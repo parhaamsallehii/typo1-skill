@@ -1,0 +1,9 @@
+{
+  "width": 1080, "height": 1920, "fps": 30, "duration": 3.2,
+  "background": "beige", "layout": "block", "start": 0.2,
+  "lines": [
+    {"text": "ایده‌ات را", "font": "block", "color": "burgundy", "width": 0.88, "align": "right"},
+    {"text": "با هوش مصنوعی", "font": "expressive", "color": "red", "width": 1.0, "align": "center"},
+    {"text": "واقعی کن", "font": "block", "color": "burgundy", "width": 0.96, "align": "left"}
+  ]
+}

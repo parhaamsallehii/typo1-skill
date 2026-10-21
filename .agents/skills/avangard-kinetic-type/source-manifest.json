@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "original_name": "AMIRFODA-BOLD- BY IVOXYGEN@BEHFONT.TTF",
+      "path": "assets/fonts/AmirFoda-Bold.ttf",
+      "role": "font: expressive accent",
+      "sha256": "55fc5ac81d12c24c1937f03f8ae47eb2e63d6b37456befc97dd4e098787d350f"
+    },
+    {
+      "original_name": "Rubbama-Black@Behfont.otf",
+      "path": "assets/fonts/Rubbama-Black.otf",
+      "role": "font: geometric block",
+      "sha256": "ea8c0ef2afe35ecd6c2129195c1af9a7c9cc156bd5bc3cfaeb60f96044cf56eb"
+    },
+    {
+      "original_name": "1b84310540ea7d079137ac1ac131fd39.jpg",
+      "path": "references/media/palette.jpg",
+      "role": "authoritative palette, printed hex labels",
+      "sha256": "db34bd719b4fc5576f6c2832b741784a8bf87aba3e0f4ddb029a72440adb6963"
+    },
+    {
+      "original_name": "b8b9f31defa035de8d4d26224bbbfdf0.jpg",
+      "path": "references/media/layout-block.jpg",
+      "role": "dense angular composition reference",
+      "sha256": "ae1916a94ff297464bd2a055c0924724d493a642a00a76340b46807397eeffdb"
+    },
+    {
+      "original_name": "635c78381220da2bb11ee8692181a69f.jpg",
+      "path": "references/media/layout-expressive.jpg",
+      "role": "calligraphic interlocking composition reference",
+      "sha256": "0b3c3cff4c691ebc6ea411f8f372752fd59fd0a88e08b13b0707181e3a404a8e"
+    }
+  ],
+  "video_reference_supplied": false
+}

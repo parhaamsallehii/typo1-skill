@@ -1,0 +1,14 @@
+interface:
+  display_name: تایپوگرافی متحرک آوانگارد
+  short_description: تایپوگرافی فارسی با دو فونت، بافت چاپی و حرکت کلمه‌ای
+  default_prompt: Use $avangard-kinetic-type to create Persian word-by-word typography
+    using the bundled fonts, palette, textures, hard shadow, and reference layouts.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

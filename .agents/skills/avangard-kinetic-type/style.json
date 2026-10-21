@@ -1,0 +1,11 @@
+{
+  "reference_width": 1080,
+  "palette": {"burgundy": "#3B0016", "red": "#F82524", "beige": "#D1C0A6"},
+  "fonts": {"block": "assets/fonts/Rubbama-Black.otf", "expressive": "assets/fonts/AmirFoda-Bold.ttf"},
+  "entrance": {"duration": 0.55, "stagger": 0.12, "offset_right": 72, "easing": "ease_out_quint", "user_graph_note": "0 / 100; fast start, extremely slow smooth finish"},
+  "texture": {"seed": 1701, "noise_strength": 0.075, "halftone_strength": 0.17, "halftone_spacing": 7, "halftone_radius": 1.25},
+  "glow": {"requested_effect": "Deep Glow", "exposure": 0.02, "fallback_mode": "visual_approximation", "radii": [8, 24, 52]},
+  "shadow": {"distance": 5, "requested_angle_degrees": 180, "direction": "down", "opacity": 1, "softness": 0},
+  "hand_drawn": {"amplitude": 0.65, "frequency": 8, "seed": 421, "mesh_step": 38},
+  "layout": {"safe_width": 0.82, "max_height": 0.62, "center_x": 0.5, "center_y": 0.5, "line_gap": 16, "word_gap": 24}
+}
