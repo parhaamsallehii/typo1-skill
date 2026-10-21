@@ -1,0 +1,22 @@
+{
+  "target": "animation.mp4",
+  "bytes": 19560372,
+  "sha256": "84782a608effc62d18741ecbd320f7f513bf2952e5146648995dc0cba6aea12b",
+  "parts": [
+    {
+      "name": "animation.mp4.part01",
+      "bytes": 8000000,
+      "sha256": "2a70b31829cc521e4be0a84c5e111e733b9cd16b27a1fb73b450bd8bfb99f4a3"
+    },
+    {
+      "name": "animation.mp4.part02",
+      "bytes": 8000000,
+      "sha256": "a1368da47075fae66b24b02c81dbe08cbdf75a8640d71029bac459070fcc4a43"
+    },
+    {
+      "name": "animation.mp4.part03",
+      "bytes": 3560372,
+      "sha256": "49e43b09c98c6d9c20fd4da4379aa1a6c9a18bad34c6761dc9f22bed427e9cc5"
+    }
+  ]
+}

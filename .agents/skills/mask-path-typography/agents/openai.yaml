@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mask Path Typography"
+  short_description: "تایپوگرافی فارسی روی منحنی با فنر و موشن‌بلر"
+  default_prompt: "با $mask-path-typography متن «ایده‌ات را واقعی کن» را روی یک منحنی نرم با حرکت فنری و موشن‌بلر بساز."

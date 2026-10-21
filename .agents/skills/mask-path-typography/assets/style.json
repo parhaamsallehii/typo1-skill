@@ -1,0 +1,51 @@
+{
+  "palette": {
+    "red": "#B40023",
+    "cream": "#FCF0D6"
+  },
+  "motion_blur": {
+    "comp_enabled": true,
+    "all_layers_enabled": true,
+    "shutter_angle": 180,
+    "shutter_phase": 0,
+    "samples_per_frame": 16,
+    "adaptive_sample_limit": 128
+  },
+  "styles": {
+    "cream": {
+      "fill": "#FCF0D6",
+      "shadow": "#B40023"
+    },
+    "red": {
+      "fill": "#B40023",
+      "shadow": "#FCF0D6"
+    }
+  },
+  "shadow": {
+    "distance": 3,
+    "opacity": 1,
+    "softness": 0,
+    "direction_default": "down",
+    "direction_was_specified": false,
+    "reference_width": 1080
+  },
+  "deep_glow": {
+    "radius": 1000,
+    "exposure": 0.3,
+    "blend_mode": "screen",
+    "native_plugin_required_for_exact_effect": true
+  },
+  "texture": {
+    "noise": true,
+    "halftone": true,
+    "anchored_to_text": true
+  },
+  "spring": {
+    "amp": 0.1,
+    "freq": 2,
+    "decay": 6,
+    "duration": 1,
+    "fade_duration": 0.2
+  },
+  "frame_convention": "ordinal frame 1 = t0, frame 15 = 14/fps"
+}

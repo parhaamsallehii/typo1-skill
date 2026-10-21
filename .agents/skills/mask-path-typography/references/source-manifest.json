@@ -1,0 +1,61 @@
+[
+  {
+    "original_name": "Bahman (2).ttf",
+    "path": "assets/fonts/Bahman.ttf",
+    "sha256": "fd041d83b373846e5d6e23d2acba7c56634cd5afc4cab5684790defaefcfd605",
+    "bytes": 40052
+  },
+  {
+    "original_name": "Bahman 1.ttf",
+    "path": "assets/fonts/E-Bahman.ttf",
+    "sha256": "c77c119446e5f52543392f9ba4d6aff786661dd8096bd035f57c5db9a718dca3",
+    "bytes": 106284
+  },
+  {
+    "original_name": "Lifta-Black@Behfont.otf",
+    "path": "assets/fonts/Lifta-Black.otf",
+    "sha256": "7b0fda46482a50afb9f82212f24ec800bad00bf859e525bfbcb0df320c505b65",
+    "bytes": 95008
+  },
+  {
+    "original_name": "Lifta-Bold@Behfont.otf",
+    "path": "assets/fonts/Lifta-Bold.otf",
+    "sha256": "fc0f0fbda860bc8e328f4dc66d19ca7b23cc6d36c828f4fbffebd8aca2545cfe",
+    "bytes": 94092
+  },
+  {
+    "original_name": "تنظیمات موشن بلر مثل افتر افکت.png",
+    "path": "references/media/motion-blur.png",
+    "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1",
+    "bytes": 36971
+  },
+  {
+    "original_name": "پالت رنگی.jpg",
+    "path": "references/media/palette.jpg",
+    "sha256": "b01b9a139f6aef204c840057957551b1a864bcc925b8fa077e28f41a8d223222",
+    "bytes": 49512
+  },
+  {
+    "original_name": "نمونه halftone و نویز برای تکست.PNG",
+    "path": "references/media/texture.png",
+    "sha256": "01867e6792cc78caf29edc3c1cd1deb36e7e7db74c045e915204e4b246dd65b3",
+    "bytes": 98680
+  },
+  {
+    "original_name": "mask path typography نمونه انیمیشن.mp4",
+    "path": "references/media/animation.mp4",
+    "sha256": "84782a608effc62d18741ecbd320f7f513bf2952e5146648995dc0cba6aea12b",
+    "bytes": 19560372,
+    "bundled_as": [
+      "references/media/animation.mp4.part01",
+      "references/media/animation.mp4.part02",
+      "references/media/animation.mp4.part03"
+    ],
+    "restore_with": "python scripts/prepare_reference.py"
+  },
+  {
+    "original_name": "mask path typography نمونه انیمیشن(1).mp4",
+    "duplicate_of": "references/media/animation.mp4",
+    "sha256": "84782a608effc62d18741ecbd320f7f513bf2952e5146648995dc0cba6aea12b"
+  }
+]

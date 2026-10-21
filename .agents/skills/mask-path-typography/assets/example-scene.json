@@ -1,0 +1,174 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 5,
+  "background": "#000000",
+  "motion_blur": true,
+  "layers": [
+    {
+      "text": "نمونه",
+      "font": "e-bahman",
+      "font_size": 160,
+      "style": "red",
+      "start": 0.0,
+      "start_frame": 1,
+      "arrival_frame": 15,
+      "travel": 900,
+      "profile": "spring-entry",
+      "motion_blur": true,
+      "path": [
+        [
+          -800,
+          1010
+        ],
+        [
+          -100,
+          800
+        ],
+        [
+          540,
+          770
+        ],
+        [
+          1180,
+          800
+        ],
+        [
+          1880,
+          1010
+        ]
+      ],
+      "spring": {
+        "amp": 0.1,
+        "freq": 2,
+        "decay": 6,
+        "duration": 1,
+        "fade_duration": 0.2
+      }
+    },
+    {
+      "text": "تایپوگرافی",
+      "font": "lifta-black",
+      "font_size": 145,
+      "style": "cream",
+      "start": 0.6,
+      "start_frame": 1,
+      "arrival_frame": 15,
+      "travel": -900,
+      "profile": "spring-entry",
+      "motion_blur": true,
+      "path": [
+        [
+          -800,
+          1210
+        ],
+        [
+          -100,
+          1000
+        ],
+        [
+          540,
+          970
+        ],
+        [
+          1180,
+          1000
+        ],
+        [
+          1880,
+          1210
+        ]
+      ],
+      "spring": {
+        "amp": 0.1,
+        "freq": 2,
+        "decay": 6,
+        "duration": 1,
+        "fade_duration": 0.2
+      }
+    },
+    {
+      "text": "روی مسیر",
+      "font": "bahman",
+      "font_size": 135,
+      "style": "red",
+      "start": 1.2,
+      "start_frame": 1,
+      "arrival_frame": 15,
+      "travel": 900,
+      "profile": "spring-entry",
+      "motion_blur": true,
+      "path": [
+        [
+          -800,
+          1410
+        ],
+        [
+          -100,
+          1200
+        ],
+        [
+          540,
+          1170
+        ],
+        [
+          1180,
+          1200
+        ],
+        [
+          1880,
+          1410
+        ]
+      ],
+      "spring": {
+        "amp": 0.1,
+        "freq": 2,
+        "decay": 6,
+        "duration": 1,
+        "fade_duration": 0.2
+      }
+    },
+    {
+      "text": "نرم و فنری",
+      "font": "lifta-bold",
+      "font_size": 125,
+      "style": "cream",
+      "start": 1.7999999999999998,
+      "start_frame": 1,
+      "arrival_frame": 15,
+      "travel": -900,
+      "profile": "spring-entry",
+      "motion_blur": true,
+      "path": [
+        [
+          -800,
+          1610
+        ],
+        [
+          -100,
+          1400
+        ],
+        [
+          540,
+          1370
+        ],
+        [
+          1180,
+          1400
+        ],
+        [
+          1880,
+          1610
+        ]
+      ],
+      "spring": {
+        "amp": 0.1,
+        "freq": 2,
+        "decay": 6,
+        "duration": 1,
+        "fade_duration": 0.2
+      }
+    }
+  ]
+}
