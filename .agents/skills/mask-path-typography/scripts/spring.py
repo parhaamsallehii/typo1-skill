@@ -2,8 +2,8 @@
 import math
 
 
-def spring_offset(t, velocity, amp=0.1, freq=2.0, decay=6.0,
-                  duration=1.0, fade_duration=0.2, max_offset=None):
+def spring_offset(t, velocity, amp=0.16, freq=2.5, decay=5.5,
+                  duration=1.0, fade_duration=0.2, max_offset=300):
     if t <= 0 or t >= duration:
         return 0.0
     fade = min(max(fade_duration, 0.0), duration)

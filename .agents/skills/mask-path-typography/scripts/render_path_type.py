@@ -17,7 +17,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont, features
 from fontTools.ttLib import TTFont
 from scipy.interpolate import CubicSpline
-from scipy.ndimage import map_coordinates, gaussian_filter, shift
+from scipy.ndimage import map_coordinates, gaussian_filter
 from scipy.spatial import cKDTree
 
 from spring import margin_at
@@ -122,9 +122,10 @@ class Layer:
         angle=math.pi/4
         u=xx*math.cos(angle)+yy*math.sin(angle);v=-xx*math.sin(angle)+yy*math.cos(angle)
         pitch=cfg.get('texture_pitch',4.0)
-        dots=((u+pitch/2)%pitch-pitch/2)**2+((v+pitch/2)%pitch-pitch/2)**2 < (.65**2)
-        grain=np.maximum(rng.normal(.0,.12,self.alpha.shape),0)
-        texture=np.clip(grain+dots*.16,0,.40)*cfg.get('texture_strength',1.0)
+        dot_radius=cfg.get('halftone_radius',1.05)
+        dots=((u+pitch/2)%pitch-pitch/2)**2+((v+pitch/2)%pitch-pitch/2)**2 < dot_radius**2
+        grain=np.maximum(rng.normal(.0,.16,self.alpha.shape),0)
+        texture=np.clip((grain+dots*.46)*cfg.get('texture_strength',1.25),0,.72)
         self.mix=(texture*self.alpha).astype(np.float32)
         self.curve=Curve(cfg['path'],k)
         # A curved ribbon must not fold over itself at the glyph height.
@@ -136,11 +137,27 @@ class Layer:
         self.target=self.curve.arc_at_x(center_x)-self.sw/2+cfg.get('target_margin_offset',0)*k
         self.source=self.target+cfg.get('travel',900)*k
         self.start=cfg.get('start',0)
-        # Ordinal frames 1 -> 15 contain 14 intervals.
-        self.arrival=self.start+(cfg.get('arrival_frame',15)-cfg.get('start_frame',1))/self.fps
+        # Ordinal frames 1 -> 5 contain four frame intervals.
+        self.frame_span=cfg.get('arrival_frame',5)-cfg.get('start_frame',1)
+        if self.frame_span<=0:raise ValueError('arrival_frame must follow start_frame')
+        self.arrival=self.start+self.frame_span/self.fps
+        self.exit_start=cfg.get('exit_start')
+        self.exit_arrival=None
+        self.exit_source=self.target+cfg.get('exit_travel',cfg.get('travel',900))*k
+        if self.exit_start is not None:
+            self.exit_span=cfg.get('exit_end_frame',5)-cfg.get('exit_start_frame',1)
+            if self.exit_span<=0:raise ValueError('exit_end_frame must follow exit_start_frame')
+            if self.exit_start<self.arrival+cfg.get('spring',{}).get('duration',1):
+                raise ValueError('exit_start must follow the completed entrance spring')
+            self.exit_arrival=self.exit_start+self.exit_span/self.fps
         self.profile=cfg.get('profile','spring-entry')
         self.spring=cfg.get('spring',{}).copy()
+        self.spring.setdefault('max_offset',300)
         if self.spring.get('max_offset') is not None:self.spring['max_offset']*=k
+        self.hand_draw_amount=cfg.get('hand_draw_amount',3.2)*k
+        self.hand_draw_frequency=cfg.get('hand_draw_frequency',8.0)
+        if self.hand_draw_amount<0 or self.hand_draw_frequency<=0:
+            raise ValueError('hand-drawn amount/frequency must be nonnegative/positive')
         self.style=cfg.get('style','red')
         if self.style not in PALETTE:raise ValueError('style must be red or cream')
         self.base=linear(rgb(PALETTE[self.style]))
@@ -157,11 +174,31 @@ class Layer:
         self.cache={};self.sample_counts=[]
 
     def margin(self,t):
+        if self.exit_start is not None and t>=self.exit_start:
+            # Reverse First Margin travel: settled target -> original offscreen side.
+            return margin_at(t,self.exit_start,self.exit_arrival,self.target,
+                             self.exit_source,self.fps,self.profile,self.spring)
         return margin_at(t,self.start,self.arrival,self.source,self.target,self.fps,self.profile,self.spring)
 
-    def sample(self,margin,shadow=False):
+    def opacity(self,t):
+        if t<=self.start:return 0.0
+        if t<self.arrival:return (t-self.start)/(self.arrival-self.start)
+        if self.exit_start is not None and t>=self.exit_start:
+            return max(0.0,1.0-(t-self.exit_start)/(self.exit_arrival-self.exit_start))
+        return 1.0
+
+    def sample(self,margin,t,shadow=False):
         s,n=(self.ss,self.nn) if shadow else (self.s,self.n)
         x=s-margin; y=n-self.src_top
+        # Continuous hand-drawn contour movement in the glyph's own space.
+        # The same displaced coordinates sample glyph coverage and print texture.
+        if self.hand_draw_amount:
+            phase=2*math.pi*self.hand_draw_frequency*t
+            local_x=x/self.scale;local_y=y/self.scale
+            x=x+self.hand_draw_amount*(.62*np.sin(local_x/83+local_y/41+phase)
+                    +.38*np.sin(local_x/29-local_y/73-phase*1.2))
+            y=y+self.hand_draw_amount*(.52*np.sin(local_x/57-local_y/69+phase*.87)
+                    +.24*np.sin(local_x/31+local_y/47-phase*1.3))
         valid=(x>=0)&(x<=self.sw-1)&(y>=0)&(y<=self.sh-1)
         a=np.zeros(s.shape,np.float32);m=np.zeros_like(a)
         if valid.any():
@@ -173,10 +210,14 @@ class Layer:
     def exposure_times(self,t):
         # Screenshot: phase 0, angle 180. Forward exposure, NOT centered -90.
         lo=t;hi=t+.5/self.fps
-        probes=np.array([self.margin(u) for u in np.linspace(lo,hi,9)])
+        times=np.linspace(lo,hi,9)
+        probes=np.array([self.margin(u) for u in times])
+        alphas=np.array([self.opacity(u) for u in times])
         distance=float(np.abs(np.diff(probes)).sum())
         count=min(128,max(16,int(math.ceil(distance/.6))))
-        if distance<1e-8:
+        if distance<1e-8 and np.max(np.abs(alphas))<1e-8:
+            return [t],16
+        if distance<1e-8 and np.max(np.abs(alphas-alphas[0]))<1e-8 and not self.hand_draw_amount:
             # Analytically identical subframes: evaluate once with identical result.
             return [t],16
         return lo+(np.arange(count)+.5)/count*(hi-lo),count
@@ -187,10 +228,13 @@ class Layer:
         if stable_key is not None and stable_key in self.cache:return self.cache[stable_key]
         ba=np.zeros(self.s.shape,np.float32);sa=np.zeros_like(ba);mi=np.zeros_like(ba);ga=np.zeros_like(ba)
         for u in times:
+            opacity=self.opacity(float(u))
+            if opacity<=0:continue
             margin=self.margin(float(u))
-            a,m=self.sample(margin);shadow,_=self.sample(margin,True)
+            a,m=self.sample(margin,float(u));shadow,_=self.sample(margin,float(u),True)
             # Subframe fill over opaque hard shadow, in premultiplied linear light.
-            ba+=a-m;mi+=m;sa+=shadow*(1-a);ga+=a
+            ba+=(a-m)*opacity;mi+=m*opacity
+            sa+=shadow*(1-a)*opacity;ga+=a*opacity
         ba/=len(times);mi/=len(times);sa/=len(times);ga/=len(times)
         alpha=np.clip(ba+mi+sa,0,1)
         premul=ba[...,None]*self.base+mi[...,None]*self.pigment+sa[...,None]*self.shadow
@@ -238,6 +282,8 @@ class Renderer:
                     motion_blur=dict(enabled=True,shutter_angle=180,shutter_phase=0,min_samples=16,adaptive_limit=128,temporal_linear_premultiplied=True),
                     deep_glow=dict(native=False,radius=1000,exposure=.3,blend='screen',method='multi-scale convolution approximation'),
                     layers=[dict(text=l.text,font=l.font_key,style=l.style,start=l.start,arrival=l.arrival,
+                                 exit_start=l.exit_start,exit_arrival=l.exit_arrival,
+                                 hand_draw_amount=l.hand_draw_amount,halftone_radius=l.cfg.get('halftone_radius',1.05),
                                  incoming_direction='right' if l.source>l.target else 'left',
                                  target_margin=float(l.target),sample_counts=sorted(set(l.sample_counts))) for l in self.layers])
 

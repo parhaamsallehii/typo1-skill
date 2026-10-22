@@ -2,7 +2,7 @@
   "width": 1080,
   "height": 1920,
   "fps": 30,
-  "duration": 5,
+  "duration": 4,
   "background": "#000000",
   "motion_blur": true,
   "layers": [
@@ -13,7 +13,7 @@
       "style": "red",
       "start": 0.0,
       "start_frame": 1,
-      "arrival_frame": 15,
+      "arrival_frame": 5,
       "travel": 900,
       "profile": "spring-entry",
       "motion_blur": true,
@@ -40,12 +40,21 @@
         ]
       ],
       "spring": {
-        "amp": 0.1,
-        "freq": 2,
-        "decay": 6,
+        "amp": 0.16,
+        "freq": 2.5,
+        "decay": 5.5,
         "duration": 1,
-        "fade_duration": 0.2
-      }
+        "fade_duration": 0.2,
+        "max_offset": 300
+      },
+      "exit_start": 3.4,
+      "exit_start_frame": 1,
+      "exit_end_frame": 5,
+      "hand_draw_amount": 3.2,
+      "hand_draw_frequency": 8,
+      "texture_pitch": 4,
+      "halftone_radius": 1.05,
+      "texture_strength": 1.25
     },
     {
       "text": "تایپوگرافی",
@@ -54,7 +63,7 @@
       "style": "cream",
       "start": 0.6,
       "start_frame": 1,
-      "arrival_frame": 15,
+      "arrival_frame": 5,
       "travel": -900,
       "profile": "spring-entry",
       "motion_blur": true,
@@ -81,12 +90,21 @@
         ]
       ],
       "spring": {
-        "amp": 0.1,
-        "freq": 2,
-        "decay": 6,
+        "amp": 0.16,
+        "freq": 2.5,
+        "decay": 5.5,
         "duration": 1,
-        "fade_duration": 0.2
-      }
+        "fade_duration": 0.2,
+        "max_offset": 300
+      },
+      "exit_start": 3.455,
+      "exit_start_frame": 1,
+      "exit_end_frame": 5,
+      "hand_draw_amount": 3.2,
+      "hand_draw_frequency": 8,
+      "texture_pitch": 4,
+      "halftone_radius": 1.05,
+      "texture_strength": 1.25
     },
     {
       "text": "روی مسیر",
@@ -95,7 +113,7 @@
       "style": "red",
       "start": 1.2,
       "start_frame": 1,
-      "arrival_frame": 15,
+      "arrival_frame": 5,
       "travel": 900,
       "profile": "spring-entry",
       "motion_blur": true,
@@ -122,12 +140,21 @@
         ]
       ],
       "spring": {
-        "amp": 0.1,
-        "freq": 2,
-        "decay": 6,
+        "amp": 0.16,
+        "freq": 2.5,
+        "decay": 5.5,
         "duration": 1,
-        "fade_duration": 0.2
-      }
+        "fade_duration": 0.2,
+        "max_offset": 300
+      },
+      "exit_start": 3.51,
+      "exit_start_frame": 1,
+      "exit_end_frame": 5,
+      "hand_draw_amount": 3.2,
+      "hand_draw_frequency": 8,
+      "texture_pitch": 4,
+      "halftone_radius": 1.05,
+      "texture_strength": 1.25
     },
     {
       "text": "نرم و فنری",
@@ -136,7 +163,7 @@
       "style": "cream",
       "start": 1.7999999999999998,
       "start_frame": 1,
-      "arrival_frame": 15,
+      "arrival_frame": 5,
       "travel": -900,
       "profile": "spring-entry",
       "motion_blur": true,
@@ -163,12 +190,21 @@
         ]
       ],
       "spring": {
-        "amp": 0.1,
-        "freq": 2,
-        "decay": 6,
+        "amp": 0.16,
+        "freq": 2.5,
+        "decay": 5.5,
         "duration": 1,
-        "fade_duration": 0.2
-      }
+        "fade_duration": 0.2,
+        "max_offset": 300
+      },
+      "exit_start": 3.565,
+      "exit_start_frame": 1,
+      "exit_end_frame": 5,
+      "hand_draw_amount": 3.2,
+      "hand_draw_frequency": 8,
+      "texture_pitch": 4,
+      "halftone_radius": 1.05,
+      "texture_strength": 1.25
     }
   ]
 }

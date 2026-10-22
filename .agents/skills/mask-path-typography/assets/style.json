@@ -38,14 +38,34 @@
   "texture": {
     "noise": true,
     "halftone": true,
-    "anchored_to_text": true
+    "anchored_to_text": true,
+    "halftone_radius_reference_px": 1.05,
+    "dot_pitch_reference_px": 4,
+    "texture_strength": 1.25
   },
   "spring": {
-    "amp": 0.1,
-    "freq": 2,
-    "decay": 6,
+    "amp": 0.16,
+    "freq": 2.5,
+    "decay": 5.5,
     "duration": 1,
-    "fade_duration": 0.2
+    "fade_duration": 0.2,
+    "max_offset": 300
   },
-  "frame_convention": "ordinal frame 1 = t0, frame 15 = 14/fps"
+  "frame_convention": "ordinal frame 1 = t0; frame 5 = 4/fps; same span reversed on exit",
+  "entrance_opacity": {
+    "start": 0,
+    "arrival": 1,
+    "interpolation": "linear"
+  },
+  "exit_opacity": {
+    "start": 1,
+    "end": 0,
+    "interpolation": "linear"
+  },
+  "hand_draw": {
+    "amount_reference_px": 3.2,
+    "frequency_hz": 8,
+    "continuous": true,
+    "anchored_to_text": true
+  }
 }

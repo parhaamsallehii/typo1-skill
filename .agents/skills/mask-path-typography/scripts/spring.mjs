@@ -1,7 +1,7 @@
 // Engine-neutral reference. Evaluate from timeline time, never accumulated dt.
 export function springOffset(t, velocity, {
-  amp=0.1, freq=2, decay=6, duration=1, fadeDuration=0.2,
-  maxOffset=Infinity
+  amp=0.16, freq=2.5, decay=5.5, duration=1, fadeDuration=0.2,
+  maxOffset=300
 }={}) {
   if (t<=0 || t>=duration) return 0;
   const fade=Math.min(Math.max(fadeDuration,0),duration);

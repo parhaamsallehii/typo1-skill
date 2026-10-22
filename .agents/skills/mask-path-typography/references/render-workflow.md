@@ -6,8 +6,9 @@ From the skill folder:
 
 ```bash
 python scripts/render_path_type.py --check
-python scripts/render_path_type.py --scene assets/example-scene.json --out /absolute/task/settled.png --still 4
+python scripts/render_path_type.py --scene assets/example-scene.json --out /absolute/task/settled.png --still 2.5
 python scripts/render_path_type.py --scene assets/example-scene.json --out /absolute/task/entrance.png --still 0.2
+python scripts/render_path_type.py --scene assets/example-scene.json --out /absolute/task/exit.png --still 3.5
 python scripts/render_path_type.py --scene assets/example-scene.json --out /absolute/task/preview.mp4
 ```
 
@@ -17,9 +18,9 @@ Append `--width 540` for a smaller design preview; it preserves effects and timi
 
 - Check actual fonts, Persian joins, half-spaces and dots.
 - Check curved movement and entry from both sides, not a flat slide over a decorative curve.
-- Inspect just before/after arrival, peak overshoot and final settling. No position jump or abrupt cutoff. A vanishing incoming velocity is not a strong spring.
-- Inspect source colors, fixed grain, hard shadow and diffuse glow.
-- Moving frames must differ from a single instantaneous sample; stationary frames must not retain trails.
+- Inspect ordinal frame 1 and frame 5 for entry opacity 0→100%; inspect the four-frame exit for the reverse fade. Check just before/after arrival, peak overshoot and settling. No position jump or abrupt cutoff. A vanishing incoming velocity is not a strong spring.
+- Inspect source colors, stronger fixed grain/halftone, hard shadow, continuous hand-drawn edge and diffuse glow.
+- Moving frames must differ from a single instantaneous sample. Even with stationary First Margin, the animated hand-drawn edge is temporally sampled; avoid echo or ghost trails.
 - Watch beginning, middle and end; fully decode and check metadata:
 
 ```bash
