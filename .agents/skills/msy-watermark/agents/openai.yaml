@@ -1,0 +1,4 @@
+interface:
+  display_name: "MSY Watermark"
+  short_description: "Place Masoudi watermark exactly on presenter shots"
+  default_prompt: "Use $msy-watermark to add the original Masoudi watermark at the reference placement on every presenter shot, above shadow-ramp when present."
