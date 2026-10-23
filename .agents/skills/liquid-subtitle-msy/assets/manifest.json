@@ -1,0 +1,40 @@
+{
+  "assets/example-scene.json": {
+    "bytes": 442,
+    "sha256": "ab2f4ba84bc5497f6a7bd90d680c9b177352cbdfcb8096e16aa0a34911010682"
+  },
+  "assets/fonts/TRADBDO.TTF": {
+    "bytes": 285792,
+    "sha256": "d2c013b074196cedb8b7cfd2b1b0cf906c75171501b86e22a3f5c91e537e78a1"
+  },
+  "assets/fonts/TRADO.TTF": {
+    "bytes": 297048,
+    "sha256": "c696147f0269567f6afb23e9ac1269e4651c0cd7d48ac0e3698509262a1151c7"
+  },
+  "assets/native/LiquidGlass.aex": {
+    "bytes": 48640,
+    "sha256": "56c4658d7469d4aa9b982c2d041cadb334db62444a09a94f9af64d655caa0b58"
+  },
+  "assets/references/motion-preview.mp4": {
+    "bytes": 887019,
+    "sha256": "cee31c47fee67da250b5662d4609f4297815e31d237c2f7cd4b9214ac0873658"
+  },
+  "assets/references/placement.jpg": {
+    "bytes": 986505,
+    "sha256": "64ae2210cd6e0d80d21ff45184f00caeef98967f9bf65552c0349172c560b1a9"
+  },
+  "assets/references/style.png": {
+    "bytes": 422226,
+    "sha256": "5fdcba40b3c7dfb0ec9ecfc42c1d27c92f593270389520d2fb48855b48142451"
+  },
+  "original_uploaded_motion": {
+    "filename": "نمونه ویدیو زیرنویس خانم مسعودی(1).mp4",
+    "sha256": "e56984180815cde224f570821a4b53ab80aa545212cad57295ebc327008dd506",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "frames": 146,
+    "duration": 4.866666666666666,
+    "note": "Bundled motion-preview.mp4 is a 540x960 viewing derivative with original timing; original upload unchanged."
+  }
+}

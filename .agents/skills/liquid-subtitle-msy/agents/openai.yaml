@@ -1,0 +1,4 @@
+interface:
+  display_name: "Liquid Subtitle MSY"
+  short_description: "Persian glass captions with eight-frame width bounce"
+  default_prompt: "Use $liquid-subtitle-msy for the requested interval: cut Persian captions in groups of four or five words over live-source liquid glass, resizing eight frames before each caption cut with the supplied bounce."

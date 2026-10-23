@@ -1,0 +1,15 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 4.6,
+  "font": "TRADO.TTF",
+  "font_size": 78,
+  "pill_height": 82,
+  "cues": [
+    {"start": 0, "end": 1.3, "text": "و کاری که شما"},
+    {"start": 1.3, "end": 2.7, "text": "فریلنسر برای کسب و کار"},
+    {"start": 2.7, "end": 4.0, "text": "خودتون انجام میدید رو"},
+    {"start": 4.0, "end": 4.6, "text": "شروع کنید"}
+  ]
+}
