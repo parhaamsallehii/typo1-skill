@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shadow Ramp"
+  short_description: "Add the exact shadow ramp beneath presenter overlays"
+  default_prompt: "Use $shadow-ramp to add the supplied shadow ramp above presenter footage and below every foreground element, excluding B-roll and motion graphics."
