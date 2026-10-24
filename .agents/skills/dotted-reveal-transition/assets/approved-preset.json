@@ -1,0 +1,67 @@
+{
+  "renderer": {
+    "path": "scripts/render_dotted_reveal.py",
+    "sha256": "a52d6d0fca0e5c06ab12a7a4fdef43edd106ec02fe183bc5834aa05ebabd5b60",
+    "bytes": 8360
+  },
+  "approved_example": {
+    "path": "assets/approved-example.mp4",
+    "sha256": "4d1ab6d9f346880464df75b2b18dfba262d69135f1a51792e77e1b41dd385810",
+    "bytes": 5885183
+  },
+  "approved_preset": {
+    "duration_seconds": 1.4333333333333333,
+    "reference_width": 1080,
+    "center_normalized": [
+      0.5,
+      0.49
+    ],
+    "initial_radius_px": 78,
+    "radius_exponent": 0.52,
+    "final_corner_margin_px": 35,
+    "dot_pitch_px": 20,
+    "dot_radius_px": 7.2,
+    "edge_wobble": "5*sin(13*theta+.3)+2*sin(29*theta)",
+    "hand_size_px": 92,
+    "hand_rotations_degrees": [
+      -45,
+      135
+    ],
+    "cursor_fill_rgba": [
+      255,
+      253,
+      242,
+      255
+    ],
+    "cursor_outline_rgba": [
+      38,
+      35,
+      32,
+      255
+    ],
+    "samples": 16,
+    "shutter_frame_fraction": 0.5,
+    "outside_blur_radius_px": 2.4,
+    "outside_multiplier": 0.69,
+    "dot_opacity": ".10+.24*luma+.25*edge",
+    "highlight": "clip(edge*dots*.66+outline*.20,0,.92)",
+    "warm_rgb": [
+      1,
+      0.98,
+      0.9
+    ]
+  },
+  "provenance": {
+    "approved_source_name": "هوک تستی.mp4",
+    "approved_source_sha256": "c4ece3b0d10607463a6f8c91539d0f44325fbd845bb76e7ea69ee6748104bd4e",
+    "approved_output_original_name": "dotted-reveal-test.mp4",
+    "output_dimensions": [
+      1080,
+      1920
+    ],
+    "output_fps": 30,
+    "output_frames": 104,
+    "output_audio": "Original AAC bitstream preserved",
+    "note": "Canonical renderer and approved output copied without changing any byte. Preset metadata documents hard-coded settings; the renderer does not read this JSON as configuration."
+  }
+}

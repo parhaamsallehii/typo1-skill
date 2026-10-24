@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dotted Reveal Transition"
+  short_description: "Approved dotted-circle reveal with two hand cursors"
+  default_prompt: "Use $dotted-reveal-transition exactly like the approved sample: reveal the same live video through a growing dotted circle with two hand cursors, preserving the approved appearance and timing."
