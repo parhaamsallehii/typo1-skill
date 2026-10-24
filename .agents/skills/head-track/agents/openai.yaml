@@ -1,0 +1,4 @@
+interface:
+  display_name: "Head Track"
+  short_description: "Face-point stabilization with motion blur and safe edges"
+  default_prompt: "Use $head-track on the main presenter video during the specified interval, matching my head-tracking reference."

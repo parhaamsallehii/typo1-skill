@@ -1,0 +1,33 @@
+{
+  "reference_video": {
+    "file": "assets/head-track-reference.mp4",
+    "sha256": "700e76188d85d2aae01d536bcd4bb896af20b703ff7d6984afcce7176f219db8",
+    "bytes": 6816243
+  },
+  "motion_blur_screenshot": {
+    "file": "assets/motion-blur-settings.png",
+    "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1",
+    "bytes": 36971
+  },
+  "required_settings": {
+    "shutter_angle": 180,
+    "shutter_phase": 0,
+    "samples_per_frame": 16,
+    "adaptive_sample_limit": 128
+  },
+  "tracking": {
+    "axes": [
+      "x",
+      "y"
+    ],
+    "inverse_motion": true,
+    "scale_stabilization": false,
+    "rotation_stabilization": false,
+    "target": "main presenter video only"
+  },
+  "edge_coverage": {
+    "preferred": "measured constant overscan",
+    "alternative": "source extension with reflected edges",
+    "coded_auto_max_crop_scale": 1.18
+  }
+}
