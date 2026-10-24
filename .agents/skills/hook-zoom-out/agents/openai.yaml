@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hook Zoom Out"
+  short_description: "Opening camera zoom-out to default at 1.5 seconds"
+  default_prompt: "Use $hook-zoom-out at the start: begin at +200 Z on ordinal frame 1, return to the original framing at 1.5 seconds with zero-speed 75/75 easing, and move the complete scene together."
