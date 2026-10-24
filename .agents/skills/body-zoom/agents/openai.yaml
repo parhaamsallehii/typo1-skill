@@ -1,0 +1,4 @@
+interface:
+  display_name: "Body Zoom"
+  short_description: "Whole-scene camera zoom with 75/75 easing and blur"
+  default_prompt: "Use $body-zoom from the requested start to end: move all visual layers together through two-second zoom in, hold, zoom out, hold stages, with 75/75 temporal influence and the supplied motion blur."
