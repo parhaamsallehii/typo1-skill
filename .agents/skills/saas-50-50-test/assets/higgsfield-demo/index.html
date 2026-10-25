@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=1080,height=960">
+<title>Higgsfield — SaaS Motion Study</title>
+<link rel="stylesheet" href="assets/fonts/vazirmatn.css">
+<script src="assets/gsap.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html,body{width:1080px;height:960px;overflow:hidden;background:#f5f5f7;font-family:Vazirmatn,sans-serif;color:#12131b}
+#root{position:relative;width:1080px;height:960px;overflow:hidden;isolation:isolate;perspective:1600px}
+.scene{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;perspective:1600px;transform-origin:50% 53%;background:#f5f5f7}
+.scene-content{width:100%;height:100%;padding:180px 70px 100px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.deco{position:absolute;pointer-events:none}.ambient{inset:0;background:radial-gradient(ellipse at 18% 52%,#e4edf5 0%,#e4edf500 53%),radial-gradient(ellipse at 85% 58%,#f2e6e4 0%,#f2e6e400 52%)}
+#brand{position:absolute;top:75px;left:350px;width:380px;text-align:center;font-size:43px;line-height:1.2;font-weight:700;letter-spacing:-1.5px;direction:ltr;z-index:20}
+.heading{position:absolute;left:80px;top:235px;width:920px;text-align:center;font-size:61px;line-height:1.35;font-weight:600;letter-spacing:-1.2px}
+.world{position:absolute;inset:0;transform-style:preserve-3d;transform-origin:50% 52%;isolation:isolate}
+.surface{background:linear-gradient(165deg,#ffffff,#fdfdfd);border:1px solid #fff;box-shadow:0 2px 1px #ffffff,0 0 0 1px #dcdde166,0 9px 10px #9ba1b61b,0 24px 38px #7c819d24,0 55px 65px -35px #5c617d33}
+.cursor{position:absolute;width:43px;height:55px;z-index:12;transform-origin:14% 6%;filter:drop-shadow(0 3px 2px #3332)}
+.cursor svg{display:block;width:100%;height:100%}.mini-icon{width:34px;height:34px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ink-muted{color:#5e6370}.scene2,.scene3{opacity:0}
+#input-capsule{position:absolute;left:145px;top:410px;width:790px;height:178px;border-radius:37px;display:flex;align-items:center;gap:27px;padding:24px 28px;direction:ltr;transform:rotateY(-7deg) rotateX(6deg)}
+#input-thumb{width:164px;height:112px;border-radius:18px;position:relative;flex-shrink:0;transform:translateZ(10px)}
+#input-thumb img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+#selection{position:absolute;inset:-7px;border:1px solid #ed73ab;border-radius:22px;box-shadow:0 0 15px #e5489d30;opacity:0}
+.corner{position:absolute;width:9px;height:9px;background:#ed4d91;border:2px solid white;box-shadow:0 0 0 1px #ed4d91;border-radius:2px}
+.corner:nth-child(1){left:-3px;top:-3px}.corner:nth-child(2){right:-3px;top:-3px}.corner:nth-child(3){left:-3px;bottom:-3px}.corner:nth-child(4){right:-3px;bottom:-3px}
+#input-copy{direction:rtl;flex:1;text-align:right;font-size:43px;font-weight:400;white-space:nowrap}
+#input-arrow{width:61px;height:61px;border-radius:50%;background:#13151d;color:white;display:flex;align-items:center;justify-content:center;transform:translateZ(18px)}
+#cursor1{left:225px;top:475px}
+#input-sheen{position:absolute;height:4px;width:138px;left:327px;bottom:11px;border-radius:10px;background:linear-gradient(90deg,#7ad6cf,#957cf9,#e782c7);opacity:.75}
+#stage1-note{position:absolute;left:160px;top:652px;width:760px;text-align:center;font-size:29px;line-height:1.4;color:#5e6370}
+#camera-surface{position:absolute;left:158px;top:368px;width:764px;height:314px;border-radius:34px;padding:27px;transform:rotateY(11deg) rotateX(5deg);transform-style:preserve-3d;z-index:2}
+.control-header{display:flex;direction:ltr;align-items:center;gap:16px;padding:0 4px 25px;border-bottom:1px solid #ececf1}
+.control-header img{width:91px;height:55px;object-fit:cover;border-radius:9px}.control-header .title{flex:1;direction:rtl;text-align:right;font-size:31px;font-weight:600}
+.camera-row{display:flex;direction:ltr;gap:13px;align-items:center;justify-content:center;height:150px;transform:translateZ(18px)}
+.camera-chip{position:relative;min-width:191px;min-height:80px;border:1px solid #e8e9ef;background:#fafafb;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:12px;padding:14px 17px;font-size:29px;line-height:1.2;direction:ltr;color:#5a5e69}
+#dolly{min-width:240px;color:#282333;border-color:#d4caed;background:linear-gradient(115deg,#f3e5ef,#e8e8fc,#e1f0f9);box-shadow:0 8px 16px #8e72c91c}
+#dolly-icon{width:40px;height:30px}.ring{position:absolute;border:1px solid #d7c9e5;border-radius:50%;left:327px;top:349px;width:440px;height:340px;transform:rotateY(56deg) rotateZ(-23deg);z-index:1}
+#ring2{left:300px;top:320px;width:490px;height:400px;opacity:.55}
+#selection-glow{position:absolute;left:290px;top:300px;width:500px;height:430px;background:radial-gradient(ellipse,#e5b9e455 0%,#c4bef134 40%,#e5b9e400 72%);opacity:0;z-index:0}
+#cursor2{left:461px;top:551px}#dolly-check{position:absolute;right:-7px;top:-8px;width:25px;height:25px;border:3px solid white;border-radius:50%;background:#7655ac;color:white;font-size:16px;text-align:center;line-height:19px;opacity:0}
+#s2-note{position:absolute;left:165px;top:730px;width:750px;text-align:center;font-size:29px;color:#5e6370}
+.scene3 .heading{top:210px}
+#gallery{position:absolute;left:540px;top:535px;width:0;height:0;transform-style:preserve-3d;perspective:1700px}
+.result-card{position:absolute;border-radius:25px;padding:17px;background:#fff;box-shadow:0 0 0 1px #dfe1e9,0 15px 30px #8e97b421,0 45px 55px -28px #7b85a849;transform-style:preserve-3d}
+#source-card{width:300px;height:329px;left:-510px;top:-160px;transform:rotateY(24deg) rotateZ(-3deg) translateZ(-80px);z-index:1}
+#source-card img{width:266px;height:195px;object-fit:cover;border-radius:15px}
+.card-label{font-size:29px;line-height:1.4;font-weight:600;text-align:center;padding:20px 8px 0;color:#454a58}
+#output-card{width:536px;height:405px;left:-268px;top:-207px;z-index:4;transform:translateZ(60px)}
+#video-window{position:relative;width:502px;height:282px;border-radius:16px;overflow:hidden;background:#d8dae4}
+#output-photo{width:100%;height:100%;object-fit:cover;transform-origin:55% 57%}
+.video-controls{display:flex;direction:ltr;align-items:center;gap:14px;padding:16px 8px 0}
+#play{width:39px;height:39px;border:1px solid #dddfe7;border-radius:50%;display:flex;align-items:center;justify-content:center}
+#play svg{width:13px;height:15px;fill:#232632;stroke:none}.timeline{height:4px;background:#dcdde7;flex:1;border-radius:4px;overflow:hidden}.timeline .progress{height:100%;width:100%;transform:scaleX(.12);transform-origin:0 50%;background:linear-gradient(90deg,#9a75de,#e175af,#75c7df)}
+.preview-label{font-size:27px;color:#505663;white-space:nowrap;direction:rtl}
+#settings-card{width:292px;height:329px;left:220px;top:-160px;transform:rotateY(-25deg) rotateZ(3deg) translateZ(-80px);z-index:2}
+#settings-card .small-label{font-size:28px;color:#5e6370;line-height:1.4;margin:12px 8px 20px}
+#path-diagram{width:220px;height:126px;margin:0 18px}
+#settings-card .mode{text-align:center;font-size:29px;direction:ltr;color:#292438;background:#f0eafa;padding:12px 16px;border-radius:15px;margin:16px 7px}
+#workflow{position:absolute;left:150px;top:795px;width:780px;display:flex;direction:ltr;justify-content:center;align-items:center;gap:18px;font-size:28px;color:#424958}
+.workflow-pill{padding:12px 23px;background:#ffffff;border:1px solid #e3e4eb;border-radius:17px;box-shadow:0 6px 12px #8a93aa12;direction:rtl;line-height:1.3;white-space:nowrap}
+.workflow-arrow{color:#7a7e8d;font-size:25px;line-height:1}
+</style></head><body>
+<div id="root" data-composition-id="main" data-width="1080" data-height="960" data-start="0" data-duration="5" data-fps="30" data-motion-blur="on" data-motion-blur-shutter="180">
+<div id="brand">Higgsfield</div>
+<section id="scene1" class="scene"><div class="ambient deco" data-layout-ignore></div><div class="scene-content">
+<h1 id="heading1" class="heading">یک عکس</h1>
+<div id="world1" class="world" data-layout-allow-overflow><div id="input-capsule" class="surface">
+ <div id="input-thumb"><img src="assets/demo-car.png" alt="Demo source image"><div id="selection" data-layout-ignore><i class="corner"></i><i class="corner"></i><i class="corner"></i><i class="corner"></i></div></div>
+ <div id="input-copy">انتخاب عکس</div><div id="input-arrow"><svg class="mini-icon" viewBox="0 0 32 32"><path d="M16 24V8m-7 7 7-7 7 7"/></svg></div><div id="input-sheen" data-layout-ignore></div>
+</div></div>
+<div id="cursor1" class="cursor" data-layout-ignore><svg viewBox="0 0 43 55"><path d="M3 2 35 31 22 34 18 49 3 2Z" fill="#141722" stroke="white" stroke-width="2"/></svg></div>
+<div id="stage1-note">عکس ورودی</div>
+</div></section>
+<section id="scene2" class="scene scene2"><div class="ambient deco" data-layout-ignore></div><div class="scene-content">
+<h2 id="heading2" class="heading">حرکت دوربین</h2>
+<div id="world2" class="world" data-layout-allow-overflow>
+ <div id="selection-glow" data-layout-ignore></div><div id="ring1" class="ring" data-layout-ignore></div><div id="ring2" class="ring" data-layout-ignore></div>
+ <div id="camera-surface" class="surface"><div class="control-header"><img src="assets/demo-car.png" alt=""><span class="title">حرکت را انتخاب کن</span><svg class="mini-icon" viewBox="0 0 32 32"><rect x="4" y="8" width="17" height="16" rx="4"/><path d="m21 13 7-4v14l-7-4"/></svg></div>
+ <div class="camera-row"><div class="camera-chip">Static</div><div id="dolly" class="camera-chip"><svg id="dolly-icon" class="mini-icon" viewBox="0 0 40 30"><rect x="2" y="5" width="17" height="20" rx="4"/><path d="M22 15h15m-6-6 6 6-6 6"/></svg><span>Dolly In</span><b id="dolly-check">✓</b></div><div class="camera-chip">360 Orbit</div></div>
+ </div>
+</div>
+<div id="cursor2" class="cursor" data-layout-ignore><svg viewBox="0 0 43 55"><path d="M3 2 35 31 22 34 18 49 3 2Z" fill="#141722" stroke="white" stroke-width="2"/></svg></div>
+<div id="s2-note">یک حرکت سینمایی</div>
+</div></section>
+<section id="scene3" class="scene scene3"><div class="ambient deco" data-layout-ignore></div><div class="scene-content">
+<h2 id="heading3" class="heading">از عکس به ویدیو</h2>
+<div id="world3" class="world" data-layout-allow-overflow><div id="gallery" data-layout-allow-overflow>
+ <article id="source-card" class="result-card" data-layout-allow-overlap><img src="assets/demo-car.png" alt="Source photograph"><div class="card-label">عکس</div></article>
+ <article id="settings-card" class="result-card" data-layout-allow-overlap><div class="small-label">حرکت</div><svg id="path-diagram" viewBox="0 0 220 126" data-layout-ignore><path d="M25 95C45 20 145 15 195 55" fill="none" stroke="#d2c4ec" stroke-width="2" stroke-dasharray="5 6"/><rect x="14" y="72" width="34" height="27" rx="7" fill="#ede7f7" stroke="#ad94d3"/><path d="m48 81 13-7v23l-13-7" fill="#b6a0d8"/><circle id="path-dot" cx="188" cy="52" r="8" fill="#b285d1"/><path d="M184 42 196 55l-17 3" fill="none" stroke="#9d7fc2" stroke-width="2"/></svg><div class="mode">Dolly In</div></article>
+ <article id="output-card" class="result-card"><div id="video-window"><img id="output-photo" src="assets/demo-car.png" alt="Illustrative motion preview"></div><div class="video-controls"><div id="play"><svg viewBox="0 0 13 15"><path d="M0 0 13 7.5 0 15Z"/></svg></div><div class="timeline"><div id="play-progress" class="progress"></div></div><span class="preview-label">پیش‌نمایش</span></div></article>
+</div></div>
+<div id="workflow"><span class="workflow-pill">عکس ✓</span><span class="workflow-arrow">→</span><span class="workflow-pill" dir="ltr">Dolly In ✓</span><span class="workflow-arrow">→</span><span class="workflow-pill">ویدیو</span></div>
+</div></section>
+</div>
+<script>
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true});
+tl.from('#brand',{y:-15,duration:.35,ease:'power2.out'},.10);
+tl.from('#heading1',{opacity:0,y:28,duration:.45,ease:'power3.out'},.10);
+tl.from('#world1',{scale:.63,x:-70,rotationY:27,rotationZ:-2,opacity:0,duration:.64,ease:'expo.out'},.10);
+tl.from('#stage1-note',{opacity:0,y:17,duration:.40,ease:'sine.out'},.20);
+tl.from('#cursor1',{x:620,y:230,rotation:12,opacity:0,duration:.52,ease:'power4.out'},.41);
+tl.to('#input-thumb',{scale:.94,duration:.09,ease:'power2.in'},.93);
+tl.to('#input-thumb',{scale:1,duration:.15,ease:'power2.out'},1.02);
+tl.to('#selection',{opacity:1,duration:.15,ease:'sine.out'},.96);
+// Transition through the selected white UI plane.
+tl.to('#world1',{scale:2.5,x:200,y:90,rotationY:-18,duration:.35,ease:'power3.in'},1.23);
+tl.to('#scene1',{opacity:0,duration:.18,ease:'sine.inOut'},1.42);
+tl.to('#scene2',{opacity:1,duration:.20,ease:'sine.inOut'},1.36);
+tl.from('#world2',{scale:.65,x:160,rotationY:25,rotationZ:2,opacity:0,duration:.51,ease:'expo.out'},1.36);
+tl.from('#heading2',{opacity:0,y:20,duration:.36,ease:'power3.out'},1.44);
+tl.from('#s2-note',{opacity:0,y:15,duration:.35,ease:'sine.out'},1.49);
+tl.from('#cursor2',{x:380,y:150,opacity:0,duration:.42,ease:'power4.out'},1.53);
+tl.to('#dolly',{scale:.95,duration:.10,ease:'power2.in'},1.98);
+tl.to('#dolly',{scale:1,duration:.16,ease:'power2.out'},2.08);
+tl.to('#dolly-check',{opacity:1,duration:.15,ease:'sine.out'},2.05);
+tl.to('#selection-glow',{opacity:1,scale:1.12,duration:.45,ease:'sine.out'},2.03);
+tl.from('#ring1',{scale:.7,opacity:0,duration:.50,ease:'power3.out'},1.66);
+tl.from('#ring2',{scale:.7,opacity:0,duration:.50,ease:'power3.out'},1.73);
+tl.to('#world2',{rotationY:-9,scale:1.06,duration:.40,ease:'power2.inOut'},2.05);
+// A second matched zoom connects controls to the card fan.
+tl.to('#world2',{scale:2.65,x:-150,y:-80,rotationY:-27,duration:.33,ease:'power3.in'},2.50);
+tl.to('#scene2',{opacity:0,duration:.18,ease:'sine.inOut'},2.66);
+tl.to('#scene3',{opacity:1,duration:.24,ease:'sine.inOut'},2.57);
+tl.from('#world3',{scale:1.28,x:110,y:80,rotationY:-16,opacity:0,duration:.57,ease:'power4.out'},2.58);
+tl.from('#heading3',{y:32,opacity:0,duration:.38,ease:'expo.out'},2.61);
+tl.from('#source-card',{x:230,y:115,rotationY:65,rotationZ:-9,opacity:0,duration:.62,ease:'power4.out'},2.63);
+tl.from('#settings-card',{x:-220,y:110,rotationY:-65,rotationZ:9,opacity:0,duration:.62,ease:'power4.out'},2.70);
+tl.from('#output-card',{y:100,scale:.68,rotationY:14,opacity:0,duration:.64,ease:'expo.out'},2.72);
+tl.from('#workflow',{y:20,opacity:0,duration:.30,ease:'power3.out'},2.81);
+tl.to('#output-photo',{scale:1.14,x:-12,duration:2.1,ease:'sine.inOut'},2.90);
+tl.to('#play-progress',{scaleX:.96,duration:1.95,ease:'none'},3.05);
+tl.to('#path-dot',{x:-20,y:-7,duration:1.4,ease:'sine.inOut'},3.60);
+window.__timelines.main=tl;
+</script></body></html>

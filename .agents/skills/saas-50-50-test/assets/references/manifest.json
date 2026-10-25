@@ -1,0 +1,34 @@
+{
+  "references": [
+    {
+      "file": "assets/references/reference-1.mp4",
+      "original_name": "AQM4UECwCjyJVvyw4R4z9vY4bORkDHEPhBsXTs4_GOXVnfr8pVjR6iXqH5710nC0hWUHZ3h.mp4",
+      "library_file_id": "libfile_ac35e934dc188191bbb2f6d8c2360a08",
+      "sha256": "61f4304811c2720fc6afa6204fa970895064ca6e411b05ce55e8c68d5de2bcdb",
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "duration": 15.0
+    },
+    {
+      "file": "assets/references/reference-2.mp4",
+      "original_name": "AQN6ojmn5DwITh6aqie_EA7X5G0eFh63w_sZnPf6FC6OYCW3XwXmaNnUCqv8zn9pPHYHrcv99VNJ5.mp4",
+      "library_file_id": "libfile_b56f28e69c008191933e150d0a2fd937",
+      "sha256": "e613999e6b77a36f5b73aeedcc72e57a5e621c523dd8b689ef2d30fb8212161e",
+      "width": 720,
+      "height": 720,
+      "fps": "30/1",
+      "duration": 11.0
+    },
+    {
+      "file": "assets/references/reference-3.mp4",
+      "original_name": "AQP_uI5oe1OB3ENmU3SPmCu_nI_oTeplU6fWxgCcp38AlZk6HprVhQMmSuwGtyrnm1derGQAjtgk.mp4",
+      "library_file_id": "libfile_36c6176017588191afce1c83e7d78cbe",
+      "sha256": "dc6751369f39b65a1f9e2ac7634fa4aff48c99c727ed2e088031ba91356aa19a",
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "duration": 22.0
+    }
+  ]
+}

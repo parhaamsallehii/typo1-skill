@@ -1,0 +1,11 @@
+{
+  "alignment": "draft",
+  "source_start": 5.0,
+  "duration": 8.0,
+  "note": "Example only. Replace with actual speech and checked source-relative timing before marking verified.",
+  "beats": [
+    {"start": 0.0, "end": 2.0, "narration": "عکس را وارد کن", "visual": "Show the actual input image being selected in a raised capsule", "trigger_word": "عکس"},
+    {"start": 2.0, "end": 5.0, "narration": "حرکت دوربین را انتخاب کن", "visual": "Pointer selects the verified camera control in a perspective control plane", "trigger_word": "حرکت"},
+    {"start": 5.0, "end": 8.0, "narration": "بعد ویدیو را بساز", "visual": "Reveal an honestly labeled result preview without claiming an unperformed generation", "trigger_word": "ویدیو"}
+  ]
+}
