@@ -67,6 +67,10 @@ inspect its original MP4 plus both PNGs in `assets/variants/white-icon-dock-v1/`
 Use the dense measured cursor trajectory and reusable renderer there; do not
 replace it with a generic straight pointer tween. Keep the exact screenshot
 entrance curve distinct from estimated pointer/hover curves.
+Read `references/white-icon-dock-user-lesson-fa.md` for the resubmitted Persian
+requirements. The renderer also accepts independent `--components` selections;
+the fresh `recheck-study.mp4` is awaiting review, not a replacement for the
+previously approved benchmark. Preserve this lesson's resubmitted source identities.
 
 For the elastic pre-click draw-back, accelerating strike, hollow pixel burst,
 five alternately shaded discs, fine rim light and dimensional symbol/plan change,

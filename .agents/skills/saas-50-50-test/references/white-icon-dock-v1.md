@@ -152,6 +152,34 @@ held objects should remain crisp while moving objects smear along their motion.
 
 ## Reproduction and review
 
+Treat the white background, dimensional icon material, mother-shape entrance,
+cursor path/rotation, and local icon hover as independent tools. Select any useful
+subset for the narration or combine all of them in the reference order. A pointer
+may travel over a different UI; an icon may use this material without a dock;
+a group may use the entrance curve without a cursor; a hover response may be
+triggered by another input. White is a background option, never a global rule.
+Keep the exact entrance graph local to this entrance variant and allow future
+entrances/graphs to coexist. Retain all measured data and evidence distinctions
+above when reusing or retiming the parts.
+
+The study renderer accepts `--components` with independent `dock`, `icons`,
+`cursor`, `hover`, and `entrance` toggles; omission preserves the complete study.
+Examples: `--components cursor` shows only cursor travel over a white stage;
+`--components dock,entrance` shows only group arrival;
+`--components icons,hover` shows hover cues without a dock or visible pointer.
+An empty component list is a clean white stage. These CLI switches demonstrate
+separation; the study's fixed white stage and reference subjects do not restrict
+production backgrounds, icon subjects, layouts or event triggers.
+
+The user resubmitted this lesson and the same three source byte streams. Record
+the new filenames and Library identities in `manifest.json` under
+`resubmitted_sources`; preserve earlier identities and the unchanged approved
+study. Read `references/white-icon-dock-user-lesson-fa.md` for the Persian
+requirement record. A fresh 3.4s rerender is bundled as `recheck-study.mp4` with
+`recheck-study-report.json`; it awaits review and does not replace the approved
+`study.mp4`. Inspect motion again and synchronize the entire skill directory to
+both destinations before claiming completion.
+
 Run `python scripts/render_icon_dock.py --output /task/icon-dock-test.mp4`.
 It renders102 frames,30fps,3.4s,1080×960, no audio/presenter; fully decodes the result
 and writes a technical report with actual sample counts and output hash. It guards

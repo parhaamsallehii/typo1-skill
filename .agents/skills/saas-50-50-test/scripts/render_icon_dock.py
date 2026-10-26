@@ -22,6 +22,7 @@ FPS, WIDTH, HEIGHT, DURATION = 30, 1080, 960, 3.4
 LEAD = .5
 NAMES = ['notes', 'discord', 'pinterest', 'after-effects', 'messages']
 CENTERS = [253, 397, 539, 682, 824]
+COMPONENTS = frozenset({'dock', 'icons', 'cursor', 'hover', 'entrance'})
 
 
 def entrance(u):
@@ -45,7 +46,11 @@ def pulse(t, start, peak, leave, end):
     return 1. - smooth((t - leave) / (end - leave))
 
 
-def build_scene():
+def build_scene(components=None):
+    """Select independent tools; hover cues do not depend on cursor visibility."""
+    enabled = COMPONENTS if components is None else frozenset(components)
+    if enabled - COMPONENTS:
+        raise ValueError(f'Unknown components: {sorted(enabled - COMPONENTS)}')
     data = json.loads((ASSETS / 'cursor-measurements.json').read_text())
     rows = data['records']
     ts = [r['t'] for r in rows]
@@ -80,11 +85,12 @@ def build_scene():
 
     def scene(t):
         canvas = Image.new('RGB', (WIDTH, HEIGHT), 'white')
-        e = entrance((t - .06) / .54)
+        e = entrance((t - .06) / .54) if 'entrance' in enabled else 1.
         scale, dy = .86 + .14 * e, 150 * (1 - e)
         pw, ph = round(790 * scale), round(222 * scale)
         pl = plate.resize((pw, ph), Image.Resampling.BICUBIC)
-        canvas.paste(pl, (round(540 - pw / 2), round(480 + dy - 106 * scale)), pl)
+        if 'dock' in enabled:
+            canvas.paste(pl, (round(540 - pw / 2), round(480 + dy - 106 * scale)), pl)
         local = t - LEAD
         # Each cue is tied to the measured cursor encounter; no independent looping pulse.
         pulses = [pulse(local, .39, .44, .45, .52),
@@ -94,7 +100,9 @@ def build_scene():
                       pulse(local, 2.11, 2.18, 2.21, 2.34)),
                   pulse(local, .73, .86, 1.44, 1.62)]
         for i, src in enumerate(icons):
-            hover = pulses[i]
+            if 'icons' not in enabled:
+                break
+            hover = pulses[i] if 'hover' in enabled else 0.
             sz = (1 + .16 * hover) * scale
             w, h = round(src.width * sz), round(src.height * sz)
             icon = src.resize((w, h), Image.Resampling.BICUBIC)
@@ -102,7 +110,7 @@ def build_scene():
             cy = 480 + dy - 7 * hover * scale
             canvas.paste(icon, (round(cx - w / 2), round(cy - h / 2)), icon)
         st = state(t)
-        if st:
+        if st and 'cursor' in enabled:
             x, y, angle = st
             rot = cv2.getRotationMatrix2D((96, 96), -angle, 1.)
             arr = cv2.warpAffine(np.array(cursor), rot, (192, 192), flags=cv2.INTER_CUBIC)
@@ -113,7 +121,7 @@ def build_scene():
     return scene, state
 
 
-def render(output):
+def render(output, components=None):
     if output.suffix.lower() != '.mp4':
         raise ValueError('Output must be MP4')
     if output.exists():
@@ -121,7 +129,8 @@ def render(output):
     if ASSETS == output.parent or ASSETS in output.parents:
         raise ValueError('Choose an output outside original reference assets')
     output.parent.mkdir(parents=True, exist_ok=True)
-    scene, state = build_scene()
+    enabled = COMPONENTS if components is None else frozenset(components)
+    scene, state = build_scene(enabled)
     # White is invariant outside this ROI; integrate only the moving scene region.
     roi = (0, 100, 1080, 800)
     proc = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo',
@@ -164,6 +173,7 @@ def render(output):
     assert (v['width'], v['height'], int(v['nb_frames'])) == (WIDTH, HEIGHT, 102)
     assert not any(s['codec_type'] == 'audio' for s in info['streams'])
     report = dict(variant='white-icon-dock-v1', duration=DURATION, fps=FPS, frames=102,
+        components=sorted(enabled),
         width=WIDTH, height=HEIGHT, audio=False, presenter=False, speech_sync_tested=False,
         status='visual reconstruction awaiting user review; not approved style canon',
         entrance=dict(bezier=[0, 0, 0, 1], start=.06, duration=.54, authored_lead_in=LEAD),
@@ -179,5 +189,8 @@ def render(output):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--components', default=','.join(sorted(COMPONENTS)),
+        help='Independent tools: dock,icons,cursor,hover,entrance. Empty means white stage only.')
     args = parser.parse_args()
-    render(args.output.resolve())
+    selected = {part.strip() for part in args.components.split(',') if part.strip()}
+    render(args.output.resolve(), selected)
