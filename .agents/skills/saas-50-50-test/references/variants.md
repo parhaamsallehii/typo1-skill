@@ -33,3 +33,5 @@ as additions to this toolset. Do not impose one example's red, white stage or gr
 on the entire skill. In shot plans list the actual chosen components and why.
 
 Lesson5: `outline-square-reaction-v1` — hollow-square field, feathered radial reveal, fast-to-soft expansion and late fade; optional box clip; brand/icon palette. Exactly5s portrait study awaiting review.
+
+Outline-square reaction revision2 supersedes the rejected broad first study: local icon radius, larger/denser squares, strong colored glow, close camera, stronger local temporal blur.

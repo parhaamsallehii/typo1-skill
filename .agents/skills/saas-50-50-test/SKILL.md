@@ -70,7 +70,7 @@ tools can be used separately in other contexts. The user calls these visual edit
 
 ## Hollow-square click reaction
 
-For the independently reusable hollow-square field revealed by a fast-start, soft-finish feathered circular matte and late opacity fade, read `references/outline-square-reaction-v1.md`. Inspect its bundled original MP4 and blur PNG. Allow box-clipped and free-space use. The lesson5 study is exactly5 seconds at1080x1920, awaiting review.
+For the independently reusable hollow-square field revealed by a fast-start, soft-finish feathered circular matte and late opacity fade, read `references/outline-square-reaction-v1.md`. Inspect its bundled original MP4 and blur PNG. Allow box-clipped and free-space use. Prefer revision2: larger/denser glowing hollow squares confined around the icon, close framing and a local stronger-blur override. The lesson5 study-v2 is exactly5 seconds at1080x1920, awaiting review; the first study was rejected.
 
 ## Select variants without turning examples into universal rules
 

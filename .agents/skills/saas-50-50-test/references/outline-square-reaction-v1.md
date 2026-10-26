@@ -18,3 +18,14 @@ Inspect assets/variants/outline-square-reaction-v1/reference.mp4 and motion-blur
 
 ## درخواست کاربر به فارسی
 واکنش کلیک روی آیکون یا شیپ: مربع‌های کوچک بدون فیل با استروک رنگی در محدودهٔ یک دایرهٔ فیدشده نمایان شوند. ماسک دایره‌ای از محل کلیک بزرگ شود؛ شروع بسیار سریع و پایان بسیار نرم و آرام باشد. اواخر حرکت، اوپاسیتی مربع‌ها تدریجاً صفر شود. نمونه داخل باکس محدود است اما استفادهٔ آزاد در جاهای دیگر مجاز است. هر جزء ابزار مستقلی است و ترکیب با اجزای دیگر اختیاری است. رنگ براساس برند یا آیکون انتخاب شود. همهٔ جزئیات و رفرنس حفظ شوند. موشن‌بلر مطابق تصویر روشن باشد. تست این پیام دقیقاً پنج ثانیه و۱۰۸۰×۱۹۲۰ با موضوع و رنگ‌بندی متفاوت باشد. ثبت در اسکیل و گیت‌هاب الزامی است.
+
+## Revision 2 — latest user correction, overrides broad first study
+The user rejected the first study's small/sparse squares and full-box spread. Prefer larger, denser hollow squares with strong Deep Glow-style colored halos. Keep the reaction in a soft circular neighborhood around the icon; never fill the whole box. Use a closer camera framing. Preserve the empty square interiors structurally; glow may spill softly into them. Keep a sharp stroke core plus narrow and broad colored halos. Radius must be constrained relative to icon size, independently of container width.
+
+Current coded study: square side16, pitch20, stroke2 in source coordinates; 2x close framing makes side32 and pitch40 output pixels. Radius145 source pixels around the icon, feather65; this affects only a local portion of the910px box. Use two glow scales sigma3 and12, gains1.5 and1.8, screen-composited in the accent family. These are authored reconstruction values, not original AE settings.
+
+The user explicitly requests much stronger motion blur for this revision. Apply a local override of shutter720 degrees, phase0,64 temporal samples with adaptive limit128, integrating [t,t+2/fps]. This overrides180 degrees only for this reaction study; other lessons keep their existing settings. In native AE a comparable stronger shutter is a starting recipe; the coded glow is an approximation of Deep Glow, not that plugin. Do not claim increasing sample count alone increases blur length.
+
+Study v2: exactly5s,1080x1920, same focus-session subject and green/ochre palette, close camera. Retain the first study as rejected/superseded history; use study-v2.mp4 as the current candidate, awaiting explicit review.
+
+اصلاح کاربر: مربع‌ها بزرگ‌تر و شلوغ‌تر، با دیپ‌گلو؛ اثر فقط اطراف آیکون بماند و کل باکس را پر نکند. اجرا زوم‌تر و موشن‌بلر بسیار بیشتر باشد. این اصلاح بر نمونهٔ اول اولویت دارد و رنگ‌ها و اجزا همچنان مستقل و قابل تغییرند.
