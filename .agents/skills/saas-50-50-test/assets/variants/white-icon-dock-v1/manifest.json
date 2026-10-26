@@ -1,0 +1,78 @@
+{
+  "source_files": [
+    {
+      "original_name": "نمونه حرکت موس و اکشن ایکون ها به موس و یک نوع گراف اومدن شیپ و ایکون ها و نمونه استایل یکم بعد دار ایکون ها.mp4",
+      "file": "reference.mp4",
+      "library_file_id": "libfile_5d5e3afa129c81919368ac1c6a4f0d87",
+      "sha256": "1d2a749f8fd9c98e1eabbe8f2f429334cd9aacb0e3305551e56f525e03bc9bf5"
+    },
+    {
+      "original_name": "نمونه گراف ورود سریع .png",
+      "file": "entrance-curve.png",
+      "library_file_id": "libfile_6a389f5e90788191bbd909cdd216dea4",
+      "sha256": "58359eba4af744b451bbf51ed3af1701ff1b96ab94b408f77135e864c058e78b"
+    },
+    {
+      "original_name": "تنظیمات موشن بلر مثل افتر افکت(3).png",
+      "file": "motion-blur-settings.png",
+      "library_file_id": "libfile_8eec2dcc22e08191b9e98536d39b3b6f",
+      "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+    }
+  ],
+  "icon_crops": {
+    "source_frame_zero_based": 10,
+    "boxes": {
+      "notes": [
+        198,
+        906,
+        308,
+        1016
+      ],
+      "discord": [
+        345,
+        906,
+        453,
+        1014
+      ],
+      "pinterest": [
+        484,
+        904,
+        594,
+        1016
+      ],
+      "after-effects": [
+        624,
+        903,
+        736,
+        1016
+      ],
+      "messages": [
+        765,
+        906,
+        874,
+        1016
+      ]
+    },
+    "alpha": "rounded silhouette mask authored; screenshot appearance retained"
+  },
+  "source_active_region": [
+    0,
+    514,
+    1080,
+    892
+  ],
+  "source_black_letterboxing": "not a design instruction; do not reproduce in panel",
+  "test_status": "approved by user: عالی بود حتی این ویدیو تست هم تو اسکیل بزار",
+  "entrance_bezier": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "motion_blur": {
+    "shutter_angle": 180,
+    "phase": 0,
+    "samples": 16,
+    "adaptive_limit": 128
+  }
+}

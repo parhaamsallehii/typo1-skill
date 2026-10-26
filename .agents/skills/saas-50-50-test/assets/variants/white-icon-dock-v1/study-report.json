@@ -1,0 +1,34 @@
+{
+  "variant": "white-icon-dock-v1",
+  "duration": 3.4,
+  "fps": 30,
+  "frames": 102,
+  "width": 1080,
+  "height": 960,
+  "audio": false,
+  "presenter": false,
+  "speech_sync_tested": false,
+  "status": "approved by user; retain this exact study as the variant benchmark",
+  "entrance": {
+    "bezier": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "start": 0.06,
+    "duration": 0.54,
+    "authored_lead_in": 0.5
+  },
+  "motion_blur": {
+    "method": "per-subframe RGB temporal integration; no directional blur",
+    "shutter_angle": 180,
+    "phase": 0,
+    "minimum_samples": 16,
+    "adaptive_limit": 128,
+    "actual_min": 16,
+    "actual_max": 128
+  },
+  "cursor": "measured frame centroids/rotations; authored PCHIP subframe interpolation",
+  "sha256": "fc19df5dc468332205be568fcf9548d2f0e6e564d2985238789ae632ee43217c"
+}

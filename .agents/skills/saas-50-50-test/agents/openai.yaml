@@ -1,4 +1,14 @@
 interface:
-  display_name: "SaaS 50.50 Test"
-  short_description: "Presenter above, speech-synced SaaS motion below"
-  default_prompt: "Use $saas-50-50-test to put my presenter in the top half and reference-matched SaaS animation synced to the narration in the bottom half."
+  display_name: SaaS 50.50 Test
+  short_description: Presenter above, speech-synced SaaS motion below
+  default_prompt: Use $saas-50-50-test to put my presenter in the top half and reference-matched
+    SaaS animation synced to the narration in the bottom half.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

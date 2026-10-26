@@ -1,0 +1,847 @@
+{
+  "reference_frame": 28,
+  "polygon_centered": [
+    [
+      -21.731,
+      -41.383
+    ],
+    [
+      -16.731,
+      25.617
+    ],
+    [
+      -1.731,
+      10.617
+    ],
+    [
+      19.269,
+      42.617
+    ],
+    [
+      22.269,
+      42.617
+    ],
+    [
+      28.269,
+      36.617
+    ],
+    [
+      9.269,
+      5.617
+    ],
+    [
+      30.269,
+      2.617
+    ]
+  ],
+  "records": [
+    {
+      "frame": 13,
+      "t": 0.43333333333333335,
+      "cx": 161.383,
+      "cy": 518.39,
+      "rotation": 16.0,
+      "scale": 1.0,
+      "iou": 0.084,
+      "rotation_status": "estimated because source motion blur obscures shape",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 14,
+      "t": 0.4666666666666667,
+      "cx": 324.345,
+      "cy": 510.558,
+      "rotation": 16.0,
+      "scale": 1.0,
+      "iou": 0.289,
+      "rotation_status": "estimated because source motion blur obscures shape",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 15,
+      "t": 0.5,
+      "cx": 432.564,
+      "cy": 505.036,
+      "rotation": 16.0,
+      "scale": 1.0,
+      "iou": 0.434,
+      "rotation_status": "estimated because source motion blur obscures shape",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 16,
+      "t": 0.5333333333333333,
+      "cx": 510.802,
+      "cy": 501.565,
+      "rotation": 16.0,
+      "scale": 1.0,
+      "iou": 0.505,
+      "rotation_status": "estimated because source motion blur obscures shape",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 17,
+      "t": 0.5666666666666667,
+      "cx": 572.279,
+      "cy": 503.768,
+      "rotation": 16.0,
+      "scale": 0.94,
+      "iou": 0.696,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 18,
+      "t": 0.6,
+      "cx": 620.979,
+      "cy": 502.979,
+      "rotation": 14.0,
+      "scale": 0.94,
+      "iou": 0.786,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 19,
+      "t": 0.6333333333333333,
+      "cx": 660.804,
+      "cy": 502.369,
+      "rotation": 10.0,
+      "scale": 0.94,
+      "iou": 0.836,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 20,
+      "t": 0.6666666666666666,
+      "cx": 694.164,
+      "cy": 501.697,
+      "rotation": 8.0,
+      "scale": 0.94,
+      "iou": 0.872,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 21,
+      "t": 0.7,
+      "cx": 722.189,
+      "cy": 501.196,
+      "rotation": 6.0,
+      "scale": 0.94,
+      "iou": 0.893,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 22,
+      "t": 0.7333333333333333,
+      "cx": 745.844,
+      "cy": 500.561,
+      "rotation": 6.0,
+      "scale": 1,
+      "iou": 0.9,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 23,
+      "t": 0.7666666666666667,
+      "cx": 766.141,
+      "cy": 500.241,
+      "rotation": 4.0,
+      "scale": 0.94,
+      "iou": 0.91,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 24,
+      "t": 0.8,
+      "cx": 783.583,
+      "cy": 499.97,
+      "rotation": 2.0,
+      "scale": 1,
+      "iou": 0.923,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 25,
+      "t": 0.8333333333333334,
+      "cx": 798.308,
+      "cy": 499.461,
+      "rotation": 2.0,
+      "scale": 1,
+      "iou": 0.927,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 26,
+      "t": 0.8666666666666667,
+      "cx": 810.855,
+      "cy": 499.445,
+      "rotation": 2.0,
+      "scale": 1,
+      "iou": 0.919,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 27,
+      "t": 0.9,
+      "cx": 821.1,
+      "cy": 499.38,
+      "rotation": 0.0,
+      "scale": 1,
+      "iou": 0.938,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 28,
+      "t": 0.9333333333333333,
+      "cx": 829.731,
+      "cy": 499.383,
+      "rotation": 0.0,
+      "scale": 1,
+      "iou": 0.934,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 29,
+      "t": 0.9666666666666667,
+      "cx": 838.895,
+      "cy": 498.885,
+      "rotation": -2.0,
+      "scale": 1,
+      "iou": 0.921,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 30,
+      "t": 1.0,
+      "cx": 849.012,
+      "cy": 496.392,
+      "rotation": -8.0,
+      "scale": 1,
+      "iou": 0.93,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 31,
+      "t": 1.0333333333333334,
+      "cx": 859.953,
+      "cy": 490.906,
+      "rotation": -18.0,
+      "scale": 1,
+      "iou": 0.912,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 32,
+      "t": 1.0666666666666667,
+      "cx": 869.639,
+      "cy": 482.04,
+      "rotation": -28.0,
+      "scale": 1,
+      "iou": 0.922,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 33,
+      "t": 1.1,
+      "cx": 876.372,
+      "cy": 471.493,
+      "rotation": -38.0,
+      "scale": 1,
+      "iou": 0.907,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 34,
+      "t": 1.1333333333333333,
+      "cx": 879.202,
+      "cy": 461.121,
+      "rotation": -48.0,
+      "scale": 1,
+      "iou": 0.922,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 35,
+      "t": 1.1666666666666667,
+      "cx": 878.801,
+      "cy": 452.484,
+      "rotation": -58.0,
+      "scale": 1,
+      "iou": 0.929,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 36,
+      "t": 1.2,
+      "cx": 875.979,
+      "cy": 446.002,
+      "rotation": -64.0,
+      "scale": 1,
+      "iou": 0.923,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 37,
+      "t": 1.2333333333333334,
+      "cx": 871.733,
+      "cy": 441.223,
+      "rotation": -70.0,
+      "scale": 1,
+      "iou": 0.933,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 38,
+      "t": 1.2666666666666666,
+      "cx": 866.437,
+      "cy": 438.129,
+      "rotation": -74.0,
+      "scale": 1,
+      "iou": 0.925,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 39,
+      "t": 1.3,
+      "cx": 860.281,
+      "cy": 436.575,
+      "rotation": -78.0,
+      "scale": 1,
+      "iou": 0.911,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 40,
+      "t": 1.3333333333333333,
+      "cx": 853.552,
+      "cy": 436.309,
+      "rotation": -80.0,
+      "scale": 1,
+      "iou": 0.916,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 41,
+      "t": 1.3666666666666667,
+      "cx": 845.539,
+      "cy": 437.472,
+      "rotation": -82.0,
+      "scale": 1,
+      "iou": 0.927,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 42,
+      "t": 1.4,
+      "cx": 836.753,
+      "cy": 439.634,
+      "rotation": -82.0,
+      "scale": 1,
+      "iou": 0.917,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 43,
+      "t": 1.4333333333333333,
+      "cx": 826.601,
+      "cy": 443.221,
+      "rotation": -82.0,
+      "scale": 1,
+      "iou": 0.918,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 44,
+      "t": 1.4666666666666666,
+      "cx": 814.933,
+      "cy": 447.915,
+      "rotation": -82.0,
+      "scale": 1,
+      "iou": 0.924,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 45,
+      "t": 1.5,
+      "cx": 800.91,
+      "cy": 453.624,
+      "rotation": -80.0,
+      "scale": 1,
+      "iou": 0.905,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 46,
+      "t": 1.5333333333333334,
+      "cx": 783.537,
+      "cy": 460.324,
+      "rotation": -76.0,
+      "scale": 1,
+      "iou": 0.916,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 47,
+      "t": 1.5666666666666667,
+      "cx": 761.281,
+      "cy": 467.492,
+      "rotation": -70.0,
+      "scale": 1,
+      "iou": 0.92,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 48,
+      "t": 1.6,
+      "cx": 731.605,
+      "cy": 473.556,
+      "rotation": -62.0,
+      "scale": 0.94,
+      "iou": 0.889,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 49,
+      "t": 1.6333333333333333,
+      "cx": 690.743,
+      "cy": 474.564,
+      "rotation": -50.0,
+      "scale": 0.94,
+      "iou": 0.891,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 50,
+      "t": 1.6666666666666667,
+      "cx": 636.579,
+      "cy": 461.477,
+      "rotation": -34.0,
+      "scale": 0.94,
+      "iou": 0.848,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 51,
+      "t": 1.7,
+      "cx": 576.924,
+      "cy": 424.748,
+      "rotation": -16.0,
+      "scale": 0.94,
+      "iou": 0.847,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 52,
+      "t": 1.7333333333333334,
+      "cx": 531.118,
+      "cy": 372.815,
+      "rotation": 2.0,
+      "scale": 0.94,
+      "iou": 0.872,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 53,
+      "t": 1.7666666666666666,
+      "cx": 503.937,
+      "cy": 322.713,
+      "rotation": 24.0,
+      "scale": 0.94,
+      "iou": 0.877,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 54,
+      "t": 1.8,
+      "cx": 490.396,
+      "cy": 277.258,
+      "rotation": 48.0,
+      "scale": 0.94,
+      "iou": 0.873,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 55,
+      "t": 1.8333333333333333,
+      "cx": 491.159,
+      "cy": 237.75,
+      "rotation": 70.0,
+      "scale": 0.94,
+      "iou": 0.891,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 56,
+      "t": 1.8666666666666667,
+      "cx": 503.885,
+      "cy": 208.139,
+      "rotation": 88.0,
+      "scale": 0.94,
+      "iou": 0.9,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 57,
+      "t": 1.9,
+      "cx": 521.686,
+      "cy": 184.587,
+      "rotation": 102.0,
+      "scale": 1,
+      "iou": 0.918,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 58,
+      "t": 1.9333333333333333,
+      "cx": 545.549,
+      "cy": 169.533,
+      "rotation": 116.0,
+      "scale": 0.94,
+      "iou": 0.895,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 59,
+      "t": 1.9666666666666666,
+      "cx": 577.72,
+      "cy": 155.263,
+      "rotation": 132.0,
+      "scale": 0.94,
+      "iou": 0.868,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 60,
+      "t": 2.0,
+      "cx": 621.074,
+      "cy": 148.175,
+      "rotation": 156.0,
+      "scale": 0.94,
+      "iou": 0.777,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 61,
+      "t": 2.033333333333333,
+      "cx": 673.052,
+      "cy": 162.638,
+      "rotation": 188.0,
+      "scale": 0.94,
+      "iou": 0.685,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 62,
+      "t": 2.066666666666667,
+      "cx": 716.299,
+      "cy": 208.673,
+      "rotation": 224.0,
+      "scale": 0.94,
+      "iou": 0.651,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 63,
+      "t": 2.1,
+      "cx": 735.297,
+      "cy": 273.746,
+      "rotation": 256.0,
+      "scale": 0.94,
+      "iou": 0.615,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 64,
+      "t": 2.1333333333333333,
+      "cx": 732.461,
+      "cy": 335.165,
+      "rotation": 278.0,
+      "scale": 0.94,
+      "iou": 0.668,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 65,
+      "t": 2.1666666666666665,
+      "cx": 718.155,
+      "cy": 381.197,
+      "rotation": 296.0,
+      "scale": 0.94,
+      "iou": 0.766,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 66,
+      "t": 2.2,
+      "cx": 700.218,
+      "cy": 412.547,
+      "rotation": 310.0,
+      "scale": 0.94,
+      "iou": 0.867,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 67,
+      "t": 2.2333333333333334,
+      "cx": 682.875,
+      "cy": 434.041,
+      "rotation": 320.0,
+      "scale": 0.94,
+      "iou": 0.902,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 68,
+      "t": 2.2666666666666666,
+      "cx": 667.938,
+      "cy": 449.843,
+      "rotation": 326.0,
+      "scale": 0.94,
+      "iou": 0.902,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 69,
+      "t": 2.3,
+      "cx": 654.531,
+      "cy": 461.437,
+      "rotation": 332.0,
+      "scale": 1,
+      "iou": 0.91,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 70,
+      "t": 2.3333333333333335,
+      "cx": 642.938,
+      "cy": 470.2,
+      "rotation": 338.0,
+      "scale": 1,
+      "iou": 0.928,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 71,
+      "t": 2.3666666666666667,
+      "cx": 632.873,
+      "cy": 477.131,
+      "rotation": 342.0,
+      "scale": 1,
+      "iou": 0.933,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 72,
+      "t": 2.4,
+      "cx": 624.105,
+      "cy": 482.707,
+      "rotation": 344.0,
+      "scale": 1,
+      "iou": 0.912,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 73,
+      "t": 2.433333333333333,
+      "cx": 616.365,
+      "cy": 487.031,
+      "rotation": 348.0,
+      "scale": 1,
+      "iou": 0.915,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 74,
+      "t": 2.466666666666667,
+      "cx": 609.659,
+      "cy": 490.728,
+      "rotation": 350.0,
+      "scale": 1,
+      "iou": 0.929,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 75,
+      "t": 2.5,
+      "cx": 603.809,
+      "cy": 493.756,
+      "rotation": 352.0,
+      "scale": 1,
+      "iou": 0.922,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 76,
+      "t": 2.533333333333333,
+      "cx": 598.699,
+      "cy": 496.268,
+      "rotation": 354.0,
+      "scale": 1,
+      "iou": 0.945,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 77,
+      "t": 2.566666666666667,
+      "cx": 594.234,
+      "cy": 498.348,
+      "rotation": 356.0,
+      "scale": 1,
+      "iou": 0.925,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 78,
+      "t": 2.6,
+      "cx": 590.189,
+      "cy": 500.093,
+      "rotation": 356.0,
+      "scale": 1,
+      "iou": 0.928,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 79,
+      "t": 2.6333333333333333,
+      "cx": 586.739,
+      "cy": 501.51,
+      "rotation": 358.0,
+      "scale": 1.04,
+      "iou": 0.917,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 80,
+      "t": 2.6666666666666665,
+      "cx": 583.816,
+      "cy": 502.844,
+      "rotation": 358.0,
+      "scale": 1,
+      "iou": 0.925,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 81,
+      "t": 2.7,
+      "cx": 581.224,
+      "cy": 503.814,
+      "rotation": 360.0,
+      "scale": 1,
+      "iou": 0.908,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 82,
+      "t": 2.7333333333333334,
+      "cx": 579.091,
+      "cy": 504.786,
+      "rotation": 360.0,
+      "scale": 1,
+      "iou": 0.919,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 83,
+      "t": 2.7666666666666666,
+      "cx": 571.344,
+      "cy": 502.928,
+      "rotation": 360.0,
+      "scale": 1,
+      "iou": 0.919,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    },
+    {
+      "frame": 84,
+      "t": 2.8,
+      "cx": 569.808,
+      "cy": 503.549,
+      "rotation": 362.0,
+      "scale": 1.04,
+      "iou": 0.913,
+      "rotation_status": "measured silhouette fit, approximate",
+      "render_scale": 1.0
+    }
+  ],
+  "coordinate_system": {
+    "source": [
+      1080,
+      1920
+    ],
+    "active_region": [
+      0,
+      514,
+      1080,
+      892
+    ],
+    "stored_cy": "source y minus 514",
+    "test_offset_y": 34,
+    "centroid_pivot": true
+  },
+  "provenance": "Black-arrow connected-component centroid and silhouette rotation fitted to each decoded reference frame; no recovery of editable original keyframes. Dense samples approximate the observed trajectory. Subframe interpolation is authored."
+}

@@ -5,8 +5,11 @@ description: >-
   original presenter above, SaaS product-motion matched to the actual narration
   below. Use for saas 50.50 test, saas-50-50-test, SaaS 50/50, موشن ساس نصف صفحه
   or مجری بالا موشن پایین. Inspect the three bundled video references before
-  each use. Match their bright white/glass UI, soft shadows, gradient accents,
-  cursor-led interactions, perspective camera moves, word emphasis and card fans.
+  each use and inspect selected variant references. Choose from a growing library
+  of independently reusable SaaS components; include dimensional icons, cursor
+  hover, elastic pre-click anticipation, outline pixels and five-disc gradient
+  reveals. Combine or separate components creatively; bind colors to the video
+  brand or selected icon. Apply 180-degree, phase-zero, 16–128-sample motion blur.
   Preserve presenter/audio timing and verify speech cues; do not invent alignment.
 ---
 
@@ -15,6 +18,76 @@ description: >-
 Create two equal horizontal panes. Put the original main talking-head presenter
 in the **top** pane and narration-specific SaaS animation in the **bottom** pane.
 Use the user's exact wording “saas 50.50 test” as an invocation alias.
+
+## Save every update to both skill storage and GitHub
+
+The user explicitly requires **every future correction/addition/approval** to be
+saved in both the registered skill and its GitHub copy. Treat both writes as part
+of completing an update; no further permission is needed within this skill's scope.
+
+- GitHub repository: `parhaamsallehii/typo1-skill`, branch `main`.
+- Skill path there: `.agents/skills/saas-50-50-test/`.
+- Keep the entire skill directory identical across both destinations: instructions,
+  detailed component recipes, scripts, original references, measured motion data,
+  icons, both approved study videos and their reports. Include future additions.
+- Preserve unrelated repository content. Inspect current branch state, commit the
+  scoped change and update with an expected-head check; never force-push over work.
+- Verify remote file paths and Git blob hashes match the local skill snapshot,
+  including binary MP4/PNG files and removed/replaced files, after the GitHub write.
+- Also validate, commit and push the registered Skills workspace as required by
+  Skill Creator. Do not call an update fully saved until both destinations succeed.
+  If either destination fails, retain the completed copy and state exactly which
+  destination remains unsynchronized; do not claim automatic cross-platform sync.
+- For visual lessons, retain the required sub-five-second test workflow below.
+  A pure synchronization or approval-only update need not invent a new animation.
+
+## Select variants without turning examples into universal rules
+
+**Make independent component selection the central principle of this skill.**
+An example may contain linked animations, transitions, backgrounds, materials,
+camera moves and interactions. Preserve both (a) the complete reference sequence
+and (b) reusable recipes for each constituent part. Never infer that components
+must always appear together just because they share a reference. For example,
+use pre-click anticipation without circles; use circles without a cursor/icon;
+use hollow pixels on another motivated transition; or reproduce all three as a
+linked click/reveal. Choose based on the actual narration, not a fixed template.
+Read `references/component-system.md` for independent triggers, event links,
+palette binding and component composition rules.
+
+Read `references/variants.md` before planning. Treat each detailed example as a
+reusable **variant**, not a restriction on the entire skill. Choose backgrounds,
+icon treatments, entrances, graphs, transitions and camera moves to suit the
+actual narration, the user's latest direction and compatible reference motifs.
+Allow future variants alongside existing ones. Use editorial judgment; do not
+randomly cycle unrelated effects or insist on white backgrounds for all shots.
+
+For the dimensional icon dock, pointer loop, hover reactions, white stage or
+fast-start/long-tail entrance, read `references/white-icon-dock-v1.md` and actively
+inspect its original MP4 plus both PNGs in `assets/variants/white-icon-dock-v1/`.
+Use the dense measured cursor trajectory and reusable renderer there; do not
+replace it with a generic straight pointer tween. Keep the exact screenshot
+entrance curve distinct from estimated pointer/hover curves.
+
+For the elastic pre-click draw-back, accelerating strike, hollow pixel burst,
+five alternately shaded discs, fine rim light and dimensional symbol/plan change,
+read `references/anticipation-circle-reveal-v1.md`. Inspect its unchanged source
+and blur screenshot under `assets/variants/anticipation-circle-reveal-v1/`.
+Use components independently or compose them in the reference event order. Bind
+palette to explicit shot direction, linked icon color or the video's brand;
+the example's red must never become a global color requirement.
+
+The exact `assets/variants/white-icon-dock-v1/study.mp4` was explicitly approved
+by the user and is bundled as that variant's visual benchmark. Preserve its bytes.
+The exact 2.4s `assets/variants/anticipation-circle-reveal-v1/study.mp4` has also
+been explicitly approved. Preserve both original benchmark videos and hashes.
+
+For every subsequent user teaching message that adds or corrects the skill,
+produce a **new video strictly shorter than five seconds** demonstrating that
+specific lesson. Preserve original reference files and detailed parameters.
+Compare the rendered motion to the reference; deliver the test with the skill
+update. Record it as awaiting review until the user explicitly accepts it.
+Do not infer approval from successful rendering, silence or this instruction.
+The prior Higgsfield test was rejected; never use it as an approved style seed.
 
 ## Inspect references actively, every time
 
@@ -27,7 +100,8 @@ Do this before authoring, even if this skill was used earlier:
    Add a dense frame strip around a camera move or UI interaction. Do not stretch
    a landscape reference into a portrait contact sheet. Inspect temporal change,
    not just a single attractive screenshot.
-3. Read `references/style-and-motion.md`. Select the matching reference motif for
+3. Read `references/style-and-motion.md` and the selected variant's detailed recipe.
+   Select the matching reference motif for
    each narration beat. Preserve the reference's visual language when changing
    subject, text and assets. Do not reuse its unrelated travel/shopping/Pinterest
    footage as the lower panel's content.
@@ -85,7 +159,7 @@ automatic synchronization. This skill does not bundle an ASR model or credential
 
 ## Match the SaaS look and movement
 
-- Use a near-white stage, raised white rounded capsules/cards, fine pale borders,
+- For light/glass variants, use a near-white stage, raised white rounded capsules/cards, fine pale borders,
   soft layered shadows, glass planes and restrained pastel/iridescent accents.
   Use the larger full-color gradient episode only when it serves a reference motif.
 - Use crisp near-black sans typography, clear hierarchy and ample negative space.
@@ -96,35 +170,59 @@ automatic synchronization. This skill does not bundle an ASR model or credential
 - Keep motion motivated: pointer → control response → camera move → resulting
   UI state. Use long-tail arrival easing and faster accelerating handoffs. Hold
   important words/results. Do not make every element bounce or continuously pulse.
-- Preserve real render-time motion blur for fast transitions. Use the existing
-  renderer's supported setting; do not claim native AE motion blur was executed.
+- Enable motion blur on the composition **and every moving visual layer**. Match
+  the supplied screenshot: **shutter angle 180°, phase 0°, samples per frame 16,
+  adaptive sample limit 128**. In native AE enable the comp and layer switches.
+  In code integrate actual subframe position/rotation/scale/hover/camera states
+  over `[t, t + 0.5/fps]`, at least 16 samples, adapting up to 128. A CSS blur,
+  duplicated trail or export flag without temporal sampling is insufficient.
+  Read `references/white-icon-dock-v1.md` for the implementation and verify fast
+  travel frames. State when this is a coded temporal equivalent, not native AE.
 - Treat CSS perspective as 3D UI planes. Do not call it a Blender mesh/physical
   scene. The rendered references do not reveal their original project, parenting
   or exact graph values; infer and compare honestly instead of inventing them.
 - Match style/choreography, not a promise of pixel-identical unrelated content.
 
-## Reuse the tested motion seed
+## Render the icon-dock study
 
-`assets/higgsfield-demo/` contains a complete, locally resourced HyperFrames/GSAP
-motion seed with fonts, photo and design rules. It renders a **five-second silent
-motion-only test**, as the user explicitly chose for testing. It is not a default
-presenter output and it was not tested against a supplied narration.
-
-Copy it to the task workspace, read its `DESIGN.md` and `index.html`, then retarget
-subject, assets, layout and **all timings** to the real speech plan. Its authored
-viewport is 1080×960, matching the lower pane directly. Do not treat a fixed five
-seconds as a requirement for production shots.
+Use the deterministic renderer for this variant's short visual study. It uses
+icon raster crops from the supplied reference, frame-measured cursor transforms,
+explicit hover cues and real adaptive temporal sampling. It does not transcribe,
+compose presenter footage or author arbitrary SaaS stories.
 
 ```bash
-cd /task/motion
-npm run check
-npx hyperframes snapshot --at 0.7,2.0,4.1 --describe false
-npm run render -- --output /task/lower-motion.mp4 --fps 30 --quality high
+python scripts/render_icon_dock.py --output /task/saas-icon-dock-test.mp4
 ```
 
-Use the installed HyperFrames/GSAP guidance. Inspect snapshots and fix errors before
-rendering. Keep input assets local. Neither this skill nor the seed connects to a
-paid video site or makes a paid generation automatically.
+Dependencies: Python, Pillow, numpy, scipy, opencv-python-headless, FFmpeg/ffprobe.
+The output is 1080×960, 30fps, 3.4s, silent and motion-only. Adapt visual subjects
+and timings to actual speech for production instead of pasting this study into
+every video. In other renderers reproduce the trajectory/curves and exposure
+contract, then inspect temporal frames. Do not claim a paid-site generation.
+
+## Render the click/reveal lesson or its independent components
+
+```bash
+python scripts/render_click_reveal.py --mode combined --color '#E60023' \
+  --output /task/saas-click-reveal-test.mp4
+```
+
+Use `--mode anticipation` for only the measured pointer draw-back/strike over a
+dock; `--mode transition` for the discs/pixels/symbol without pointer/dock; or
+`--mode pixels` for only hollow pixels. The Python module also exposes separate
+`AnticipationCursor`, `OutlinePixelBurst`, `FiveDiscReveal` and `DimensionalSymbol`
+classes for independent scene orchestration. Pass a different `--color` from the
+actual brand/icon; pass matching transparent `--symbol` artwork when retargeting.
+Use `--no-symbol` for a transition without an icon, and `--no-pixels` when only
+the five discs are needed. Do not retain Pinterest in an unrelated brand reveal.
+Red/Pinterest defaults reproduce only this specific lesson. Never claim the fixed
+study is a general scene author, ASR system or native AE/Blender execution.
+
+The study is 1080×960, 30fps, 2.4s, silent; output time equals source-local time
+plus .4s, with a final hold. It preserves the previous approved study unchanged.
+Use the same dependencies as the dock renderer. Inspect consecutive output frames,
+the actual sampled exposure and the reference. The exact bundled study is now
+user-approved; future changed renders must be reviewed separately.
 
 ## Compose an interval
 
@@ -159,5 +257,10 @@ and writes its frame count, pane rectangles and mode to a companion JSON report.
 - Verify action onset and semantic relevance against speech, including shot edits
   and source/composition offsets. Do not claim speech sync for a silent visual test.
 - Check audio, full decode, frame count, resolution, duration and untouched source.
+- Verify selected variants remain options, the actual motion-blur exposure was
+  sampled, and each skill-teaching update includes a new test shorter than 5s.
+- Verify component independence is explicit; palette selection follows the actual
+  brand/icon and a linked click chain is never mandatory for standalone use.
 - Deliver the rendered video and report the actual scope. Save skill changes through
-  the Skills Git workspace; do not hand the user a skill ZIP unless requested.
+  the Skills Git workspace **and** the specified GitHub skill path; verify both.
+  Do not hand the user a skill ZIP unless requested.

@@ -1,0 +1,31 @@
+{
+  "mode": "combined",
+  "color": "#E60023",
+  "duration": 2.4,
+  "fps": 30,
+  "frames": 72,
+  "width": 1080,
+  "height": 960,
+  "audio": false,
+  "presenter": false,
+  "speech_sync_tested": false,
+  "modules": [
+    "cursor-anticipation",
+    "outline-pixel-burst",
+    "five-gradient-disc-reveal",
+    "dimensional-symbol"
+  ],
+  "source_time_mapping": "output = source + 0.4s; final state held",
+  "blur": {
+    "angle": 180,
+    "phase": 0,
+    "minimum_samples": 16,
+    "adaptive_limit": 128,
+    "actual_min": 16,
+    "actual_max": 87
+  },
+  "status": "approved explicitly by user: اینم عالی بود سیوش کن",
+  "native_AE_executed": false,
+  "geometry": "deforming pointer mesh in screen space; projected layered symbol relief, not Blender mesh",
+  "sha256": "adee7671f6d06709238b19959b1c8ebdc9d5b1e316e0bef1fd1dbf285d291ba2"
+}

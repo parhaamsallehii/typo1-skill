@@ -1,0 +1,31 @@
+# SaaS variant selection
+
+Keep the skill open-ended. The user's lessons define reusable, composable variants
+within a style vocabulary; they do not impose one background, one entrance or one
+curve on every SaaS shot. Preserve fine detail in each variant's own recipe.
+
+| Variant | Background | Objects / action | Entrance | Status |
+| --- | --- | --- | --- | --- |
+| `white-icon-dock-v1` | White/light stage | Soft dimensional app tiles in a translucent rounded dock; black/white pointer sweeps, rotates and loops; local hover magnification | Exact screenshot `cubic-bezier(0,0,0,1)`; immediate high speed, very soft finish | Exact bundled study explicitly approved by user |
+| `anticipation-circle-reveal-v1` | Example starts light; destination uses icon/brand color | Elastic cursor draw-back/strike; hollow square burst; five alternating gradient discs with fine rim light; dimensional symbol | Slow soft preparation, accelerating strike; brief explosive reveal with long soft settle | Exact bundled2.4s study explicitly approved by user |
+| Original references 1–3 | Multiple bright, gradient, photographic and glass treatments | Travel assistant, shopping selection and visual-discovery motion vocabulary | Observe each actual move; original editable curves unavailable | Reference sources, not interchangeable fixed templates |
+
+Select by spoken concept and shot needs. A cursor dock is useful for selecting or
+switching apps; it is not necessary for every sentence. Retarget the app identities
+to the narration. Use the original icons only when the subject calls for them or
+when reconstructing this exact reference for a lesson test.
+
+When adding another lesson, retain existing alternatives, register the new variant,
+bundle the unchanged source, write precise appearance/geometry/timing/easing/blur/
+parenting rules and a short test recipe. Mark measurements, inferences and user
+numbers separately. Do not label a test approved until the user says so.
+
+The old five-second Higgsfield study was explicitly rejected. Its layout, gradient
+choices, car image, card sequence and choreography are not a style authority.
+Do not reuse it as the skill's seed or override later user examples with it.
+
+Read `component-system.md`: a variant is a reference recipe, not an indivisible
+block. Select its cursor/material/particles/camera/transition separately when that
+serves the narration, or combine them like the reference. Keep all later lessons
+as additions to this toolset. Do not impose one example's red, white stage or graph
+on the entire skill. In shot plans list the actual chosen components and why.

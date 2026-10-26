@@ -1,0 +1,50 @@
+{
+  "source_files": [
+    {
+      "file": "reference.mp4",
+      "original_name": "نمون اکشن موس قبل از زدن روی چیزی و نمونه ترنزیشن باز شدن یک ابجکت یا ایکون و تغییر پلان و ایکون 3 بعدی.mp4",
+      "library_file_id": "libfile_2341590494dc81918a9a9e2109ddb176",
+      "sha256": "c0a91e9d63fe2cebbf624de41a3f976fa5a5d02bcdd16bd10b161a0c0fd21119"
+    },
+    {
+      "file": "motion-blur-settings.png",
+      "original_name": "تنظیمات موشن بلر مثل افتر افکت(4).png",
+      "library_file_id": "libfile_fe34101df9248191bdca86ddd68c684a",
+      "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+    }
+  ],
+  "source_active_region": [
+    0,
+    655,
+    1080,
+    610
+  ],
+  "test_status": "approved explicitly by user: اینم عالی بود سیوش کن",
+  "modules": [
+    "cursor-anticipation",
+    "outline-pixel-burst",
+    "five-gradient-disc-reveal",
+    "dimensional-symbol"
+  ],
+  "palette": "bind to explicit user color, linked icon color, or video brand; red is example only",
+  "default_example_hex": "#E60023",
+  "source_duration": 1,
+  "source_frames": 30,
+  "fps": 30,
+  "blur": {
+    "angle": 180,
+    "phase": 0,
+    "samples": 16,
+    "adaptive_limit": 128
+  },
+  "symbol_crop": {
+    "source_frame": 28,
+    "source_box": [
+      430,
+      820,
+      650,
+      1110
+    ],
+    "mask": "low-saturation bright connected component; white silhouette crop, not original3Dasset"
+  }
+}
