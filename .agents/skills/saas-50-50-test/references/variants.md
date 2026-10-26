@@ -31,3 +31,5 @@ block. Select its cursor/material/particles/camera/transition separately when th
 serves the narration, or combine them like the reference. Keep all later lessons
 as additions to this toolset. Do not impose one example's red, white stage or graph
 on the entire skill. In shot plans list the actual chosen components and why.
+
+Lesson5: `outline-square-reaction-v1` — hollow-square field, feathered radial reveal, fast-to-soft expansion and late fade; optional box clip; brand/icon palette. Exactly5s portrait study awaiting review.

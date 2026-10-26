@@ -68,6 +68,10 @@ reference typing variant requires a synchronized camera, even though its underly
 tools can be used separately in other contexts. The user calls these visual edits
 “جی کات”; do not turn that alias into an unrequested audio J-cut.
 
+## Hollow-square click reaction
+
+For the independently reusable hollow-square field revealed by a fast-start, soft-finish feathered circular matte and late opacity fade, read `references/outline-square-reaction-v1.md`. Inspect its bundled original MP4 and blur PNG. Allow box-clipped and free-space use. The lesson5 study is exactly5 seconds at1080x1920, awaiting review.
+
 ## Select variants without turning examples into universal rules
 
 **Make independent component selection the central principle of this skill.**
