@@ -46,5 +46,28 @@
       1110
     ],
     "mask": "low-saturation bright connected component; white silhouette crop, not original3Dasset"
-  }
+  },
+  "resubmitted_sources": [
+    {
+      "original_name": "نمون اکشن موس قبل از زدن روی چیزی و نمونه ترنزیشن باز شدن یک ابجکت یا ایکون و تغییر پلان و ایکون 3 بعدی(1).mp4",
+      "file": "reference.mp4",
+      "library_file_id": "libfile_c8698361100881918e7bc20d3edaa39a",
+      "sha256": "c0a91e9d63fe2cebbf624de41a3f976fa5a5d02bcdd16bd10b161a0c0fd21119",
+      "byte_identical_to_bundled_original": true
+    },
+    {
+      "original_name": "71104b61-007e-46b1-911b-9dadd8679a9f.png",
+      "file": "motion-blur-settings.png",
+      "library_file_id": "libfile_b94c510718608191b3763aa5fea42414",
+      "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1",
+      "byte_identical_to_bundled_original": true
+    }
+  ],
+  "independent_modules": [
+    "cursor-anticipation",
+    "outline-pixel-burst",
+    "five-gradient-disc-reveal",
+    "rim-light-sweep",
+    "dimensional-symbol"
+  ]
 }

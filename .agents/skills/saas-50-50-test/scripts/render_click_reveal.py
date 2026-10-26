@@ -104,10 +104,25 @@ class OutlinePixelBurst:
         canvas.alpha_composite(layer)
 
 
+class RimLightSweep:
+    """Fine perimeter light for any circle; no cursor, fill, symbol or pixel dependency."""
+    @staticmethod
+    def draw(canvas, t, radius, origin=(540, 480), start=.49, index=0):
+        sweep = Image.new('RGBA', canvas.size)
+        d = ImageDraw.Draw(sweep)
+        box = (origin[0] - radius + .5, origin[1] - radius + .5,
+               origin[0] + radius - .5, origin[1] + radius - .5)
+        angle = 198 + 28 * out((t - start) / .55) + index * 3
+        d.arc(box, angle, angle + 60,
+              fill=(255, 255, 255, 140 if index == 0 else 65), width=2)
+        canvas.alpha_composite(sweep)
+
+
 class FiveDiscReveal:
     """Exactly five concentric filled gradient discs, with independent color/origin/time."""
-    def __init__(self, color):
+    def __init__(self, color, include_rim=True):
         self.color = np.array(color, dtype=float)
+        self.include_rim = include_rim
         self.final_radii = [190., 325., 460., 600., 770.]
         # Reference-visible envelope, with a very soft final settle; not recovered AE keys.
         self.growth = PchipInterpolator([.49, .52, .55, .58, .61, .65, .69, .73, .78, .84, .96],
@@ -130,7 +145,8 @@ class FiveDiscReveal:
         angle = np.arctan2(y - n / 2, x - n / 2)
         arc = np.maximum(0, np.cos(angle + 2.25)) ** 8
         rim = np.exp(-((distance - (n / 2 - 2)) / 1.2) ** 2) * (.1 + .8 * arc)
-        rgb += (255 - rgb) * rim[..., None]
+        if self.include_rim:
+            rgb += (255 - rgb) * rim[..., None]
         rgba = np.zeros((n, n, 4), np.uint8)
         rgba[:, :, :3] = np.clip(rgb, 0, 255)
         rgba[:, :, 3] = np.clip((n / 2 - distance) * 255, 0, 255)
@@ -152,13 +168,8 @@ class FiveDiscReveal:
             side = max(2, round(2 * r))
             disc = self.textures[i].resize((side, side), Image.Resampling.BILINEAR)
             canvas.alpha_composite(disc, (round(origin[0] - side / 2), round(origin[1] - side / 2)))
-            # A fine moving light sweep stays clipped to the circular perimeter.
-            sweep = Image.new('RGBA', canvas.size)
-            d = ImageDraw.Draw(sweep)
-            box = (origin[0] - r + .5, origin[1] - r + .5, origin[0] + r - .5, origin[1] + r - .5)
-            angle = 198 + 28 * out((t - start) / .55) + i * 3
-            d.arc(box, angle, angle + 60, fill=(255, 255, 255, 140 if i == 0 else 65), width=2)
-            canvas.alpha_composite(sweep)
+            if self.include_rim:
+                RimLightSweep.draw(canvas, t, r, origin, start, i)
 
 
 class DimensionalSymbol:
@@ -196,7 +207,7 @@ class DimensionalSymbol:
         canvas.alpha_composite(surf, (round(origin[0] - 160), round(origin[1] - 170)))
 
 
-def build_scene(mode, color, symbol_path=None, show_symbol=True, show_pixels=True):
+def build_scene(mode, color, symbol_path=None, show_symbol=True, show_pixels=True, show_rim=True):
     spec = importlib.util.spec_from_file_location('dock_variant', ROOT / 'scripts/render_icon_dock.py')
     dock = importlib.util.module_from_spec(spec); spec.loader.exec_module(dock)
     old_scene, _ = dock.build_scene()
@@ -205,7 +216,7 @@ def build_scene(mode, color, symbol_path=None, show_symbol=True, show_pixels=Tru
     target = Image.open(ROOT / 'assets/variants/white-icon-dock-v1/icon-pinterest.png').convert('RGBA')
     target = target.resize((128, 130), Image.Resampling.LANCZOS)
     background.alpha_composite(target, (475, 408))
-    cursor, pixels, discs = AnticipationCursor(), OutlinePixelBurst(color), FiveDiscReveal(color)
+    cursor, pixels, discs = AnticipationCursor(), OutlinePixelBurst(color), FiveDiscReveal(color, show_rim)
     symbol = DimensionalSymbol(symbol_path or ASSETS / 'symbol-pinterest.png') if show_symbol else None
     frozen = None
 
@@ -219,7 +230,8 @@ def build_scene(mode, color, symbol_path=None, show_symbol=True, show_pixels=Tru
         if combined or mode == 'anticipation':
             canvas = background.copy()
         else:
-            canvas = Image.new('RGBA', (W, H), 'white')
+            # Neutral contrast for the white-only edge-light demonstration, not a global palette.
+            canvas = Image.new('RGBA', (W, H), (48, 48, 52, 255) if mode == 'rim' else 'white')
         if show_pixels and (combined or mode in ('transition', 'pixels')):
             pixels.draw(canvas, local)
         if combined or mode == 'transition':
@@ -227,6 +239,14 @@ def build_scene(mode, color, symbol_path=None, show_symbol=True, show_pixels=Tru
             # The selected icon identity survives the plan change, now a raised white symbol.
             if symbol:
                 symbol.draw(canvas, local, discs.progress(local))
+        if mode == 'symbol' and symbol:
+            # Standalone symbol has its own local growth, not an implicit circle trigger.
+            symbol.draw(canvas, local, out((local - .51) / .36))
+        if mode == 'rim' and show_rim:
+            e = discs.progress(local)
+            for i, radius in enumerate(discs.final_radii):
+                if radius * e >= .6:
+                    RimLightSweep.draw(canvas, local, radius * e, index=i)
         if combined or mode == 'anticipation':
             cursor.draw(canvas, max(0, local), hide_after_impact=combined)
         result = canvas.convert('RGB')
@@ -245,7 +265,8 @@ def render(args):
         raise ValueError('Choose a new MP4 outside the skill source folder')
     color = parse_color(args.color)
     output.parent.mkdir(parents=True, exist_ok=True)
-    scene, cursor, discs = build_scene(args.mode, color, args.symbol, not args.no_symbol, not args.no_pixels)
+    scene, cursor, discs = build_scene(args.mode, color, args.symbol,
+                                     not args.no_symbol, not args.no_pixels, not args.no_rim)
     proc = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
         '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-an', '-c:v', 'libx264', '-crf', '16',
         '-preset', 'medium', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', str(output)], stdin=subprocess.PIPE)
@@ -255,7 +276,7 @@ def render(args):
             t = frame / FPS; local = t - LEAD
             half = .5 / FPS
             travel = float(np.linalg.norm(cursor.polygon(local + half) - cursor.polygon(local), axis=1).max())
-            if args.mode in ('combined', 'transition'):
+            if args.mode in ('combined', 'transition', 'rim'):
                 travel = max(travel, abs(discs.progress(local + half) - discs.progress(local)) * 770)
             count = min(128, max(16, math.ceil(travel / .7)))
             counts.append(count)
@@ -283,8 +304,10 @@ def render(args):
         active.append('outline-pixel-burst')
     if args.mode in ('combined', 'transition'):
         active.append('five-gradient-disc-reveal')
-        if not args.no_symbol:
-            active.append('dimensional-symbol')
+    if not args.no_rim and args.mode in ('combined', 'transition', 'rim'):
+        active.append('rim-light-sweep')
+    if not args.no_symbol and args.mode in ('combined', 'transition', 'symbol'):
+        active.append('dimensional-symbol')
     report = dict(mode=args.mode, color='#' + ''.join(f'{c:02X}' for c in color), duration=DURATION,
         fps=FPS, frames=72, width=W, height=H, audio=False, presenter=False, speech_sync_tested=False,
         modules=active,
@@ -300,9 +323,10 @@ def render(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', required=True, type=Path)
-    parser.add_argument('--mode', choices=['combined', 'anticipation', 'transition', 'pixels'], default='combined')
+    parser.add_argument('--mode', choices=['combined', 'anticipation', 'transition', 'pixels', 'rim', 'symbol'], default='combined')
     parser.add_argument('--color', default='#E60023', help='Explicit video brand or selected icon hex; red is example default only')
     parser.add_argument('--symbol', type=Path, help='Transparent face artwork for the result; keep consistent with the chosen palette/subject')
     parser.add_argument('--no-symbol', action='store_true', help='No icon or symbol in the reveal')
     parser.add_argument('--no-pixels', action='store_true', help='No outline particle accents')
+    parser.add_argument('--no-rim', action='store_true', help='No static specular rim or moving perimeter light')
     render(parser.parse_args())

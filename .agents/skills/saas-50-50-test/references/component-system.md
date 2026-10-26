@@ -30,6 +30,7 @@ mandatory or erase its individual parts into one opaque preset.
 | Elastic pre-click anticipation | Cursor mesh, target, preparation and strike intervals | Draw-back/foreshortening/right-tip stretch, then impact cue |
 | Hollow pixel burst | Origin, color, start, spread, lifetime | Sparse outlined grid squares/corners; no mouse/disc dependency |
 | Five-disc gradient reveal | Origin, palette, start, radius envelope, destination | Five filled alternating-gradient discs, fine rim light, scene coverage |
+| Fine rim light / light sweep | Circular perimeter/radius, origin, time, arc and intensity | Narrow moving edge highlight; no filled discs, icon or click required |
 | Dimensional symbol | Transparent face, depth treatment, pose/time | Raised white or brand-appropriate symbol; no required circle or click |
 
 ## Palette binding

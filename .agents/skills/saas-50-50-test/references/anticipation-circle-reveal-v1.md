@@ -196,6 +196,23 @@ visual study, not a complete arbitrary-scene authoring engine.
 
 ## Study and review
 
+Read `references/anticipation-circle-user-lesson-fa.md` for the resubmitted Persian
+requirement record. The new MP4 and PNG are byte-identical to the earlier source
+assets; retain their new names/Library identities under `resubmitted_sources` in
+the manifest without replacing the earlier provenance or approved benchmark.
+Bundle the fresh 2.4s reconstruction as `recheck-study.mp4` and its report as
+`recheck-study-report.json`, awaiting user review.
+
+Use `RimLightSweep.draw(canvas, t, radius, origin, start, index)` independently of
+any disc fill, mouse, app or symbol. Use `--mode rim` for a standalone edge-light
+study, or `--no-rim` to remove the texture's specular rim and animated sweep from
+filled discs. Use `--mode symbol` for a dimensional symbol on its own start/growth
+curve with no required transition or cursor. Keep pixel/cursor/disc components
+independent as before. Default combined output retains the approved choreography.
+The rim-only CLI uses a neutral charcoal demonstration stage so white edge light
+is visible. This is local test contrast, not a required production background;
+the class can draw on any circle/material supplied by the scene.
+
 Run `scripts/render_click_reveal.py --mode combined --color '#E60023' --output
 /task/new-test.mp4`. Use a new output path. It renders72frames,30fps,1080×960,
 **2.4s**, silent/no presenter. Output time equals source+.4s; the last state holds.

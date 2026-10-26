@@ -79,6 +79,11 @@ and blur screenshot under `assets/variants/anticipation-circle-reveal-v1/`.
 Use components independently or compose them in the reference event order. Bind
 palette to explicit shot direction, linked icon color or the video's brand;
 the example's red must never become a global color requirement.
+Read `references/anticipation-circle-user-lesson-fa.md` for the resubmitted lesson.
+Preserve its uploaded source identities and the fresh `recheck-study.mp4`/report.
+Use `RimLightSweep` or `--mode rim` for independent perimeter light, `--mode symbol`
+for an independent dimensional symbol, and `--no-rim` for discs without that light.
+Keep the new recheck awaiting review and preserve the earlier approved study.
 
 The exact `assets/variants/white-icon-dock-v1/study.mp4` was explicitly approved
 by the user and is bundled as that variant's visual benchmark. Preserve its bytes.
@@ -219,6 +224,8 @@ classes for independent scene orchestration. Pass a different `--color` from the
 actual brand/icon; pass matching transparent `--symbol` artwork when retargeting.
 Use `--no-symbol` for a transition without an icon, and `--no-pixels` when only
 the five discs are needed. Do not retain Pinterest in an unrelated brand reveal.
+Use `--mode rim` for the edge light alone or `--mode symbol` for only the central
+symbol; `--no-rim` removes both baked specular rim and animated edge sweep.
 Red/Pinterest defaults reproduce only this specific lesson. Never claim the fixed
 study is a general scene author, ASR system or native AE/Blender execution.
 
