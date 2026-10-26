@@ -1,6 +1,8 @@
 ---
 name: saas-50-50-test
 description: >-
+  Current complete authoritative version, with all bundled reference assets and
+  both resubmitted lessons. Prefer this version over older same-name copies.
   Automatically split presenter-led video into an exact top/bottom 50/50 layout:
   original presenter above, SaaS product-motion matched to the actual narration
   below. Use for saas 50.50 test, saas-50-50-test, SaaS 50/50, موشن ساس نصف صفحه
@@ -14,6 +16,16 @@ description: >-
 ---
 
 # SaaS 50.50 Test
+
+## Current authoritative bundle
+
+Use this complete registered bundle when duplicate skill names appear. It
+supersedes older same-name copies with IDs `6ade48046ff4819198c635b1b9591069` and
+`6adee93c4eb881919b992e13b98b30b4`. Preserve the current bundle and GitHub mirror
+as one version, including binary references and approved studies. A successful
+push alone did not guarantee asset retention for the earlier update: read the
+materialized remote tree after saving and confirm the complete skill subtree
+hash. Report any loss honestly; do not keep creating unnamed duplicate versions.
 
 Create two equal horizontal panes. Put the original main talking-head presenter
 in the **top** pane and narration-specific SaaS animation in the **bottom** pane.
