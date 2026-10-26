@@ -1,0 +1,35 @@
+{
+  "variant": "spin-particle-handoff-v1",
+  "mode": "combined",
+  "color": "#E60023",
+  "width": 1080,
+  "height": 960,
+  "fps": 30,
+  "frames": 72,
+  "duration": 2.4,
+  "audio": false,
+  "presenter": false,
+  "speech_sync_tested": false,
+  "status": "awaiting user review",
+  "source_time_mapping": "output = source + 0.4s; final destination held",
+  "blur": {
+    "angle": 180,
+    "phase": 0,
+    "minimum_samples": 16,
+    "adaptive_limit": 128,
+    "actual_min": 16,
+    "actual_max": 128
+  },
+  "native_AE_executed": false,
+  "cut_source_time": 0.7,
+  "aperture": [
+    0.56,
+    0.7
+  ],
+  "dot_cleanup": [
+    0.7,
+    1.0
+  ],
+  "evidence": "Timing/curves and particle simulation reconstructed from rendered source; not original AE settings except blur.",
+  "sha256": "af6aedced51494ec30f2c558d164ed07a431012950271c9f62d0d7812cfa7ee4"
+}

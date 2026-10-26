@@ -9,6 +9,7 @@ curve on every SaaS shot. Preserve fine detail in each variant's own recipe.
 | `white-icon-dock-v1` | White/light stage | Soft dimensional app tiles in a translucent rounded dock; black/white pointer sweeps, rotates and loops; local hover magnification | Exact screenshot `cubic-bezier(0,0,0,1)`; immediate high speed, very soft finish | Exact bundled study explicitly approved by user |
 | `anticipation-circle-reveal-v1` | Example starts light; destination uses icon/brand color | Elastic cursor draw-back/strike; hollow square burst; five alternating gradient discs with fine rim light; dimensional symbol | Slow soft preparation, accelerating strike; brief explosive reveal with long soft settle | Exact bundled2.4s study explicitly approved by user |
 | Original references 1–3 | Multiple bright, gradient, photographic and glass treatments | Travel assistant, shopping selection and visual-discovery motion vocabulary | Observe each actual move; original editable curves unavailable | Reference sources, not interchangeable fixed templates |
+| `spin-particle-handoff-v1` | Example red/icon palette, then actual next scene | Accelerating spin/zoom of five circles; source-shaped floating glyph fragments; feather aperture; incoming ordered dots and opposite-eased cleanup | Spin/aperture slow→fast; incoming dot cleanup fast→soft | New2.4s study awaiting explicit review |
 
 Select by spoken concept and shot needs. A cursor dock is useful for selecting or
 switching apps; it is not necessary for every sentence. Retarget the app identities

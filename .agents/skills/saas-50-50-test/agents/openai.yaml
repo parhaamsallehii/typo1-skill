@@ -1,6 +1,6 @@
 interface:
-  display_name: SaaS 50.50 Test
-  short_description: Presenter above, speech-synced SaaS motion below
+  display_name: SaaS 50.50 Test — Current
+  short_description: Complete icon, click, particle and mask lessons
   default_prompt: Use $saas-50-50-test to put my presenter in the top half and reference-matched
     SaaS animation synced to the narration in the bottom half.
   icon_small: assets/icon.svg

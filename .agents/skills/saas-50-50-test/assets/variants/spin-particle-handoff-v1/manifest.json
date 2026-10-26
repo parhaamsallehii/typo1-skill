@@ -1,0 +1,46 @@
+{
+  "variant": "spin-particle-handoff-v1",
+  "source_files": [
+    {
+      "file": "reference.mp4",
+      "original_name": "نمونه ترنزیشن ذرات و دون دون شدن(1).mp4",
+      "library_file_id": "libfile_ce38ebad099881919fc13fb3af192892",
+      "sha256": "9ff900e19435dbfb50576a91eed010a0de2c36d952bf538b6f37008a25842951"
+    },
+    {
+      "file": "motion-blur-settings.png",
+      "original_name": "تنظیمات موشن بلر مثل افتر افکت(7).png",
+      "library_file_id": "libfile_a324ac1ea8988191b4bdf5194dfbd6d6",
+      "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+    }
+  ],
+  "native": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "frames": 30,
+    "duration": 1
+  },
+  "active_crop": [
+    0,
+    656,
+    1080,
+    608
+  ],
+  "incoming_scene": "Authored study uses final source-frame crop at native aspect with cover fitting; not original clean plate or site execution. Replace for production.",
+  "study_status": "awaiting explicit user review",
+  "blur": {
+    "shutter_angle": 180,
+    "phase": 0,
+    "minimum_samples": 16,
+    "adaptive_limit": 128
+  },
+  "independent_modules": [
+    "spin-zoom-disc-stack",
+    "glyph-particle-dissolve",
+    "accelerating-feather-aperture",
+    "regular-dot-overlay",
+    "decelerating-feather-cleanup"
+  ],
+  "evidence": "Blur values exact screenshot/user. Timing measured at 30fps; numeric paths/eases are authored equivalents, not recovered AE project."
+}

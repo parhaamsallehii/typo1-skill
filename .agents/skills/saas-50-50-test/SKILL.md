@@ -2,7 +2,8 @@
 name: saas-50-50-test
 description: >-
   Current complete authoritative version, with all bundled reference assets and
-  both resubmitted lessons. Prefer this version over older same-name copies.
+  the cursor, click/reveal and spin/particle/mask lessons. Prefer this version
+  over older same-name copies.
   Automatically split presenter-led video into an exact top/bottom 50/50 layout:
   original presenter above, SaaS product-motion matched to the actual narration
   below. Use for saas 50.50 test, saas-50-50-test, SaaS 50/50, موشن ساس نصف صفحه
@@ -10,7 +11,7 @@ description: >-
   each use and inspect selected variant references. Choose from a growing library
   of independently reusable SaaS components; include dimensional icons, cursor
   hover, elastic pre-click anticipation, outline pixels and five-disc gradient
-  reveals. Combine or separate components creatively; bind colors to the video
+  reveals, glyph particles and feathered masks. Combine components creatively; bind colors to the video
   brand or selected icon. Apply 180-degree, phase-zero, 16–128-sample motion blur.
   Preserve presenter/audio timing and verify speech cues; do not invent alignment.
 ---
@@ -21,7 +22,8 @@ description: >-
 
 Use this complete registered bundle when duplicate skill names appear. It
 supersedes older same-name copies with IDs `6ade48046ff4819198c635b1b9591069` and
-`6adee93c4eb881919b992e13b98b30b4`. Preserve the current bundle and GitHub mirror
+`6adee93c4eb881919b992e13b98b30b4`, plus the earlier two-lesson bundle
+`6adeecb41d888191982ec12d79b07c70`. Preserve the current bundle and GitHub mirror
 as one version, including binary references and approved studies. A successful
 push alone did not guarantee asset retention for the earlier update: read the
 materialized remote tree after saving and confirm the complete skill subtree
@@ -65,6 +67,19 @@ use hollow pixels on another motivated transition; or reproduce all three as a
 linked click/reveal. Choose based on the actual narration, not a fixed template.
 Read `references/component-system.md` for independent triggers, event links,
 palette binding and component composition rules.
+
+For accelerating five-circle rotation/zoom, source-shaped glyph particles,
+the outgoing soft circular aperture, an incoming regular dot grid and its
+opposite-eased cleanup, read `references/spin-particle-handoff-v1.md`. Inspect
+the original MP4 and blur PNG in `assets/variants/spin-particle-handoff-v1/`.
+Keep these tools independent. The outgoing aperture starts soft and ends fast;
+the incoming dot-clearing mask starts fast and ends soft. Keep particles alive
+across the scene handoff, fully remove the outgoing circles and eventually clear
+the grid without erasing incoming footage. New numeric curves are authored
+reconstructions, not recovered project settings. Use
+`scripts/render_particle_handoff.py` for its fresh sub-five-second study.
+The user permits useful additional observations from references; retain explicit
+requirements and distinguish direct evidence from inferred implementation.
 
 Read `references/variants.md` before planning. Treat each detailed example as a
 reusable **variant**, not a restriction on the entire skill. Choose backgrounds,

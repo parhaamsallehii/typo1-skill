@@ -32,6 +32,11 @@ mandatory or erase its individual parts into one opaque preset.
 | Five-disc gradient reveal | Origin, palette, start, radius envelope, destination | Five filled alternating-gradient discs, fine rim light, scene coverage |
 | Fine rim light / light sweep | Circular perimeter/radius, origin, time, arc and intensity | Narrow moving edge highlight; no filled discs, icon or click required |
 | Dimensional symbol | Transparent face, depth treatment, pose/time | Raised white or brand-appropriate symbol; no required circle or click |
+| Spin/zoom circle stack | Filled-circle stack, origin, material frame, rotation/scale timing | Slow-to-fast exit motion; no particle or cut dependency |
+| Glyph particle dissolve | Actual subject alpha, seeded fragments, detach/lifetime/float curves | Recognizable silhouette gradually disperses; can bridge an edit independently |
+| Accelerating feather aperture | Origin, feather, radius, start/duration, old/new scenes | Soft center-out reveal, slow start and fast full-coverage finish |
+| Ordered dot field | Grid origin/pitch/radius/opacity and destination layer | Regular point overlay, distinct from floating fragments and hollow square particles |
+| Decelerating feather cleanup | Independent origin/radius/feather/time and overlay alpha | Fast opening, soft finish; clears only the overlay and preserves underlying scene |
 
 ## Palette binding
 
