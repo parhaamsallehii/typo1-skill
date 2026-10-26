@@ -7,7 +7,7 @@
       "library_file_id": "libfile_8e513e4fa7f881919f399e56ee6dfafe",
       "sha256": "934bd13885665bef0c0be1612af6ab5b86141d3917a8d8b9007e3618a1e0c780",
       "assembled_filename": "reference.mp4",
-      "storage": "Three unchanged raw-byte chunks; run scripts/assemble_reference.py before visual inspection. Original video SHA256 retained.",
+      "storage": "Six unchanged raw-byte chunks, each under4MiB; run scripts/assemble_reference.py before inspection. Original video SHA256 retained.",
       "parts_manifest": "reference-parts.json"
     },
     {

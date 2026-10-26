@@ -62,7 +62,7 @@ Use them frequently and deliberately, with readable holds. Read
 `references/glow-type-camera-v1.md`; inspect its full original video, blur PNG
 and two cursor-variant data sets. Restore its large original MP4 with
 `scripts/assemble_reference.py` and the recipe's parts manifest before inspection;
-its three raw chunks preserve the original video exactly. Keep nature/glass/peripheral-focus backgrounds,
+its six raw chunks preserve the original video exactly. Keep nature/glass/peripheral-focus backgrounds,
 both cursors and same-scene detail cuts independently selectable. The named
 reference typing variant requires a synchronized camera, even though its underlying
 tools can be used separately in other contexts. The user calls these visual edits

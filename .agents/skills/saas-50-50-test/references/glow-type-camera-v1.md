@@ -29,7 +29,7 @@ python scripts/assemble_reference.py \
 ```
 
 The21MB source exceeds the connector's16MiB request-body limit after base64
-encoding. Its original bytes are therefore bundled in three raw chunks, not
+encoding. Its original bytes are therefore bundled in six raw chunks, not
 re-encoded or shortened. The helper checks each chunk and the final SHA256.
 The restored MP4 is byte-identical to the upload. Keep the same lossless parts
 and manifest in Skills and GitHub, and restore outside the skill assets.

@@ -1,5 +1,5 @@
 interface:
-  display_name: SaaS 50.50 Test — Current
+  display_name: SaaS 50.50 Test — Glow & Camera
   short_description: Four complete lessons with glow typing and camera cuts
   default_prompt: Use $saas-50-50-test to put my presenter in the top half and reference-matched
     SaaS animation synced to the narration in the bottom half.

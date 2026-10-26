@@ -6,18 +6,33 @@
   "parts": [
     {
       "file": "reference-parts/part-000.bin",
-      "size_bytes": 8388606,
-      "sha256": "a17a6402fac9392ea7df2992621090ede80c1ec412ede114818eaa35bbcf4d9e"
+      "size_bytes": 4194303,
+      "sha256": "e77bb80207a8712ce1f72b399cdc239e730df1fa464c4aac971b58ca9599e5db"
     },
     {
       "file": "reference-parts/part-001.bin",
-      "size_bytes": 8388606,
-      "sha256": "d521867c0c429cfce5980230500be346334d5d7505087edb00493ecddd6a2328"
+      "size_bytes": 4194303,
+      "sha256": "e1ac1ca0a107271b0c9840c2ee68885ac8c3e824bc97da191a0db782b60cd9a7"
     },
     {
       "file": "reference-parts/part-002.bin",
-      "size_bytes": 4195938,
-      "sha256": "15a7e4ffa95c961da03b4d346386e97ddfb0689af32baac360658083890b08ac"
+      "size_bytes": 4194303,
+      "sha256": "1d1114e4a60e82853ba553a47454400be427a24aba873d2d12544162b99096d2"
+    },
+    {
+      "file": "reference-parts/part-003.bin",
+      "size_bytes": 4194303,
+      "sha256": "05199edea31a0b650f5754b022e657fd2e09b53d15f9a1508a255d69bb849f20"
+    },
+    {
+      "file": "reference-parts/part-004.bin",
+      "size_bytes": 4194303,
+      "sha256": "373e48b583c9db24dbe482f388d05e8793ca0595a8103cec7b056ef8be0de5f9"
+    },
+    {
+      "file": "reference-parts/part-005.bin",
+      "size_bytes": 1635,
+      "sha256": "7f042bd4d5f037ecccb954f788f9bfadedfa5ae0a96779a7f2d68291e63d4ab6"
     }
   ]
 }
