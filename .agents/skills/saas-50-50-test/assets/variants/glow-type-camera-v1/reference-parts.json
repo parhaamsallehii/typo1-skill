@@ -1,0 +1,23 @@
+{
+  "original_filename": "reference.mp4",
+  "size_bytes": 20973150,
+  "sha256": "934bd13885665bef0c0be1612af6ab5b86141d3917a8d8b9007e3618a1e0c780",
+  "method": "lossless raw byte concatenation in listed order; no media encoding or compression",
+  "parts": [
+    {
+      "file": "reference-parts/part-000.bin",
+      "size_bytes": 8388606,
+      "sha256": "a17a6402fac9392ea7df2992621090ede80c1ec412ede114818eaa35bbcf4d9e"
+    },
+    {
+      "file": "reference-parts/part-001.bin",
+      "size_bytes": 8388606,
+      "sha256": "d521867c0c429cfce5980230500be346334d5d7505087edb00493ecddd6a2328"
+    },
+    {
+      "file": "reference-parts/part-002.bin",
+      "size_bytes": 4195938,
+      "sha256": "15a7e4ffa95c961da03b4d346386e97ddfb0689af32baac360658083890b08ac"
+    }
+  ]
+}

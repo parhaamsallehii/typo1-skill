@@ -38,6 +38,21 @@ mandatory or erase its individual parts into one opaque preset.
 | Ordered dot field | Grid origin/pitch/radius/opacity and destination layer | Regular point overlay, distinct from floating fragments and hollow square particles |
 | Decelerating feather cleanup | Independent origin/radius/feather/time and overlay alpha | Fast opening, soft finish; clears only the overlay and preserves underlying scene |
 
+| Live nature/background plane | Actual footage/time map, crop, palette and scene camera | Optional moving backdrop; not mandatory for every variant |
+| Glass input container | Current underlying pixels, shape, blur/refraction/tint/highlights | Translucent panel/input; independent of nature, mouse or typing |
+| Peripheral feather focus | Center, range/ellipse, feather, spatial blur | Sharp center and soft edges; separate from temporal blur |
+| Glow writing head / glyph trail | Shaped text/advances, accent,75/75 progress, glow/trail range | Character reveal and leading light; named variant requires shared follow camera |
+| Typing follow camera | Same writing progress, direction, framing offset and scale | Camera follows typing with synchronized75/75 easing |
+| Same-scene detail cut | Target, output frame boundary, pre/post framing | Hard overview/detail jump without changing the scene |
+| Peak-speed pan match cut | Lateral path,100/100 progress, midpoint cut and scale pair | Frequent motivated hard scale edit at maximum motion, with continuity |
+| Two lesson4 pointer variants | Separate measured entry/exit paths, unwrapped orientation, targets | Distinct first-input and last-control approaches, usable independently |
+
+Frequently consider glow typing/follow and peak-speed match cuts in SaaS shot
+plans. Independence does not cancel the user's required follow-camera pairing
+when invoking that named typing variant. Keep individual APIs reusable elsewhere.
+A user-specified test duration overrides the under5s default locally; lesson4
+explicitly uses exactly5s. Never infer acceptance from rendering or saving.
+
 ## Palette binding
 
 Resolve palette for **each shot/component**, using this precedence:

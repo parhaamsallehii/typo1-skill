@@ -1,19 +1,17 @@
 ---
 name: saas-50-50-test
 description: >-
-  Current complete authoritative version, with all bundled reference assets and
-  the cursor, click/reveal and spin/particle/mask lessons. Prefer this version
-  over older same-name copies.
-  Automatically split presenter-led video into an exact top/bottom 50/50 layout:
-  original presenter above, SaaS product-motion matched to the actual narration
-  below. Use for saas 50.50 test, saas-50-50-test, SaaS 50/50, موشن ساس نصف صفحه
-  or مجری بالا موشن پایین. Inspect the three bundled video references before
-  each use and inspect selected variant references. Choose from a growing library
-  of independently reusable SaaS components; include dimensional icons, cursor
-  hover, elastic pre-click anticipation, outline pixels and five-disc gradient
-  reveals, glyph particles and feathered masks. Combine components creatively; bind colors to the video
-  brand or selected icon. Apply 180-degree, phase-zero, 16–128-sample motion blur.
-  Preserve presenter/audio timing and verify speech cues; do not invent alignment.
+  Current complete authoritative bundle: icon dock, elastic click/reveal,
+  spin/particles/masks, and glow typing with camera cuts; all original references
+  and studies included. Prefer this version over older same-name copies.
+  Use for saas 50.50 test, saas-50-50-test, SaaS 50/50, موشن ساس نصف صفحه or
+  مجری بالا موشن پایین. Split presenter video exactly 50/50: presenter above,
+  SaaS motion matched to actual speech below. Inspect the three original videos
+  and selected variant references. Compose independent tools creatively; bind
+  colors to the brand/icon. Frequently use75/75 glow typing with its required
+  follow camera and100/100 peak-speed pan match cuts when motivated. Preserve
+  source/audio timing, verify speech cues, apply180-degree phase-zero16–128-sample
+  temporal blur, and keep Skills/GitHub copies identical. Do not invent alignment.
 ---
 
 # SaaS 50.50 Test
@@ -23,7 +21,8 @@ description: >-
 Use this complete registered bundle when duplicate skill names appear. It
 supersedes older same-name copies with IDs `6ade48046ff4819198c635b1b9591069` and
 `6adee93c4eb881919b992e13b98b30b4`, plus the earlier two-lesson bundle
-`6adeecb41d888191982ec12d79b07c70`. Preserve the current bundle and GitHub mirror
+`6adeecb41d888191982ec12d79b07c70` and the earlier three-lesson bundle
+`6adefc3c1d648191a553ef9a001562d0`. Preserve the current bundle and GitHub mirror
 as one version, including binary references and approved studies. A successful
 push alone did not guarantee asset retention for the earlier update: read the
 materialized remote tree after saving and confirm the complete skill subtree
@@ -54,6 +53,20 @@ of completing an update; no further permission is needed within this skill's sco
   destination remains unsynchronized; do not claim automatic cross-platform sync.
 - For visual lessons, retain the required sub-five-second test workflow below.
   A pure synchronization or approval-only update need not invent a new animation.
+
+## Preferred frequent typing and camera-cut vocabulary
+
+Prioritize the user's glow typing with shared75/75 follow camera and100/100
+peak-speed pan match cuts for appropriate text-entry and detail-handoff beats.
+Use them frequently and deliberately, with readable holds. Read
+`references/glow-type-camera-v1.md`; inspect its full original video, blur PNG
+and two cursor-variant data sets. Restore its large original MP4 with
+`scripts/assemble_reference.py` and the recipe's parts manifest before inspection;
+its three raw chunks preserve the original video exactly. Keep nature/glass/peripheral-focus backgrounds,
+both cursors and same-scene detail cuts independently selectable. The named
+reference typing variant requires a synchronized camera, even though its underlying
+tools can be used separately in other contexts. The user calls these visual edits
+“جی کات”; do not turn that alias into an unrequested audio J-cut.
 
 ## Select variants without turning examples into universal rules
 
@@ -118,12 +131,14 @@ The exact 2.4s `assets/variants/anticipation-circle-reveal-v1/study.mp4` has als
 been explicitly approved. Preserve both original benchmark videos and hashes.
 
 For every subsequent user teaching message that adds or corrects the skill,
-produce a **new video strictly shorter than five seconds** demonstrating that
+produce a **new video strictly shorter than five seconds**, unless the user
+explicitly specifies another duration, demonstrating that
 specific lesson. Preserve original reference files and detailed parameters.
 Compare the rendered motion to the reference; deliver the test with the skill
 update. Record it as awaiting review until the user explicitly accepts it.
 Do not infer approval from successful rendering, silence or this instruction.
-The prior Higgsfield test was rejected; never use it as an approved style seed.
+The glow-type-camera lesson explicitly requests exactly5s, a local exception;
+its new study is awaiting review. The prior Higgsfield test was rejected; never use it as an approved style seed.
 
 ## Inspect references actively, every time
 
@@ -296,7 +311,8 @@ and writes its frame count, pane rectangles and mode to a companion JSON report.
   and source/composition offsets. Do not claim speech sync for a silent visual test.
 - Check audio, full decode, frame count, resolution, duration and untouched source.
 - Verify selected variants remain options, the actual motion-blur exposure was
-  sampled, and each skill-teaching update includes a new test shorter than 5s.
+  sampled, and each teaching update includes a fresh test under5s unless the user explicitly
+  overrides duration (glow-type-camera lesson: exactly5s).
 - Verify component independence is explicit; palette selection follows the actual
   brand/icon and a linked click chain is never mandatory for standalone use.
 - Deliver the rendered video and report the actual scope. Save skill changes through

@@ -1,0 +1,81 @@
+{
+  "variant": "glow-type-camera-v1",
+  "source_files": [
+    {
+      "file": "reference.mp4",
+      "original_name": "نمونه ویدیو بکگراند طبیعت برای سس انیمیشن و باکس لیکویید گلسی و نمونه حرکت موس و بلور شدن دور کادر با مسک فید شده و نمونه کات سریع ساده زوم شدنی و مچ کات تو سرعت و نمونه تکست انیمیشن سس انیمیشنی همراه با گلو.mp4",
+      "library_file_id": "libfile_8e513e4fa7f881919f399e56ee6dfafe",
+      "sha256": "934bd13885665bef0c0be1612af6ab5b86141d3917a8d8b9007e3618a1e0c780",
+      "assembled_filename": "reference.mp4",
+      "storage": "Three unchanged raw-byte chunks; run scripts/assemble_reference.py before visual inspection. Original video SHA256 retained.",
+      "parts_manifest": "reference-parts.json"
+    },
+    {
+      "file": "motion-blur-settings.png",
+      "original_name": "تنظیمات موشن بلر مثل افتر افکت(8).png",
+      "library_file_id": "libfile_288758ee60848191b2667d3ba1c528f5",
+      "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+    }
+  ],
+  "native": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "frames": 155,
+    "duration": 5.166666666666667
+  },
+  "active_crop": [
+    0,
+    656,
+    1080,
+    608
+  ],
+  "user_graphs": {
+    "typing_and_follow_camera": {
+      "incoming_influence": 75,
+      "outgoing_influence": 75,
+      "zero_endpoint_speed_scalar_bezier": [
+        0.75,
+        0,
+        0.25,
+        1
+      ]
+    },
+    "pan_match_cut": {
+      "incoming_influence": 100,
+      "outgoing_influence": 100,
+      "zero_endpoint_speed_scalar_bezier": [
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "blur": {
+    "angle": 180,
+    "phase": 0,
+    "minimum_samples": 16,
+    "adaptive_limit": 128
+  },
+  "study": {
+    "duration": 5,
+    "fps": 30,
+    "frames": 150,
+    "topic": "AI study planner",
+    "palette": "midnight navy/cyan",
+    "background": "Code-native abstract, chosen after image-generation usage limit; no claim of generated lake or live nature footage",
+    "status": "awaiting explicit user review"
+  },
+  "independent_modules": [
+    "nature-video-stage",
+    "glass-input-panel",
+    "feathered-peripheral-focus",
+    "cursor-entry-variant",
+    "same-scene-detail-cut",
+    "glow-type-with-required-follow-camera",
+    "peak-speed-pan-match-cut",
+    "cursor-exit-variant"
+  ],
+  "priority": "User asks frequent motivated use of glow typing with camera and peak-speed match cuts. Preserve readability."
+}
