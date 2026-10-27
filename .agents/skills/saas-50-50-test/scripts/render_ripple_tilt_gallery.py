@@ -44,14 +44,14 @@ def state(f):
  a=np.array(im.convert('RGB'),dtype=float)
  # coded approximation of the automatic 15-frame center-out ripple
  if 0<=u<1:
-  rad=50+ease(u,(.15,.4,.3,1))*520;env=np.exp(-((R-rad)/50)**2)*np.sin(np.pi*u)
-  delta=14*np.sin((R-rad)/12)*env;xx=X+delta*(X-W/2)/np.maximum(R,1);yy=Y+delta*(Y-H/2)/np.maximum(R,1)
+  rad=8+300*u;env=np.exp(-((R-rad)/65)**2)*min(1,u*12)*min(1,(1-u)*5)
+  delta=20*np.sin((R-rad)/23)*env*np.clip(R/70,0,1);xx=X+delta*(X-W/2)/np.maximum(R,1);yy=Y+delta*(Y-H/2)/np.maximum(R,1)
   a=np.stack([map_coordinates(a[:,:,k],[yy,xx],order=1,mode='nearest') for k in range(3)],axis=-1)
  return a
-out=Path(__file__).with_name('ripple-gallery-test.mp4');p=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','540x960','-r','30','-i','-','-vf','scale=1080:1920:flags=lanczos','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(out)],stdin=subprocess.PIPE)
+out=Path(__file__).with_name('ripple-gallery-v2.mp4');p=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','540x960','-r','30','-i','-','-vf','crop=540:600:0:180,scale=1080:1200:flags=lanczos,pad=1080:1920:0:360:color=0xEDF3F3','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(out)],stdin=subprocess.PIPE)
 for f in range(150):
  a=np.zeros((H,W,3))
- for k in range(16):a+=state(f+(k+.5)/16*.5)/16
+ for k in range(1 if f<45 else 16):a+=state(f+(k+.5)/(1 if f<45 else 16)*.5)/(1 if f<45 else 16)
  im=Image.fromarray(np.clip(a,0,255).astype('uint8'));p.stdin.write(im.tobytes())
- if f in [40,48,53,60,90,149]:im.save(out.with_name('frame-%03d.jpg'%f))
+ if f in [40,46,48,50,53,56,60,90,149]:im.save(out.with_name('frame-%03d.jpg'%f))
 p.stdin.close();assert p.wait()==0

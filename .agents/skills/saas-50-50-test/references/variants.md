@@ -41,3 +41,5 @@ Revision3: mixed-size nested overlapping square groups, stronger green glow stud
 `scale-optics-match-v1`: arbitrary-subject scale match cut; outgoing(.88,.04,.93,.10), incoming(.06,.88,.10,.95), optics pulse, +/-4-frame blur and20-frame color motion. See detailed recipe; exactly5s study awaiting review.
 
 `ripple-tilt-gallery-v1`: independent15-frame Auto BCC ripple and X/Z-tilt/Z-recession gallery; top/bottom15-frame entries followed immediately by slow linear drift and colored entrances. Read the detailed recipe and supplied settings;5s study awaiting review.
+
+Ripple/gallery revision2: first study rejected for an imperceptible wave; latest study-v2 strengthens actual subject-edge refraction and uses closer framing. Native BCC screenshot parameters remain unchanged.
