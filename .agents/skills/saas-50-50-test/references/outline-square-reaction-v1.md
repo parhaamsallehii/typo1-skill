@@ -36,3 +36,5 @@ Override revision2's uniform grid. Use overlapping square groups with mixed larg
 Current study implementation: seed57; center pitch34 source pixels with +/-10px jitter; outer sizes24/32/42/54; nested ratios1/.55/.24; stroke2. Output camera2x. Glow uses sigma3/12/24 at gains2.5/3.4/1.8. Stroke RGB50,245,110 and glow RGB65,255,125; icon green. Keep radius145 and feather65 source units and the720-degree phase0 64-sample local override. Values are authored fits. Render exactly5s at1080x1920. study-v3.mp4 is the latest candidate awaiting review; revision2 remains prior history, not approved.
 
 اصلاح سوم کاربر: مربع‌ها توهم‌توهم و تودرتو با اندازه‌های بزرگ و کوچک باشند، گلو بیشتر شود و تست با رنگ سبز ارائه شود. سایر خواسته‌های قبلی شامل محدودماندن دور آیکون، نمای نزدیک، محوشدن تدریجی و بلر بیشتر حفظ شوند.
+
+Historical study.mp4 and study-v2.mp4 are superseded and preserved via references/study-history.json; current local square study remains study-v3.mp4.

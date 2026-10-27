@@ -1,0 +1,42 @@
+[
+  {
+    "original_path": "assets/variants/ripple-tilt-gallery-v1/study.mp4",
+    "sha256": "6b321877b5ecc201d2bf90f05713891c95ad15046b7b1d3ce6e26e5049c8b20f",
+    "size": 586619,
+    "github_commit": "4a9c86bfc0452e9fed253904d45a4068f6b425b1",
+    "reason": "superseded/rejected study or byte-identical recheck",
+    "url": "https://github.com/parhaamsallehii/typo1-skill/raw/4a9c86bfc0452e9fed253904d45a4068f6b425b1/.agents/skills/saas-50-50-test/assets/variants/ripple-tilt-gallery-v1/study.mp4"
+  },
+  {
+    "original_path": "assets/variants/outline-square-reaction-v1/study.mp4",
+    "sha256": "584216c846d4c07d65f33882aaca408b1c49854932b45cf2195e963b0941db0c",
+    "size": 118858,
+    "github_commit": "4a9c86bfc0452e9fed253904d45a4068f6b425b1",
+    "reason": "superseded/rejected study or byte-identical recheck",
+    "url": "https://github.com/parhaamsallehii/typo1-skill/raw/4a9c86bfc0452e9fed253904d45a4068f6b425b1/.agents/skills/saas-50-50-test/assets/variants/outline-square-reaction-v1/study.mp4"
+  },
+  {
+    "original_path": "assets/variants/outline-square-reaction-v1/study-v2.mp4",
+    "sha256": "11a8745fb0733c450d4cc32e3393029d252389a15549bee475c05a6d3c764f27",
+    "size": 115210,
+    "github_commit": "4a9c86bfc0452e9fed253904d45a4068f6b425b1",
+    "reason": "superseded/rejected study or byte-identical recheck",
+    "url": "https://github.com/parhaamsallehii/typo1-skill/raw/4a9c86bfc0452e9fed253904d45a4068f6b425b1/.agents/skills/saas-50-50-test/assets/variants/outline-square-reaction-v1/study-v2.mp4"
+  },
+  {
+    "original_path": "assets/variants/anticipation-circle-reveal-v1/recheck-study.mp4",
+    "sha256": "adee7671f6d06709238b19959b1c8ebdc9d5b1e316e0bef1fd1dbf285d291ba2",
+    "size": 211811,
+    "github_commit": "4a9c86bfc0452e9fed253904d45a4068f6b425b1",
+    "reason": "superseded/rejected study or byte-identical recheck",
+    "url": "https://github.com/parhaamsallehii/typo1-skill/raw/4a9c86bfc0452e9fed253904d45a4068f6b425b1/.agents/skills/saas-50-50-test/assets/variants/anticipation-circle-reveal-v1/recheck-study.mp4"
+  },
+  {
+    "original_path": "assets/variants/white-icon-dock-v1/recheck-study.mp4",
+    "sha256": "fc19df5dc468332205be568fcf9548d2f0e6e564d2985238789ae632ee43217c",
+    "size": 130384,
+    "github_commit": "4a9c86bfc0452e9fed253904d45a4068f6b425b1",
+    "reason": "superseded/rejected study or byte-identical recheck",
+    "url": "https://github.com/parhaamsallehii/typo1-skill/raw/4a9c86bfc0452e9fed253904d45a4068f6b425b1/.agents/skills/saas-50-50-test/assets/variants/white-icon-dock-v1/recheck-study.mp4"
+  }
+]

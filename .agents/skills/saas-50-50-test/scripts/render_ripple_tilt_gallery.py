@@ -16,6 +16,20 @@ def ease(u,c):
   else:h=t
  return 3*(1-t)**2*t*c[1]+3*(1-t)*t*t*c[3]+t**3
 
+ENTRY_CURVE=(.06,.88,.10,.95)
+JOIN_START=11.;JOIN_END=15.;DRIFT_SPEED=.18
+
+def travel(frame):
+ if frame<=JOIN_START:
+  return -760*(1-ease(frame/15,ENTRY_CURVE))
+ if frame>=JOIN_END:
+  return DRIFT_SPEED*(frame-JOIN_END)
+ h=JOIN_END-JOIN_START;u=(frame-JOIN_START)/h
+ p0=-760*(1-ease(JOIN_START/15,ENTRY_CURVE))
+ eps=.001
+ v0=760*(ease((JOIN_START+eps)/15,ENTRY_CURVE)-ease((JOIN_START-eps)/15,ENTRY_CURVE))/(2*eps)
+ return (2*u**3-3*u**2+1)*p0+(u**3-2*u**2+u)*h*v0+(u**3-u**2)*h*DRIFT_SPEED
+
 def plane(tile,cx,cy,rx,rz,z):
  corners=np.array([[-60,-85,0],[60,-85,0],[60,85,0],[-60,85,0]],float)
  ax=np.deg2rad(rx);az=np.deg2rad(rz)
@@ -34,8 +48,7 @@ def state(f):
  for i in range(1,9):
   col=(i-1)%3;row=(i-1)//3;cx=90+col*180;target=245+row*230
   direction=-1 if i%2 else 1
-  cy=target+direction*760*(1-entry)
-  if u>1:cy+=direction*(f-start-15)*.18
+  cy=target-direction*travel(f-start)
   tile=tiles[i]
   if 0<=u<1:
    a=np.array(tile).astype(float);phase=entry*7+i;a[:,:,:3]=np.clip(a[:,:,:3]+30*np.sin(phase+np.arange(3)*2.1),0,255);tile=Image.fromarray(a.astype('uint8'))
@@ -48,7 +61,7 @@ def state(f):
   delta=20*np.sin((R-rad)/23)*env*np.clip(R/70,0,1);xx=X+delta*(X-W/2)/np.maximum(R,1);yy=Y+delta*(Y-H/2)/np.maximum(R,1)
   a=np.stack([map_coordinates(a[:,:,k],[yy,xx],order=1,mode='nearest') for k in range(3)],axis=-1)
  return a
-out=Path(__file__).with_name('ripple-gallery-v2.mp4');p=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','540x960','-r','30','-i','-','-vf','crop=540:600:0:180,scale=1080:1200:flags=lanczos,pad=1080:1920:0:360:color=0xEDF3F3','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(out)],stdin=subprocess.PIPE)
+out=Path(__file__).with_name('ripple-gallery-v3.mp4');p=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','540x960','-r','30','-i','-','-vf','crop=540:600:0:180,scale=1080:1200:flags=lanczos,pad=1080:1920:0:360:color=0xEDF3F3','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(out)],stdin=subprocess.PIPE)
 for f in range(150):
  a=np.zeros((H,W,3))
  for k in range(1 if f<45 else 16):a+=state(f+(k+.5)/(1 if f<45 else 16)*.5)/(1 if f<45 else 16)

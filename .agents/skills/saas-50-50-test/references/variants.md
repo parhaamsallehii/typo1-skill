@@ -43,3 +43,5 @@ Revision3: mixed-size nested overlapping square groups, stronger green glow stud
 `ripple-tilt-gallery-v1`: independent15-frame Auto BCC ripple and X/Z-tilt/Z-recession gallery; top/bottom15-frame entries followed immediately by slow linear drift and colored entrances. Read the detailed recipe and supplied settings;5s study awaiting review.
 
 Ripple/gallery revision2: first study rejected for an imperceptible wave; latest study-v2 strengthens actual subject-edge refraction and uses closer framing. Native BCC screenshot parameters remain unchanged.
+
+Ripple/gallery revision3: accepted revision2 ripple retained; gallery entry/drift direction and velocity continuity corrected. Latest study-v3 awaiting review.
