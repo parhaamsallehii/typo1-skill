@@ -37,3 +37,5 @@ Lesson5: `outline-square-reaction-v1` — hollow-square field, feathered radial 
 Outline-square reaction revision2 supersedes the rejected broad first study: local icon radius, larger/denser squares, strong colored glow, close camera, stronger local temporal blur.
 
 Revision3: mixed-size nested overlapping square groups, stronger green glow study; latest candidate study-v3.mp4, awaiting review. Green remains an optional study palette.
+
+`scale-optics-match-v1`: arbitrary-subject scale match cut; outgoing(.88,.04,.93,.10), incoming(.06,.88,.10,.95), optics pulse, +/-4-frame blur and20-frame color motion. See detailed recipe; exactly5s study awaiting review.

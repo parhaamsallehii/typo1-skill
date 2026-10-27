@@ -1,0 +1,18 @@
+{
+  "reference.mp4": {
+    "original_name": "نمونه مچ کات یک مدل ترنزیشن تو سبک saas animation.mp4",
+    "sha256": "bc884cb395c95593a41756ddb7c72bd43b142b47c6b1ecefdf80e6b70d308096"
+  },
+  "motion-blur-settings.png": {
+    "original_name": "تنظیمات موشن بلر مثل افتر افکت(10).png",
+    "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+  },
+  "outgoing-curve.png": {
+    "original_name": "نمونه گراف اول نرم و اخر خیلی سریع سبک saas.png",
+    "sha256": "380bf89b1d4b8cce3dd356f8b89502c96851621311c188fccf4eb69b06370e60"
+  },
+  "incoming-curve.png": {
+    "original_name": "نمونه گراف خیلی سریع saas.png",
+    "sha256": "919bb1d8cbf9c187c41deae5a27f76be51853070fa04b2be998e9abe115632b9"
+  }
+}

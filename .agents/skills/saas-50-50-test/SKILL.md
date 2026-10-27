@@ -322,3 +322,7 @@ and writes its frame count, pane rectangles and mode to a companion JSON report.
 - Deliver the rendered video and report the actual scope. Save skill changes through
   the Skills Git workspace **and** the specified GitHub skill path; verify both.
   Do not hand the user a skill ZIP unless requested.
+
+## Scale/optics match cut
+
+Read `references/scale-optics-match-v1.md` and inspect its four bundled source assets for the15-frame outgoing/incoming anisotropic scale handoff, exact supplied Flow curves, full-scene optics peak, separate +/-4-frame box-blur pulse and20-frame incoming color sweep. Apply to arbitrary objects/images; all constituent tools are independently reusable. This lesson uses the supplied180-degree motion-blur settings, not the square-reaction override. Exactly5s study awaiting review.
