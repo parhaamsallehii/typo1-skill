@@ -2,7 +2,8 @@
 name: saas-50-50-test
 description: >-
   Current complete authoritative bundle: icon dock, elastic click/reveal,
-  spin/particles/masks, and glow typing with camera cuts; all original references
+  spin/particles/masks, glow typing, nested square reactions, scale/optics match
+  cuts and auto ripple with tilted galleries; all original references
   and studies included. Prefer this version over older same-name copies.
   Use for saas 50.50 test, saas-50-50-test, SaaS 50/50, موشن ساس نصف صفحه or
   مجری بالا موشن پایین. Split presenter video exactly 50/50: presenter above,
@@ -326,3 +327,7 @@ and writes its frame count, pane rectangles and mode to a companion JSON report.
 ## Scale/optics match cut
 
 Read `references/scale-optics-match-v1.md` and inspect its four bundled source assets for the15-frame outgoing/incoming anisotropic scale handoff, exact supplied Flow curves, full-scene optics peak, separate +/-4-frame box-blur pulse and20-frame incoming color sweep. Apply to arbitrary objects/images; all constituent tools are independently reusable. This lesson uses the supplied180-degree motion-blur settings, not the square-reaction override. Exactly5s study awaiting review.
+
+## Auto ripple and tilted gallery
+
+Read `references/ripple-tilt-gallery-v1.md` and inspect its five bundled reference assets. Use BCC Ripple Dissolve Auto on an exactly15-frame adjustment without keys; combine optionally with X/Z tilt and Z recession,15-frame top/bottom gallery entry, immediate slow linear drift and entrance color motion. Use exact supplied curves(.30,0,.10,1) and(.06,.88,.10,.95). Each tool is independently reusable. Preserve180-degree phase-zero blur. The5s coded study approximates the native BCC effect and awaits review.

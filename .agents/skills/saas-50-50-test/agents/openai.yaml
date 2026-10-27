@@ -1,6 +1,6 @@
 interface:
   display_name: SaaS 50.50 Test — Glow & Camera
-  short_description: Five lessons including feathered hollow-square reactions
+  short_description: Seven lessons with ripple, gallery and match-cut motion
   default_prompt: Use $saas-50-50-test to put my presenter in the top half and reference-matched
     SaaS animation synced to the narration in the bottom half.
   icon_small: assets/icon.svg

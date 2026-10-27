@@ -1,0 +1,22 @@
+{
+  "reference.mp4": {
+    "original_name": "نمونه افکت ریپل.mp4",
+    "sha256": "d5e3e164d3bba61f9cca9dc87855de3760694d8009d049f427d7987de2d94e84"
+  },
+  "motion-blur-settings.png": {
+    "original_name": "b78b6359-c839-427c-8f44-2c0835bda041.png",
+    "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+  },
+  "bcc-settings.png": {
+    "original_name": "تنظیمات افکت bbc ripple dissolve.png",
+    "sha256": "596a08e53684202a6ac54390f2b3d2dce1e98bcf6b851d3e0ffc1867c3c18872"
+  },
+  "tilt-curve.png": {
+    "original_name": "گراف وسط نرم.png",
+    "sha256": "1476025f7db700a699ae0cdaecd14c74eabe6eff59ddcecda43f0e5e4e8cfdaa"
+  },
+  "entry-curve.png": {
+    "original_name": "aa19855b-5140-4f39-82a1-97f700966726.png",
+    "sha256": "919bb1d8cbf9c187c41deae5a27f76be51853070fa04b2be998e9abe115632b9"
+  }
+}
