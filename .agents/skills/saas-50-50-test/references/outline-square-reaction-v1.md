@@ -29,3 +29,10 @@ The user explicitly requests much stronger motion blur for this revision. Apply 
 Study v2: exactly5s,1080x1920, same focus-session subject and green/ochre palette, close camera. Retain the first study as rejected/superseded history; use study-v2.mp4 as the current candidate, awaiting explicit review.
 
 اصلاح کاربر: مربع‌ها بزرگ‌تر و شلوغ‌تر، با دیپ‌گلو؛ اثر فقط اطراف آیکون بماند و کل باکس را پر نکند. اجرا زوم‌تر و موشن‌بلر بسیار بیشتر باشد. این اصلاح بر نمونهٔ اول اولویت دارد و رنگ‌ها و اجزا همچنان مستقل و قابل تغییرند.
+
+## Revision 3 — nested multiscale green study (latest)
+Override revision2's uniform grid. Use overlapping square groups with mixed large/small sizes and smaller hollow squares nested inside larger ones. Keep colored strokes and empty fills; distribute centers with slight deterministic irregularity. Retain a local feathered circle around the icon, fast initial expansion, long soft finish and late fade. Preserve close camera and revision2 stronger temporal blur. Increase colored glow while preserving discernible square cores. Green is the requested study palette, not a universal brand restriction.
+
+Current study implementation: seed57; center pitch34 source pixels with +/-10px jitter; outer sizes24/32/42/54; nested ratios1/.55/.24; stroke2. Output camera2x. Glow uses sigma3/12/24 at gains2.5/3.4/1.8. Stroke RGB50,245,110 and glow RGB65,255,125; icon green. Keep radius145 and feather65 source units and the720-degree phase0 64-sample local override. Values are authored fits. Render exactly5s at1080x1920. study-v3.mp4 is the latest candidate awaiting review; revision2 remains prior history, not approved.
+
+اصلاح سوم کاربر: مربع‌ها توهم‌توهم و تودرتو با اندازه‌های بزرگ و کوچک باشند، گلو بیشتر شود و تست با رنگ سبز ارائه شود. سایر خواسته‌های قبلی شامل محدودماندن دور آیکون، نمای نزدیک، محوشدن تدریجی و بلر بیشتر حفظ شوند.
