@@ -1,0 +1,329 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 5,
+  "start": 0.3,
+  "end": 4.7,
+  "samples": 16,
+  "supersample": 2,
+  "background": "#183344",
+  "drawings": [
+    {
+      "target": "presenter crown",
+      "target_bounds": [
+        380,
+        480,
+        720,
+        610
+      ],
+      "strokes": [
+        {
+          "points": [
+            [
+              405,
+              475
+            ],
+            [
+              469,
+              456
+            ],
+            [
+              542,
+              452
+            ],
+            [
+              609,
+              462
+            ],
+            [
+              665,
+              480
+            ]
+          ],
+          "seed": 900,
+          "mode": "flash",
+          "width": 2.8,
+          "boil": 0.65,
+          "reposition": 4,
+          "opacity": 0.96
+        }
+      ]
+    },
+    {
+      "target": "microphone foam cap",
+      "target_bounds": [
+        96,
+        1050,
+        212,
+        1330
+      ],
+      "strokes": [
+        {
+          "points": [
+            [
+              78,
+              1148
+            ],
+            [
+              79,
+              1084
+            ],
+            [
+              100,
+              1045
+            ],
+            [
+              144,
+              1030
+            ],
+            [
+              189,
+              1044
+            ],
+            [
+              219,
+              1082
+            ]
+          ],
+          "seed": 907,
+          "mode": "flash",
+          "width": 2.8,
+          "boil": 0.65,
+          "reposition": 4,
+          "opacity": 0.96
+        }
+      ]
+    },
+    {
+      "target": "wooden figure head top",
+      "target_bounds": [
+        730,
+        1190,
+        947,
+        1405
+      ],
+      "strokes": [
+        {
+          "points": [
+            [
+              710,
+              1220
+            ],
+            [
+              754,
+              1190
+            ],
+            [
+              810,
+              1172
+            ],
+            [
+              866,
+              1180
+            ],
+            [
+              921,
+              1205
+            ]
+          ],
+          "seed": 914,
+          "mode": "flash",
+          "width": 2.8,
+          "boil": 0.65,
+          "reposition": 4,
+          "opacity": 0.96
+        }
+      ]
+    },
+    {
+      "target": "presenter left outer scarf",
+      "target_bounds": [
+        325,
+        600,
+        409,
+        942
+      ],
+      "strokes": [
+        {
+          "points": [
+            [
+              366,
+              614
+            ],
+            [
+              340,
+              674
+            ],
+            [
+              320,
+              744
+            ],
+            [
+              307,
+              810
+            ]
+          ],
+          "seed": 921,
+          "mode": "flash",
+          "width": 2.8,
+          "boil": 0.65,
+          "reposition": 4,
+          "opacity": 0.96
+        }
+      ]
+    },
+    {
+      "target": "presenter right shoulder",
+      "target_bounds": [
+        711,
+        918,
+        893,
+        1105
+      ],
+      "strokes": [
+        {
+          "points": [
+            [
+              729,
+              906
+            ],
+            [
+              789,
+              923
+            ],
+            [
+              848,
+              963
+            ],
+            [
+              880,
+              1013
+            ]
+          ],
+          "seed": 928,
+          "mode": "flash",
+          "width": 2.8,
+          "boil": 0.65,
+          "reposition": 4,
+          "opacity": 0.96
+        }
+      ]
+    },
+    {
+      "target": "wooden figure base",
+      "target_bounds": [
+        713,
+        1580,
+        948,
+        1685
+      ],
+      "strokes": [
+        {
+          "points": [
+            [
+              704,
+              1627
+            ],
+            [
+              722,
+              1682
+            ],
+            [
+              797,
+              1702
+            ],
+            [
+              885,
+              1695
+            ],
+            [
+              944,
+              1677
+            ]
+          ],
+          "seed": 935,
+          "mode": "flash",
+          "width": 2.8,
+          "boil": 0.65,
+          "reposition": 4,
+          "opacity": 0.96
+        }
+      ]
+    },
+    {
+      "target": "presenter right outer scarf",
+      "target_bounds": [
+        678,
+        585,
+        732,
+        936
+      ],
+      "strokes": [
+        {
+          "points": [
+            [
+              741,
+              617
+            ],
+            [
+              756,
+              691
+            ],
+            [
+              762,
+              765
+            ],
+            [
+              753,
+              835
+            ]
+          ],
+          "seed": 942,
+          "mode": "flash",
+          "width": 2.8,
+          "boil": 0.65,
+          "reposition": 4,
+          "opacity": 0.96
+        }
+      ]
+    },
+    {
+      "target": "microphone stand",
+      "target_bounds": [
+        117,
+        1325,
+        183,
+        1600
+      ],
+      "strokes": [
+        {
+          "points": [
+            [
+              102,
+              1370
+            ],
+            [
+              99,
+              1445
+            ],
+            [
+              100,
+              1516
+            ],
+            [
+              111,
+              1574
+            ]
+          ],
+          "seed": 949,
+          "mode": "flash",
+          "width": 2.8,
+          "boil": 0.65,
+          "reposition": 4,
+          "opacity": 0.96
+        }
+      ]
+    }
+  ]
+}

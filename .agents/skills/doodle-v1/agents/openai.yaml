@@ -1,0 +1,15 @@
+interface:
+  display_name: Doodle V1
+  short_description: Target-aware doodle flashes with blank rest frames
+  default_prompt: Use $doodle-v1 for one-frame thin doodle flashes alternating with
+    completely blank rest frames. Anchor each different drawing to actual objects,
+    presenter edges, existing text or shapes; keep hand roughness very light.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

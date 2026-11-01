@@ -1,0 +1,18 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30.0,
+  "frames": 104,
+  "duration": 3.466666666666667,
+  "strokes": 8,
+  "shutter_angle": 180,
+  "shutter_phase": 0,
+  "samples": 16,
+  "automatic_segmentation": false,
+  "one_frame_lifetime": true,
+  "blank_frames_between": 1,
+  "hard_cut_locations": true,
+  "target_anchored": true,
+  "local_roughness": 0.65,
+  "source_reference": "Only thin animated doodle lines; no source scene recreation"
+}

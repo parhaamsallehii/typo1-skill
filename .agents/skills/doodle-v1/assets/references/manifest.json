@@ -1,0 +1,17 @@
+{
+  "original": "نمونه خط doodle ورژن 1.mp4",
+  "file": "reference.mp4",
+  "bytes": 3157617,
+  "sha256": "b4f960e9fe25c32a86175241027433e293443758726ac752b8ede2231c09c529",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 24,
+  "duration": 0.8,
+  "active_picture_estimate": [
+    0,
+    552,
+    1080,
+    816
+  ]
+}
