@@ -1,0 +1,14 @@
+interface:
+  display_name: Typo Uzbek V1
+  short_description: تایپوگرافی دوخطی فارسی با بانس و هایلایت کلمه
+  default_prompt: با $typo-uzbek-v1 تایپوگرافی دوخطی فارسی را با فونت‌های مدام، پالت
+    زرشکی و کرم و حرکت رفرنس در بازهٔ درخواستی اجرا کن.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
