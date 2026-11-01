@@ -1,0 +1,14 @@
+interface:
+  display_name: Typo Uzbek V2
+  short_description: تایپو فارسی سه‌ردیفی با ورود گفتاری و بانس دقیق
+  default_prompt: از $typo-uzbek-v2 برای اجرای تایپو سه‌ردیفی مرجع در زمان مشخص، مطابق
+    کلمات واقعی گفتار، استفاده کن.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

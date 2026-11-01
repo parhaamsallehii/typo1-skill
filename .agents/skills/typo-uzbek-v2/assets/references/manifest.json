@@ -1,0 +1,68 @@
+[
+  {
+    "original": "نمونه تایپوگرافی ازبک ورژن 2.mp4",
+    "path": "assets/references/reference.mp4",
+    "bytes": 7160921,
+    "sha256": "a57fd782c795e3789e6ec3eb4a2c14061998274a344611090b1fe87365f9d12f"
+  },
+  {
+    "original": "پالت رنگی(6).jpg",
+    "path": "assets/references/palette.jpg",
+    "bytes": 49512,
+    "sha256": "b01b9a139f6aef204c840057957551b1a864bcc925b8fa077e28f41a8d223222"
+  },
+  {
+    "original": "تنظیمات موشن بلر مثل افتر افکت(20261101-133025).png",
+    "path": "assets/references/motion-blur.png",
+    "bytes": 36971,
+    "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+  },
+  {
+    "original": "MODAM-BLACK(1).TTF",
+    "path": "assets/fonts/MODAM-BLACK.TTF",
+    "bytes": 54648,
+    "sha256": "837c3a0848a4c56ed589594a592bca01e24702704749de9ada79f5b9f23bee88"
+  },
+  {
+    "original": "MODAM-BOLD(1).TTF",
+    "path": "assets/fonts/MODAM-BOLD.TTF",
+    "bytes": 54872,
+    "sha256": "ff36bd0a102992c6c0d358ee96290f51a2c9539714bf3f59a43c49eb02b3f565"
+  },
+  {
+    "original": "MODAM-EXTRABOLD(1).TTF",
+    "path": "assets/fonts/MODAM-EXTRABOLD.TTF",
+    "bytes": 55056,
+    "sha256": "684f354b383dc0f5c4f9bcfe29e3d3f50c9b183ed10a82511de46dcaabf94017"
+  },
+  {
+    "original": "MODAM-EXTRALIGHT(1).TTF",
+    "path": "assets/fonts/MODAM-EXTRALIGHT.TTF",
+    "bytes": 54052,
+    "sha256": "035654988cf5ef0be89d37c3a1c9e576e5958312a1f24d799d034d9a7cee251d"
+  },
+  {
+    "original": "MODAM-LIGHT(1).TTF",
+    "path": "assets/fonts/MODAM-LIGHT.TTF",
+    "bytes": 54480,
+    "sha256": "ba476b35c70fff1a93a5a9785abce591ee3eb315cebc6e341883d122f22727a9"
+  },
+  {
+    "original": "MODAM-MEDIUM(1).TTF",
+    "path": "assets/fonts/MODAM-MEDIUM.TTF",
+    "bytes": 54424,
+    "sha256": "aabfab8e1bcff7c8411e08ddc09c482ad73b5da0c8d01320401da9e149e9bb69"
+  },
+  {
+    "original": "MODAM-REGULAR(1).TTF",
+    "path": "assets/fonts/MODAM-REGULAR.TTF",
+    "bytes": 54312,
+    "sha256": "dec16e315914b68947a8389d944423abb96d4f193d8890269a0fc4929abebdae"
+  },
+  {
+    "original": "MODAM-SEMIBOLD(1).TTF",
+    "path": "assets/fonts/MODAM-SEMIBOLD.TTF",
+    "bytes": 55028,
+    "sha256": "427d50d2334d7ce1a1e620cda0c0b7379189d44e6adf2d0d87a827f338b1f2b8"
+  }
+]

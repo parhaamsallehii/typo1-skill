@@ -1,0 +1,86 @@
+{
+  "renderer": "coded V2 reconstruction; column tilt approximates native per-character projection",
+  "demo": false,
+  "speech_evidence": "/root/.codex/skills/remote-skills/typo-uzbek-v2/assets/studies/speech-evidence.json",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 104,
+  "duration": 3.466666666666667,
+  "words": [
+    {
+      "text": "تمام",
+      "start": 0.1,
+      "end": 0.38,
+      "row": 0,
+      "accent": true,
+      "source_index": 0
+    },
+    {
+      "text": "این",
+      "start": 0.4,
+      "end": 0.54,
+      "row": 0,
+      "accent": false,
+      "source_index": 1
+    },
+    {
+      "text": "ویدیویی",
+      "start": 0.56,
+      "end": 0.84,
+      "row": 0,
+      "accent": false,
+      "source_index": 2
+    },
+    {
+      "text": "که",
+      "start": 0.86,
+      "end": 0.92,
+      "row": 1,
+      "accent": false,
+      "source_index": 3
+    },
+    {
+      "text": "دارید",
+      "start": 0.96,
+      "end": 1.18,
+      "row": 1,
+      "accent": false,
+      "source_index": 4
+    },
+    {
+      "text": "می‌بینید",
+      "start": 1.22,
+      "end": 1.52,
+      "row": 2,
+      "accent": false,
+      "source_index": 5
+    }
+  ],
+  "close": [
+    {
+      "start": 1.56,
+      "end": 1.7933333333333334
+    }
+  ],
+  "bounce": {
+    "amp": 0.1,
+    "freq": 2,
+    "decay": 6,
+    "active_seconds": 1,
+    "velocity_sample": "keyTime-actualFrameDuration/10",
+    "source": "scripts/bounce-expression.jsx"
+  },
+  "motion_blur": {
+    "shutter_angle": 180,
+    "shutter_phase": 0,
+    "samples_per_frame": 16,
+    "adaptive_limit": 128,
+    "composition_enabled": true,
+    "moving_layers_enabled": true
+  },
+  "observed_samples_min": 16,
+  "observed_samples_max": 78,
+  "source_audio_preserved": true,
+  "added_global_flash_or_camera": false
+}

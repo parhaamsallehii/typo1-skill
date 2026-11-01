@@ -1,0 +1,82 @@
+{
+  "method": "invideo audio.transcript",
+  "status": "completed machine ASR with word timestamps; not a human-reviewed transcript",
+  "source_name": "هوک تستی(1).mp4",
+  "source_sha256": "c4ece3b0d10607463a6f8c91539d0f44325fbd845bb76e7ea69ee6748104bd4e",
+  "source_duration": 3.466666666666667,
+  "service_url": "https://invideo.io/@parham-790953/typo-uzbek-v2-speech-timing-test/notebook/seq-1.1",
+  "words": [
+    {
+      "end_seconds": 0.38,
+      "speaker_id": "speaker_0",
+      "start_seconds": 0.1,
+      "text": "تمام"
+    },
+    {
+      "end_seconds": 0.54,
+      "speaker_id": "speaker_0",
+      "start_seconds": 0.4,
+      "text": "این"
+    },
+    {
+      "end_seconds": 0.84,
+      "speaker_id": "speaker_0",
+      "start_seconds": 0.56,
+      "text": "ویدیویی"
+    },
+    {
+      "end_seconds": 0.92,
+      "speaker_id": "speaker_0",
+      "start_seconds": 0.86,
+      "text": "که"
+    },
+    {
+      "end_seconds": 1.18,
+      "speaker_id": "speaker_0",
+      "start_seconds": 0.96,
+      "text": "دارید"
+    },
+    {
+      "end_seconds": 1.52,
+      "speaker_id": "speaker_0",
+      "start_seconds": 1.22,
+      "text": "می‌بینید"
+    },
+    {
+      "end_seconds": 1.84,
+      "speaker_id": "speaker_0",
+      "start_seconds": 1.56,
+      "text": "رو"
+    },
+    {
+      "end_seconds": 2.44,
+      "speaker_id": "speaker_0",
+      "start_seconds": 1.9,
+      "text": "ChatGPT"
+    },
+    {
+      "end_seconds": 2.64,
+      "speaker_id": "speaker_0",
+      "start_seconds": 2.48,
+      "text": "برای"
+    },
+    {
+      "end_seconds": 2.82,
+      "speaker_id": "speaker_0",
+      "start_seconds": 2.68,
+      "text": "من"
+    },
+    {
+      "end_seconds": 3.12,
+      "speaker_id": "speaker_0",
+      "start_seconds": 2.86,
+      "text": "ادیت"
+    },
+    {
+      "end_seconds": 3.44,
+      "speaker_id": "speaker_0",
+      "start_seconds": 3.16,
+      "text": "کرده"
+    }
+  ]
+}
