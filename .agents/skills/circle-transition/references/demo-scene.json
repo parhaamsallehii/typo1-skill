@@ -1,0 +1,10 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 3,
+  "start": 1,
+  "transition_duration": 1.0,
+  "background": "#172936",
+  "next_background": "#FCF0D6"
+}

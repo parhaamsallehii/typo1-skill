@@ -1,0 +1,27 @@
+{
+  "effect": "single expanding soft annulus only",
+  "color": "#B40023",
+  "easing": [
+    0.06,
+    0.88,
+    0.1,
+    0.95
+  ],
+  "start": 1.2,
+  "transition_duration": 1.0,
+  "frames": 104,
+  "fps": 30.0,
+  "duration": 3.466666666666667,
+  "width": 1080,
+  "height": 1920,
+  "shutter_angle": 180,
+  "shutter_phase": 0,
+  "samples_per_frame": 16,
+  "adaptive_limit": 128,
+  "observed_samples_min": 16,
+  "observed_samples_max": 128,
+  "next_scene_provided": false,
+  "camera_animation_added": false,
+  "audio": "explicit finished timeline or unchanged outgoing source",
+  "renderer": "coded temporal reconstruction; original AE project not supplied"
+}

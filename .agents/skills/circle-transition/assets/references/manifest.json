@@ -1,0 +1,26 @@
+[
+  {
+    "original": "نمونه ترنزیشن دایره.mp4",
+    "path": "assets/references/reference.mp4",
+    "bytes": 1896336,
+    "sha256": "d0e6b4d9465e8af87461fdc252a94216d60cc55a9eefb5a223ff2a7a585e140a"
+  },
+  {
+    "original": "پالت رنگی(5).jpg",
+    "path": "assets/references/palette.jpg",
+    "bytes": 49512,
+    "sha256": "b01b9a139f6aef204c840057957551b1a864bcc925b8fa077e28f41a8d223222"
+  },
+  {
+    "original": "نمونه گراف خیلی سریع saas(1).png",
+    "path": "assets/references/graph.png",
+    "bytes": 12231,
+    "sha256": "919bb1d8cbf9c187c41deae5a27f76be51853070fa04b2be998e9abe115632b9"
+  },
+  {
+    "original": "تنظیمات موشن بلر مثل افتر افکت(20261101-121727).png",
+    "path": "assets/references/motion-blur.png",
+    "bytes": 36971,
+    "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+  }
+]

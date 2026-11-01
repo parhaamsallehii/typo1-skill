@@ -1,0 +1,28 @@
+{
+  "color": "#B40023",
+  "center": [
+    0.5,
+    0.5
+  ],
+  "duration": 1.0,
+  "stroke_width_at_1080": 216,
+  "feather_sigma_at_1080": 27,
+  "easing": [
+    0.06,
+    0.88,
+    0.1,
+    0.95
+  ],
+  "shutter_angle": 180,
+  "shutter_phase": 0,
+  "samples_per_frame": 16,
+  "adaptive_sample_limit": 128,
+  "layer_motion_blur": true,
+  "composition_motion_blur": true,
+  "provenance": {
+    "color": "user palette",
+    "easing": "user Flow screenshot",
+    "motion_blur": "user AE screenshot",
+    "geometry_duration": "Authored geometry and 1s radius-key span; supplied fast-out graph makes visible passage much shorter. Reference clip lasts0.5s, original key times unknown."
+  }
+}

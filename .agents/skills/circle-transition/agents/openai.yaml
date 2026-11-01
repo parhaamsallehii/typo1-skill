@@ -1,0 +1,14 @@
+interface:
+  display_name: Circle Transition
+  short_description: ترنزیشن دایره زرشکی با گراف سریع و موشن‌بلر
+  default_prompt: با $circle-transition در زمان مشخص‌شده فقط ترنزیشن دایرهٔ مرجع را
+    با رنگ زرشکی و گراف و موشن‌بلر ارسالی اجرا کن.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
