@@ -1,0 +1,64 @@
+{
+  "renderer": "coded shaped-ribbon approximation; not native AE glyph layout",
+  "demo": true,
+  "frames": 150,
+  "fps": 30.0,
+  "width": 1080,
+  "height": 1920,
+  "duration": 5.0,
+  "motion_blur": {
+    "shutter_angle": 180,
+    "shutter_phase": 0,
+    "minimum_samples": 16,
+    "adaptive_limit": 128,
+    "max_used": 20
+  },
+  "layers": [
+    {
+      "text": "ساده",
+      "keys": [
+        [
+          0.8,
+          35.0
+        ],
+        [
+          0.8666666666666667,
+          0
+        ],
+        [
+          1.9333333333333333,
+          0
+        ],
+        [
+          2.0,
+          35.0
+        ]
+      ],
+      "fade_in_frames": 4,
+      "fade_out_frames": 3
+    },
+    {
+      "text": "روان",
+      "keys": [
+        [
+          1.1,
+          -35.0
+        ],
+        [
+          1.1666666666666667,
+          0
+        ],
+        [
+          2.2333333333333334,
+          0
+        ],
+        [
+          2.3000000000000003,
+          -35.0
+        ]
+      ],
+      "fade_in_frames": 4,
+      "fade_out_frames": 3
+    }
+  ]
+}

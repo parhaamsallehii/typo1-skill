@@ -1,0 +1,66 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 5,
+  "demo": true,
+  "background": "../assets/references/clean-still.jpg",
+  "layers": [
+    {
+      "text": "ساده",
+      "start": 0.8,
+      "font": "saadi-ultra",
+      "font_size": 160,
+      "color": "cream",
+      "path": [
+        [
+          360,
+          1060
+        ],
+        [
+          220,
+          900
+        ],
+        [
+          240,
+          650
+        ],
+        [
+          310,
+          480
+        ]
+      ],
+      "entry_margin": 35,
+      "exit_margin": 35,
+      "hold": 1
+    },
+    {
+      "text": "روان",
+      "start": 1.1,
+      "font": "lifta-black",
+      "font_size": 160,
+      "color": "red",
+      "path": [
+        [
+          740,
+          550
+        ],
+        [
+          790,
+          690
+        ],
+        [
+          760,
+          900
+        ],
+        [
+          660,
+          1000
+        ]
+      ],
+      "entry_margin": -35,
+      "exit_margin": -35,
+      "hold": 1
+    }
+  ]
+}

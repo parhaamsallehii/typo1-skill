@@ -1,0 +1,14 @@
+interface:
+  display_name: Margin Bounce Face MSY
+  short_description: Minimal Persian curved text with face-side margin bounce
+  default_prompt: Use $margin-bounce-face-msy at the requested time to place two speech-matched
+    Persian phrases on curved paths beside the presenter’s head.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

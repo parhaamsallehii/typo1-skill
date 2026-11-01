@@ -1,0 +1,56 @@
+[
+  {
+    "original": "نمونه تکست مارجین بانس دور سر.mp4",
+    "path": "assets/references/reference.mp4",
+    "bytes": 2406767,
+    "sha256": "4de17bac61fdecbf6ed880c1fa1bebdddf3b8fb4a5f8372e8665f49ecf7888a7"
+  },
+  {
+    "original": "پالت رنگی(3).jpg",
+    "path": "assets/references/palette.jpg",
+    "bytes": 49512,
+    "sha256": "b01b9a139f6aef204c840057957551b1a864bcc925b8fa077e28f41a8d223222"
+  },
+  {
+    "original": "تنظیمات موشن بلر مثل افتر افکت(20261101-045356).png",
+    "path": "assets/references/motion-blur.png",
+    "bytes": 36971,
+    "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
+  },
+  {
+    "original": "نمونه مدل جایگذاری و path تکست مارجین بانس دور سر.jpg",
+    "path": "assets/references/placement.jpg",
+    "bytes": 1005807,
+    "sha256": "3e8f9aa9d2bf28908ac669269eb4446f224af1455262570ae256dfdd5bf55488"
+  },
+  {
+    "original": "@ALLOFONT(SAADI).TTF",
+    "path": "assets/fonts/Saadi.ttf",
+    "bytes": 37372,
+    "sha256": "052e9bf3e45e0a979696f0c2b38d592d4cad0dd49aad3601298d01c049cf1e83"
+  },
+  {
+    "original": "@ALLOFONT(SAADI BOLD).TTF",
+    "path": "assets/fonts/Saadi-Bold.ttf",
+    "bytes": 34808,
+    "sha256": "7608ab7ad9cb66c068db8583e9ea8e72c2ff1d12828209b42e862f183fe572a3"
+  },
+  {
+    "original": "@ALLOFONT(SAADI ULTRA).TTF",
+    "path": "assets/fonts/Saadi-Ultra.ttf",
+    "bytes": 36344,
+    "sha256": "2b99eefb3db0ec148f1c1e7219d523d597de597bcac9b214f6c63d0092e2d286"
+  },
+  {
+    "original": "LIFTA-BLACK@BEHFONT(1).OTF",
+    "path": "assets/fonts/Lifta-Black.otf",
+    "bytes": 95008,
+    "sha256": "7b0fda46482a50afb9f82212f24ec800bad00bf859e525bfbcb0df320c505b65"
+  },
+  {
+    "original": "LIFTA-BOLD@BEHFONT(1).OTF",
+    "path": "assets/fonts/Lifta-Bold.otf",
+    "bytes": 94092,
+    "sha256": "fc0f0fbda860bc8e328f4dc66d19ca7b23cc6d36c828f4fbffebd8aca2545cfe"
+  }
+]
