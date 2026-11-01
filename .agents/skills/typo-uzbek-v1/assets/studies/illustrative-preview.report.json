@@ -48,5 +48,21 @@
   "shutter_angle": 180,
   "phase": 0,
   "samples_min": 16,
-  "samples_max": 128
+  "samples_max": 128,
+  "bounce": {
+    "source": "scripts/bounce-expression.jsx",
+    "amp": 0.1,
+    "freq": 2,
+    "decay": 6,
+    "active_seconds": 1,
+    "velocity_sample": "most_recent_key_time - actual_frame_duration / 10",
+    "properties": [
+      "text_position",
+      "text_scale",
+      "text_rotation",
+      "highlight_width"
+    ],
+    "no_double_bounce": true
+  },
+  "motion_blur_enabled": true
 }

@@ -64,5 +64,11 @@
     "path": "assets/fonts/MODAM-SEMIBOLD.TTF",
     "bytes": 55028,
     "sha256": "427d50d2334d7ce1a1e620cda0c0b7379189d44e6adf2d0d87a827f338b1f2b8"
+  },
+  {
+    "original": "تنظیمات موشن بلر مثل افتر افکت(20261101-114419).png",
+    "path": "assets/references/motion-blur.png",
+    "bytes": 36971,
+    "sha256": "965f32295be095a55cbb10f0999d067ddafff39ebf3229eb5c0a6aae7ed9c8e1"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "reference_fps": 30,
-  "status": "authored visual reconstruction, not recovered AE project values",
+  "status": "User-supplied exact bounce expression and motion blur settings; base timing/geometry remain authored reference reconstruction",
   "palette": {
     "cream": "#FCF0D6",
     "crimson": "#B40023"
@@ -30,167 +30,94 @@
   "top": {
     "frames": [
       0,
-      2,
-      4,
-      6,
-      9,
-      12
+      6
     ],
     "x": [
-      0,
-      0,
-      0,
-      0,
       0,
       0
     ],
     "y": [
       -110,
-      -75,
-      -28,
-      5,
-      -2,
       0
     ],
     "scale": [
-      1,
-      1,
-      1,
-      1,
       1,
       1
     ],
     "angle": [
       0,
-      0,
-      0,
-      0,
-      0,
       0
     ],
     "opacity": [
       0,
-      0.4,
-      0.82,
-      1,
-      1,
       1
     ],
-    "tint_frames": 18
+    "tint_frames": 18,
+    "arrival_velocity_ratio": 0.1
   },
   "keyword": {
     "frames": [
       0,
-      2,
-      4,
-      6,
-      8,
-      11
+      4
     ],
     "x": [
       100,
-      65,
-      18,
-      -7,
-      2,
       0
     ],
     "y": [
       150,
-      95,
-      28,
-      -14,
-      5,
       0
     ],
     "scale": [
       0.12,
-      0.48,
-      0.94,
-      1.08,
-      0.985,
       1
     ],
     "angle": [
       -35,
-      -24,
-      -7,
-      6,
-      -2,
       0
     ],
     "opacity": [
       0,
-      0.7,
-      1,
-      1,
-      1,
       1
     ],
-    "tint_frames": 12
+    "tint_frames": 12,
+    "arrival_velocity_ratio": 0.15
   },
   "remainder": {
     "frames": [
       0,
-      2,
-      4,
-      6,
-      8,
-      11
+      4
     ],
     "x": [
       -170,
-      -100,
-      -24,
-      9,
-      -3,
       0
     ],
     "y": [
       175,
-      105,
-      30,
-      -18,
-      6,
       0
     ],
     "scale": [
       0.12,
-      0.5,
-      0.95,
-      1.08,
-      0.985,
       1
     ],
     "angle": [
       32,
-      21,
-      6,
-      -5,
-      1.7,
       0
     ],
     "opacity": [
       0,
-      0.7,
-      1,
-      1,
-      1,
       1
     ],
-    "tint_frames": 12
+    "tint_frames": 12,
+    "arrival_velocity_ratio": 0.15
   },
   "highlight": {
     "frames": [
       0,
-      2,
-      4,
-      6
+      4
     ],
     "width_scale": [
       0,
-      0.94,
-      1.035,
       1
     ],
     "pad_x": 9,
@@ -198,7 +125,8 @@
     "gradient_gain_top": 1.08,
     "gradient_gain_bottom": 0.72,
     "glow_radius": 8,
-    "glow_opacity": 0.18
+    "glow_opacity": 0.18,
+    "arrival_velocity_ratio": 0.0
   },
   "exit": {
     "frames": [
@@ -251,6 +179,23 @@
     "shutter_phase": 0,
     "minimum_samples": 16,
     "adaptive_limit": 128,
-    "note": "authored coded exposure; not supplied or recoverable from source"
+    "note": "Exact user-supplied screenshot settings; coded temporal sampling approximates AE rasterization",
+    "composition_enabled": true,
+    "moving_layers_enabled": true
+  },
+  "bounce": {
+    "source": "scripts/bounce-expression.jsx",
+    "amp": 0.1,
+    "freq": 2,
+    "decay": 6,
+    "active_seconds": 1,
+    "velocity_sample": "most_recent_key_time - actual_frame_duration / 10",
+    "properties": [
+      "text_position",
+      "text_scale",
+      "text_rotation",
+      "highlight_width"
+    ],
+    "no_double_bounce": true
   }
 }

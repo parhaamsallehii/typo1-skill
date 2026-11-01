@@ -13,6 +13,33 @@ def rgb(hexcolor):return tuple(int(hexcolor[i:i+2],16) for i in (1,3,5))
 def curve(block,key,t):
     xs=block['frames'];ys=block[key]
     return float(PchipInterpolator(xs,ys)(np.clip(t,xs[0],xs[-1])))
+def base_property(block,key,t):
+    """Base value/analytic velocity in seconds, BEFORE expression application."""
+    xs=np.asarray(block['frames'],float)/30
+    ys=np.asarray(block[key],float)
+    if t<xs[0] or t>=xs[-1]:return (float(ys[0] if t<xs[0] else ys[-1]),0.)
+    n=int(np.searchsorted(xs,t,side='right')-1)
+    duration=xs[n+1]-xs[n];u=(t-xs[n])/duration
+    ratio=float(block.get('arrival_velocity_ratio',.15))
+    # Monotone authored Hermite base: zero outgoing speed, specified
+    # incoming speed. The user supplied the spring, not the base AE graph.
+    ease=(-2+ratio)*u**3+(3-ratio)*u**2
+    derivative=(3*(-2+ratio)*u*u+2*(3-ratio)*u)/duration
+    delta=ys[n+1]-ys[n]
+    return float(ys[n]+delta*ease),float(delta*derivative)
+
+def spring_curve(block,key,frame_age,fps):
+    t=frame_age/30
+    value,_=base_property(block,key,t)
+    xs=np.asarray(block['frames'],float)/30
+    n=int(np.searchsorted(xs,t,side='right')-1)
+    if n<0:return value
+    elapsed=t-xs[n]
+    if elapsed<1:
+        _,velocity=base_property(block,key,xs[n]-1/(fps*10))
+        value+=velocity*.1*math.sin(2*math.pi*2*elapsed)/math.exp(6*elapsed)
+    return value
+
 def mix(a,b,t):return tuple(round(x+(y-x)*np.clip(t,0,1)) for x,y in zip(a,b))
 
 def pair_masks(texts,weight,ink_height,max_width,gap):
@@ -73,13 +100,13 @@ def validate(cfg):
             if len(e.get('cues',[]))!=4 or 'exit_start' not in e:raise ValueError('Production requires four actual absolute speech cues and exit_start')
         if 'cues' in e:
             if len(e['cues'])!=4 or sorted(e['cues'])!=e['cues'] or e['cues'][0]<e['start']:raise ValueError('Speech cues must be ordered absolute seconds')
-            if e.get('exit_start',1e9)<e['cues'][-1]+11/30:raise ValueError('Exit cannot precede lower-line settling')
+            if e.get('exit_start',1e9)<e['cues'][-1]+4/30:raise ValueError('Exit cannot precede lower-line base arrival')
     return True
 
 class Event:
     def __init__(self,e,cfg,profile):
         self.e=e;self.p=profile;self.W=cfg['width'];self.H=cfg['height'];self.k=self.W/1080
-        self.start=float(e['start']);l=profile['layout']
+        self.start=float(e['start']);self.fps=float(cfg['fps']);l=profile['layout']
         self.cx=float(e.get('center_x',l['center_x']))*self.W
         self.ys=[float(e.get('top_y',l['top_ink_center_y']))*self.H,float(e.get('bottom_y',l['bottom_ink_center_y']))*self.H]
         self.pivot=np.array([self.cx,sum(self.ys)/2])
@@ -111,13 +138,13 @@ class Event:
             row=item['row'];part=item['part'];block=self.p['top'] if row==0 else self.p['keyword' if part==0 else 'remainder']
             op=curve(block,'opacity',age)
             if op<=.001:continue
-            pos=item['center']+np.array([curve(block,'x',age),curve(block,'y',age)])*self.k
+            pos=item['center']+np.array([spring_curve(block,'x',age,self.fps),spring_curve(block,'y',age,self.fps)])*self.k
             center=(pos-self.pivot)@mat.T*es+self.pivot+np.array([ex,ey])
-            scale=curve(block,'scale',age)*es;angle=curve(block,'angle',age)+ea
+            scale=spring_curve(block,'scale',age,self.fps)*es;angle=spring_curve(block,'angle',age,self.fps)+ea
             tint=mix(red,cream,min(1,max(0,age/block['tint_frames'])))
             # Keyword rectangle is a separate layer, behind the shaped word.
             if row==1 and part==0 and t>=self.highlight:
-                b=self.p['highlight'];f=(t-self.highlight)*30;amount=curve(b,'width_scale',f)
+                b=self.p['highlight'];f=(t-self.highlight)*30;amount=spring_curve(b,'width_scale',f,self.fps)
                 fullw=item['width']+2*b['pad_x']*self.k;boxh=item['height']+2*b['pad_y']*self.k
                 boxw=max(1,round(fullw*amount));pad=max(4,round(3*b['glow_radius']*self.k))
                 box=Image.new('RGBA',(boxw+2*pad,round(boxh)+2*pad))
@@ -145,6 +172,7 @@ class Renderer:
     def __init__(self,cfg):
         validate(cfg);self.cfg=cfg;self.W=int(cfg['width']);self.H=int(cfg['height']);self.fps=float(cfg['fps'])
         self.profile=json.loads(json.dumps(PROFILE))
+        self.sample_counts=[]
         self.events=[Event(e,cfg,self.profile) for e in cfg['events']]
     def elements(self,t):
         return [elem for event in self.events for elem in event.render_elements(t)]
@@ -164,7 +192,9 @@ class Renderer:
         if not any(e.state(t) or e.state(t+.5/self.fps) for e in self.events):return result
         # Forward 180-degree phase-zero exposure, at least16 midpoint samples.
         movement=max((abs(curve(self.profile['exit'],'y',max(0,(t+.5/self.fps-e.exit)*30))-curve(self.profile['exit'],'y',max(0,(t-e.exit)*30))) for e in self.events if e.state(t)),default=0)
-        count=min(128,max(16,math.ceil(movement*self.W/1080)))
+        blur=self.profile['motion_blur']
+        count=min(blur['adaptive_limit'],max(blur['minimum_samples'],math.ceil(movement*self.W/1080)))
+        self.sample_counts.append(count)
         for i in range(count):
             sample=self.sample(t+(i+.5)/count*.5/self.fps)
             if sample:
@@ -205,6 +235,6 @@ def main():
     if source:
         subprocess.run(['ffmpeg','-v','error','-y','-i',str(temp),'-i',str(source),'-map','0:v:0','-map','1:a?','-c','copy','-t',str(duration),'-movflags','+faststart',str(a.output)],check=True);temp.unlink()
     else:temp.replace(a.output)
-    report={'renderer':'coded visual reconstruction, not original AE project','demo':cfg.get('demo',False),'width':W,'height':H,'fps':fps,'frames':round(duration*fps),'palette':r.profile['palette'],'events':[{'start':e.start,'cues':e.onsets,'exit':e.exit,'end':e.end,'font_sizes':[x['font_size'] for x in e.items]} for e in r.events],'shutter_angle':180,'phase':0,'samples_min':16,'samples_max':128}
+    report={'renderer':'coded visual reconstruction, not original AE project','demo':cfg.get('demo',False),'width':W,'height':H,'fps':fps,'frames':round(duration*fps),'palette':r.profile['palette'],'events':[{'start':e.start,'cues':e.onsets,'exit':e.exit,'end':e.end,'font_sizes':[x['font_size'] for x in e.items]} for e in r.events],'shutter_angle':180,'phase':0,'samples_min':16,'samples_max':128,'bounce':r.profile['bounce'],'motion_blur_enabled':True,'observed_samples_min':min(r.sample_counts,default=16),'observed_samples_max':max(r.sample_counts,default=16)}
     a.output.with_suffix('.report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False))
 if __name__=='__main__':main()
