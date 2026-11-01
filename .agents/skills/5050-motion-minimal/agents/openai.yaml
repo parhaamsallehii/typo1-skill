@@ -1,0 +1,14 @@
+interface:
+  display_name: 5050 motion minimal
+  short_description: مجری بالا و موشن مینیمال پایین با پالت قرمز و کرم
+  default_prompt: از $5050-motion-minimal در بازهٔ مشخص ویدیو استفاده کن؛ سر مجری
+    در مرکز نیمهٔ بالا، موشن مرتبط با گفتار در پایین و بدون زیرنویس باشد.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

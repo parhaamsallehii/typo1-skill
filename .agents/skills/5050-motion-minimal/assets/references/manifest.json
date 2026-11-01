@@ -1,0 +1,32 @@
+[
+  {
+    "original": "AQNGQW1TtoiQQeiwrZXVjDvBX4JQMIcVoLD2Nh7l0_FPYHT1G_w1M1_9oN07S3L.mp4",
+    "bundled": "reference.mp4",
+    "sha256": "ac968487b1d7c5f9895c98c1783317a4571b2c25305c8b17df13f9493d55ccd4"
+  },
+  {
+    "original": "پالت رنگی(7).jpg",
+    "bundled": "palette.jpg",
+    "sha256": "b01b9a139f6aef204c840057957551b1a864bcc925b8fa077e28f41a8d223222"
+  },
+  {
+    "original": "d5e76177-0e1b-4aef-b12b-b998e33ab6df.png",
+    "bundled": "poster-1.png",
+    "sha256": "37970747458d46cd4dfd44672e103d16d67f84528e9fa2173981e52e97cd72de"
+  },
+  {
+    "original": "860461bf-861a-47a6-b658-50d6fbcd3caf.png",
+    "bundled": "poster-2.png",
+    "sha256": "59f58b5c3e5f3c99c27564f77887cad4bdcd0394f79543dd771ca04242932686"
+  },
+  {
+    "original": "2700a026-e0f6-4f9c-aaca-a45f3600678c.png",
+    "bundled": "poster-3.png",
+    "sha256": "c105b64cd4214acb2b66aaea3f1e03e1fd3e3ad2a82d076ab41f6b9f2bf558bb"
+  },
+  {
+    "original": "145a9535-25f6-4bc3-b8af-0354d1870185.png",
+    "bundled": "poster-4.png",
+    "sha256": "35efe38aec73c361a4933af46462f5896880814e754afaae71f359b80866fcc6"
+  }
+]
